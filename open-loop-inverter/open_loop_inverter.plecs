@@ -28,8 +28,8 @@ Plecs {
   AlgebraicLoopWithStateMachineMsg "3"
   AssertionAction "1"
   FixedPointDatatypeOverride "1"
-  InitializationCommands "f = 50\nL = 1e-3\nR = 1\niql = 0\nidl = 20\n\nUmd = "
-"-2*pi*f*iql + R*idl + 220*sqrt(2)\nUmq = 2*pi*f*idl + R*iql + 0"
+  InitializationCommands "f = 50\nL = 1e-3\nR = 1\niql = 0\nidl = -20\n\nu_md "
+"= -2*pi*f*L*iql + R*idl + 220*sqrt(2)\nu_mq = 2*pi*f*L*idl + R*iql + 0"
   InitialState  "1"
   SystemState   ""
   TaskingMode   "1"
@@ -54,8 +54,8 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [1, 31; 959, 988]
-    ZoomFactor    1.30957
+    Location      [0, 23; 1920, 989]
+    ZoomFactor    1.49863
     SliderPosition [0, 0]
     ShowBrowser   off
     BrowserWidth  100
@@ -200,37 +200,53 @@ Plecs {
       Type          PlecsProbe
       Name          "Probe"
       Show          on
-      Position      [270, 150]
+      Position      [470, 115]
       Direction     right
       Flipped       off
       LabelPosition south
       Probe {
         Component     "3ph Meter"
         Path          ""
-        Signals       {"Measured voltage", "Measured current"}
+        Signals       {"Measured current", "Measured voltage"}
+      }
+      Probe {
+        Component     "V"
+        Path          ""
+        Signals       {"Source voltage"}
+      }
+      Probe {
+        Component     "V1"
+        Path          ""
+        Signals       {"Source voltage"}
+      }
+      Probe {
+        Component     "V2"
+        Path          ""
+        Signals       {"Source voltage"}
       }
     }
     Component {
       Type          Scope
       Name          "Scope"
       Show          on
-      Position      [400, 150]
+      Position      [600, 115]
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 27; 1920, 1042]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAAF4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPcAAAA"
+      Location      [0, 27; 1920, 1024]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAAC4fwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAAIYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMBAAAAMAAAAuEAAABoAP///wAAAAMAAAeAAAAA5fw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABSAP///wAABsgAAALhAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":223,\"Labels\":[],"
-"\"VisualIdxs\":[]}"
+      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":223,\"Labels\":["
+"],\"VisualIdxs\":[]}"
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
-"AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
-      Axes          "2"
+"AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+"=="
+      Axes          "3"
       TimeRange     "0.0"
       ScrollingMode "1"
       SingleTimeAxis "1"
@@ -261,12 +277,33 @@ Plecs {
         KeepBaseline  off
         BaselineValue 0
       }
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
       Fourier {
         SingleXAxis       on
         AxisLabel         "Frequency / Hz"
         Scaling           0
         PhaseDisplay      0
         ShowFourierLegend off
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
         Axis {
           Name          ""
           AutoScale     1
@@ -664,7 +701,7 @@ Plecs {
       Frame         [-55, -10; 55, 10]
       Parameter {
         Variable      "Value"
-        Value         "[Umd Umq]"
+        Value         "[u_md u_mq]"
         Show          off
       }
       Parameter {
@@ -677,13 +714,13 @@ Plecs {
       Type          SignalDemux
       Name          "Demux1"
       Show          off
-      Position      [330, 150]
+      Position      [530, 115]
       Direction     right
       Flipped       on
       LabelPosition south
       Parameter {
         Variable      "Width"
-        Value         "[3 3]"
+        Value         "[3 3 3]"
         Show          off
       }
     }
@@ -711,7 +748,7 @@ Plecs {
       LabelPosition east
       Parameter {
         Variable      "Tag"
-        Value         "tag"
+        Value         "u_md"
         Show          off
       }
       Parameter {
@@ -735,7 +772,7 @@ Plecs {
       LabelPosition east
       Parameter {
         Variable      "Tag"
-        Value         "tag1"
+        Value         "u_mq"
         Show          off
       }
       Parameter {
@@ -856,13 +893,6 @@ Plecs {
       SrcTerminal   6
       DstComponent  "V_3ph"
       DstTerminal   3
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "RRF->3ph"
-      SrcTerminal   2
-      DstComponent  "Goto"
-      DstTerminal   1
     }
     Connection {
       Type          Signal
@@ -996,6 +1026,20 @@ Plecs {
       SrcTerminal   3
       Points        [485, 480]
       DstComponent  "Goto5"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Demux1"
+      SrcTerminal   4
+      DstComponent  "Scope"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "RRF->3ph"
+      SrcTerminal   2
+      DstComponent  "Goto"
       DstTerminal   1
     }
   }
