@@ -28,7 +28,8 @@ Plecs {
   AlgebraicLoopWithStateMachineMsg "3"
   AssertionAction "1"
   FixedPointDatatypeOverride "1"
-  InitializationCommands ""
+  InitializationCommands "f = 50\nL = 1e-3\nR = 1\niql = 0\nidl = 20\n\nUmd = "
+"-2*pi*f*iql + R*idl + 220*sqrt(2)\nUmq = 2*pi*f*idl + R*iql + 0"
   InitialState  "1"
   SystemState   ""
   TaskingMode   "1"
@@ -53,7 +54,7 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [0, 23; 1920, 989]
+    Location      [1, 31; 959, 988]
     ZoomFactor    1.30957
     SliderPosition [0, 0]
     ShowBrowser   off
@@ -97,7 +98,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "R"
-        Value         "1"
+        Value         "R"
         Show          off
       }
     }
@@ -111,7 +112,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "R"
-        Value         "1"
+        Value         "R"
         Show          off
       }
     }
@@ -125,7 +126,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "R"
-        Value         "1"
+        Value         "R"
         Show          off
       }
     }
@@ -206,29 +207,30 @@ Plecs {
       Probe {
         Component     "3ph Meter"
         Path          ""
-        Signals       {"Measured voltage"}
+        Signals       {"Measured voltage", "Measured current"}
       }
     }
     Component {
       Type          Scope
       Name          "Scope"
       Show          on
-      Position      [355, 150]
+      Position      [400, 150]
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 23; 1920, 1011]
+      Location      [0, 27; 1920, 1042]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"G0AQQByAGUAYQAAAAAA/////wAAAF4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPBAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPcAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":136,\"Labels\":[],"
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":223,\"Labels\":[],"
 "\"VisualIdxs\":[]}"
-      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-      Axes          "1"
+      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
+"AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+      Axes          "2"
       TimeRange     "0.0"
       ScrollingMode "1"
       SingleTimeAxis "1"
@@ -248,12 +250,33 @@ Plecs {
         KeepBaseline  off
         BaselineValue 0
       }
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
       Fourier {
         SingleXAxis       on
         AxisLabel         "Frequency / Hz"
         Scaling           0
         PhaseDisplay      0
         ShowFourierLegend off
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
         Axis {
           Name          ""
           AutoScale     1
@@ -463,7 +486,7 @@ Plecs {
       LabelPosition north
       Parameter {
         Variable      "L"
-        Value         "0.001"
+        Value         "L"
         Show          off
       }
       Parameter {
@@ -482,7 +505,7 @@ Plecs {
       LabelPosition north
       Parameter {
         Variable      "L"
-        Value         "0.001"
+        Value         "L"
         Show          off
       }
       Parameter {
@@ -501,7 +524,7 @@ Plecs {
       LabelPosition north
       Parameter {
         Variable      "L"
-        Value         "0.001"
+        Value         "L"
         Show          off
       }
       Parameter {
@@ -634,19 +657,95 @@ Plecs {
       Type          Constant
       Name          "Constant"
       Show          off
-      Position      [405, 515]
+      Position      [380, 515]
       Direction     right
       Flipped       off
       LabelPosition south
-      Frame         [-30, -10; 30, 10]
+      Frame         [-55, -10; 55, 10]
       Parameter {
         Variable      "Value"
-        Value         "[1 0]"
+        Value         "[Umd Umq]"
         Show          off
       }
       Parameter {
         Variable      "DataType"
         Value         "10"
+        Show          off
+      }
+    }
+    Component {
+      Type          SignalDemux
+      Name          "Demux1"
+      Show          off
+      Position      [330, 150]
+      Direction     right
+      Flipped       on
+      LabelPosition south
+      Parameter {
+        Variable      "Width"
+        Value         "[3 3]"
+        Show          off
+      }
+    }
+    Component {
+      Type          SignalDemux
+      Name          "Demux2"
+      Show          off
+      Position      [460, 485]
+      Direction     up
+      Flipped       on
+      LabelPosition east
+      Parameter {
+        Variable      "Width"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          Goto
+      Name          "Goto4"
+      Show          off
+      Position      [435, 455]
+      Direction     up
+      Flipped       off
+      LabelPosition east
+      Parameter {
+        Variable      "Tag"
+        Value         "tag"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          Goto
+      Name          "Goto5"
+      Show          off
+      Position      [485, 455]
+      Direction     up
+      Flipped       off
+      LabelPosition east
+      Parameter {
+        Variable      "Tag"
+        Value         "tag1"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "2"
         Show          off
       }
     }
@@ -760,13 +859,6 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Probe"
-      SrcTerminal   1
-      DstComponent  "Scope"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Signal
       SrcComponent  "RRF->3ph"
       SrcTerminal   2
       DstComponent  "Goto"
@@ -857,9 +949,53 @@ Plecs {
     }
     Connection {
       Type          Signal
+      SrcComponent  "Probe"
+      SrcTerminal   1
+      DstComponent  "Demux1"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Demux1"
+      SrcTerminal   2
+      DstComponent  "Scope"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Demux1"
+      SrcTerminal   3
+      DstComponent  "Scope"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
       SrcComponent  "Constant"
       SrcTerminal   1
-      DstComponent  "RRF->3ph"
+      Points        [460, 515]
+      Branch {
+        DstComponent  "RRF->3ph"
+        DstTerminal   1
+      }
+      Branch {
+        DstComponent  "Demux2"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Demux2"
+      SrcTerminal   2
+      Points        [435, 480]
+      DstComponent  "Goto4"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Demux2"
+      SrcTerminal   3
+      Points        [485, 480]
+      DstComponent  "Goto5"
       DstTerminal   1
     }
   }
