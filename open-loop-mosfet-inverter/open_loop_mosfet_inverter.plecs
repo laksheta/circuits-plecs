@@ -54,8 +54,8 @@ Plecs {
   ScriptsDialogSplitterPos "0"
   Schematic {
     Location      [0, 23; 1920, 989]
-    ZoomFactor    1.96257
-    SliderPosition [0, 12]
+    ZoomFactor    2.2459
+    SliderPosition [19, 0]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -266,13 +266,13 @@ Plecs {
       Type          From
       Name          "From"
       Show          off
-      Position      [280, 250]
-      Direction     right
+      Position      [285, 240]
+      Direction     down
       Flipped       off
-      LabelPosition south
+      LabelPosition west
       Parameter {
         Variable      "Tag"
-        Value         "tag"
+        Value         "PWM_a"
         Show          off
       }
       Parameter {
@@ -290,13 +290,13 @@ Plecs {
       Type          From
       Name          "From1"
       Show          off
-      Position      [280, 350]
-      Direction     right
+      Position      [285, 340]
+      Direction     down
       Flipped       off
-      LabelPosition south
+      LabelPosition west
       Parameter {
         Variable      "Tag"
-        Value         "tag"
+        Value         "PWM_a'"
         Show          off
       }
       Parameter {
@@ -314,13 +314,13 @@ Plecs {
       Type          From
       Name          "From2"
       Show          off
-      Position      [375, 350]
-      Direction     right
+      Position      [380, 340]
+      Direction     down
       Flipped       off
-      LabelPosition south
+      LabelPosition west
       Parameter {
         Variable      "Tag"
-        Value         "tag"
+        Value         "PWM_b'"
         Show          off
       }
       Parameter {
@@ -338,13 +338,13 @@ Plecs {
       Type          From
       Name          "From3"
       Show          off
-      Position      [375, 250]
-      Direction     right
+      Position      [380, 240]
+      Direction     down
       Flipped       off
-      LabelPosition south
+      LabelPosition west
       Parameter {
         Variable      "Tag"
-        Value         "tag"
+        Value         "PWM_b"
         Show          off
       }
       Parameter {
@@ -362,13 +362,13 @@ Plecs {
       Type          From
       Name          "From4"
       Show          off
-      Position      [470, 250]
-      Direction     right
+      Position      [470, 240]
+      Direction     down
       Flipped       off
-      LabelPosition south
+      LabelPosition west
       Parameter {
         Variable      "Tag"
-        Value         "tag"
+        Value         "PWM_c"
         Show          off
       }
       Parameter {
@@ -386,13 +386,13 @@ Plecs {
       Type          From
       Name          "From5"
       Show          off
-      Position      [470, 350]
-      Direction     right
+      Position      [470, 340]
+      Direction     down
       Flipped       off
-      LabelPosition south
+      LabelPosition west
       Parameter {
         Variable      "Tag"
-        Value         "tag"
+        Value         "PWM_c'"
         Show          off
       }
       Parameter {
@@ -487,7 +487,7 @@ Plecs {
       SrcComponent  "Components/Control/Transformations/RRF->3ph"
       Name          "RRF->3ph"
       Show          on
-      Position      [420, 90]
+      Position      [390, 65]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -560,7 +560,7 @@ Plecs {
       Type          From
       Name          "From7"
       Show          off
-      Position      [380, 115]
+      Position      [350, 90]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1209,6 +1209,212 @@ Plecs {
         }
       }
     }
+    Component {
+      Type          Constant
+      Name          "Constant"
+      Show          on
+      Position      [460, 115]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Frame         [-20, -10; 20, 10]
+      Parameter {
+        Variable      "Value"
+        Value         "Vln"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
+      }
+    }
+    Component {
+      Type          SignalDemux
+      Name          "Demux"
+      Show          off
+      Position      [630, 70]
+      Direction     right
+      Flipped       on
+      LabelPosition south
+      Parameter {
+        Variable      "Width"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          SignalDemux
+      Name          "Demux1"
+      Show          off
+      Position      [630, 90]
+      Direction     right
+      Flipped       on
+      LabelPosition south
+      Parameter {
+        Variable      "Width"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          SignalDemux
+      Name          "Demux2"
+      Show          off
+      Position      [630, 105]
+      Direction     right
+      Flipped       on
+      LabelPosition south
+      Parameter {
+        Variable      "Width"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          Goto
+      Name          "Goto3"
+      Show          off
+      Position      [675, 65]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "PWM_a"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          Goto
+      Name          "Goto4"
+      Show          off
+      Position      [675, 75]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "PWM_a'"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          Goto
+      Name          "Goto5"
+      Show          off
+      Position      [675, 85]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "PWM_b"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          Goto
+      Name          "Goto6"
+      Show          off
+      Position      [675, 95]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "PWM_b'"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          Goto
+      Name          "Goto7"
+      Show          off
+      Position      [675, 105]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "PWM_c"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          Goto
+      Name          "Goto8"
+      Show          off
+      Position      [675, 115]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "PWM_c'"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "2"
+        Show          off
+      }
+    }
     Connection {
       Type          Wire
       SrcComponent  "FETD2"
@@ -1272,6 +1478,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From2"
       SrcTerminal   1
+      Points        [380, 350]
       DstComponent  "FETD3"
       DstTerminal   3
     }
@@ -1279,6 +1486,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From3"
       SrcTerminal   1
+      Points        [380, 250]
       DstComponent  "FETD2"
       DstTerminal   3
     }
@@ -1286,6 +1494,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From4"
       SrcTerminal   1
+      Points        [470, 250]
       DstComponent  "FETD4"
       DstTerminal   3
     }
@@ -1293,6 +1502,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From5"
       SrcTerminal   1
+      Points        [470, 350]
       DstComponent  "FETD5"
       DstTerminal   3
     }
@@ -1314,7 +1524,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From7"
       SrcTerminal   1
-      Points        [390, 115]
+      Points        [360, 90]
       DstComponent  "RRF->3ph"
       DstTerminal   3
     }
@@ -1473,8 +1683,83 @@ Plecs {
       Type          Signal
       SrcComponent  "RRF->3ph"
       SrcTerminal   2
-      Points        [480, 90; 480, 80]
+      Points        [480, 65; 480, 80]
       DstComponent  "SPWM"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Constant"
+      SrcTerminal   1
+      Points        [485, 100]
+      DstComponent  "SPWM"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "SPWM"
+      SrcTerminal   3
+      Points        [610, 80]
+      DstComponent  "Demux"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "SPWM"
+      SrcTerminal   4
+      DstComponent  "Demux1"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "SPWM"
+      SrcTerminal   5
+      Points        [610, 100]
+      DstComponent  "Demux2"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Demux"
+      SrcTerminal   2
+      DstComponent  "Goto3"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Demux"
+      SrcTerminal   3
+      DstComponent  "Goto4"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Demux1"
+      SrcTerminal   2
+      DstComponent  "Goto5"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Demux1"
+      SrcTerminal   3
+      DstComponent  "Goto6"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Demux2"
+      SrcTerminal   2
+      Points        [650, 100; 650, 105]
+      DstComponent  "Goto7"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Demux2"
+      SrcTerminal   3
+      Points        [645, 110; 645, 115]
+      DstComponent  "Goto8"
       DstTerminal   1
     }
   }
