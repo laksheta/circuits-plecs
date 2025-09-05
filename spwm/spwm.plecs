@@ -920,7 +920,7 @@ Plecs {
           Type          Product
           Name          "Divide"
           Show          off
-          Position      [175, 85]
+          Position      [170, 110]
           Direction     up
           Flipped       off
           LabelPosition south
@@ -949,7 +949,7 @@ Plecs {
           Type          SignalDemux
           Name          "Demux"
           Show          off
-          Position      [230, 85]
+          Position      [225, 110]
           Direction     right
           Flipped       on
           LabelPosition south
@@ -963,7 +963,7 @@ Plecs {
           Type          LogicalOperator
           Name          "Logical\nOperator"
           Show          off
-          Position      [360, 60]
+          Position      [435, 75]
           Direction     up
           Flipped       off
           LabelPosition south
@@ -982,7 +982,7 @@ Plecs {
           Type          LogicalOperator
           Name          "Logical\nOperator1"
           Show          off
-          Position      [360, 110]
+          Position      [435, 125]
           Direction     up
           Flipped       off
           LabelPosition south
@@ -1001,7 +1001,7 @@ Plecs {
           Type          LogicalOperator
           Name          "Logical\nOperator2"
           Show          off
-          Position      [360, 150]
+          Position      [435, 165]
           Direction     up
           Flipped       off
           LabelPosition south
@@ -1020,7 +1020,7 @@ Plecs {
           Type          Output
           Name          "PWM_a"
           Show          on
-          Position      [480, 55]
+          Position      [555, 70]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -1039,7 +1039,7 @@ Plecs {
           Type          Output
           Name          "PWM_b"
           Show          on
-          Position      [480, 105]
+          Position      [555, 120]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -1058,7 +1058,7 @@ Plecs {
           Type          Output
           Name          "PWM_c"
           Show          on
-          Position      [480, 145]
+          Position      [555, 160]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -1077,7 +1077,7 @@ Plecs {
           Type          SignalMux
           Name          "Mux"
           Show          off
-          Position      [440, 55]
+          Position      [515, 70]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -1091,7 +1091,7 @@ Plecs {
           Type          SignalMux
           Name          "Mux1"
           Show          off
-          Position      [440, 105]
+          Position      [515, 120]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -1105,7 +1105,7 @@ Plecs {
           Type          SignalMux
           Name          "Mux2"
           Show          off
-          Position      [440, 145]
+          Position      [515, 160]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -1115,10 +1115,120 @@ Plecs {
             Show          off
           }
         }
+        Component {
+          Type          Comparator
+          Name          "Comparator"
+          Show          off
+          Position      [315, 75]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+        }
+        Component {
+          Type          Comparator
+          Name          "Comparator1"
+          Show          off
+          Position      [315, 125]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+        }
+        Component {
+          Type          Comparator
+          Name          "Comparator2"
+          Show          off
+          Position      [315, 165]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+        }
+        Component {
+          Type          TriangleGenerator
+          Name          "Triangular Wave"
+          Show          on
+          Position      [80, 210]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Min"
+            Value         "-1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Max"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "f"
+            Value         "fsw"
+            Show          off
+          }
+          Parameter {
+            Variable      "DutyCycle"
+            Value         "0.5"
+            Show          off
+          }
+          Parameter {
+            Variable      "Delay"
+            Value         "0"
+            Show          off
+          }
+        }
+        Component {
+          Type          Goto
+          Name          "Goto2"
+          Show          off
+          Position      [140, 210]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Tag"
+            Value         "ref"
+            Show          off
+          }
+          Parameter {
+            Variable      "Visibility"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "NoMatchingCounterpartAction"
+            Value         "2"
+            Show          off
+          }
+        }
+        Component {
+          Type          From
+          Name          "From"
+          Show          off
+          Position      [240, 185]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Tag"
+            Value         "ref"
+            Show          off
+          }
+          Parameter {
+            Variable      "Visibility"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "NoMatchingCounterpartAction"
+            Value         "1"
+            Show          off
+          }
+        }
         Connection {
           Type          Signal
           SrcComponent  "Vabc"
           SrcTerminal   1
+          Points        [125, 80; 125, 105]
           DstComponent  "Divide"
           DstTerminal   2
         }
@@ -1126,7 +1236,7 @@ Plecs {
           Type          Signal
           SrcComponent  "amp"
           SrcTerminal   1
-          Points        [125, 135; 125, 90]
+          Points        [125, 135; 125, 115]
           DstComponent  "Divide"
           DstTerminal   3
         }
@@ -1167,41 +1277,10 @@ Plecs {
         }
         Connection {
           Type          Signal
-          SrcComponent  "Demux"
-          SrcTerminal   2
-          Points        [285, 75; 285, 60]
-          Branch {
-            DstComponent  "Logical\nOperator"
-            DstTerminal   2
-          }
-          Branch {
-            Points        [285, 45; 420, 45; 420, 50]
-            DstComponent  "Mux"
-            DstTerminal   2
-          }
-        }
-        Connection {
-          Type          Signal
           SrcComponent  "Logical\nOperator1"
           SrcTerminal   1
           DstComponent  "Mux1"
           DstTerminal   3
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "Demux"
-          SrcTerminal   3
-          Points        [285, 85; 285, 95]
-          Branch {
-            Points        [285, 110]
-            DstComponent  "Logical\nOperator1"
-            DstTerminal   2
-          }
-          Branch {
-            Points        [420, 95; 420, 100]
-            DstComponent  "Mux1"
-            DstTerminal   2
-          }
         }
         Connection {
           Type          Signal
@@ -1212,19 +1291,101 @@ Plecs {
         }
         Connection {
           Type          Signal
-          SrcComponent  "Demux"
-          SrcTerminal   4
-          Points        [265, 95; 265, 130]
+          SrcComponent  "Comparator"
+          SrcTerminal   3
+          Points        [355, 75]
           Branch {
-            Points        [265, 150]
+            DstComponent  "Logical\nOperator"
+            DstTerminal   2
+          }
+          Branch {
+            Points        [355, 60; 495, 60; 495, 65]
+            DstComponent  "Mux"
+            DstTerminal   2
+          }
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Comparator1"
+          SrcTerminal   3
+          Points        [360, 125]
+          Branch {
+            DstComponent  "Logical\nOperator1"
+            DstTerminal   2
+          }
+          Branch {
+            Points        [360, 110; 495, 110; 495, 115]
+            DstComponent  "Mux1"
+            DstTerminal   2
+          }
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Comparator2"
+          SrcTerminal   3
+          Points        [340, 165]
+          Branch {
             DstComponent  "Logical\nOperator2"
             DstTerminal   2
           }
           Branch {
-            Points        [425, 130]
+            Points        [340, 145; 500, 145]
             DstComponent  "Mux2"
             DstTerminal   2
           }
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Triangular Wave"
+          SrcTerminal   1
+          DstComponent  "Goto2"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "From"
+          SrcTerminal   1
+          Points        [270, 185; 270, 170]
+          Branch {
+            DstComponent  "Comparator2"
+            DstTerminal   2
+          }
+          Branch {
+            Points        [270, 130]
+            Branch {
+              DstComponent  "Comparator1"
+              DstTerminal   2
+            }
+            Branch {
+              Points        [270, 80]
+              DstComponent  "Comparator"
+              DstTerminal   2
+            }
+          }
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Demux"
+          SrcTerminal   2
+          Points        [260, 100; 260, 70]
+          DstComponent  "Comparator"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Demux"
+          SrcTerminal   3
+          Points        [260, 110; 260, 120]
+          DstComponent  "Comparator1"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Demux"
+          SrcTerminal   4
+          Points        [255, 120; 255, 160]
+          DstComponent  "Comparator2"
+          DstTerminal   1
         }
       }
     }
