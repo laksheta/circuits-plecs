@@ -55,8 +55,8 @@ Plecs {
   ScriptsDialogSplitterPos "0"
   Schematic {
     Location      [0, 23; 1920, 989]
-    ZoomFactor    2.94117
-    SliderPosition [-1, 311]
+    ZoomFactor    2.2459
+    SliderPosition [0, 0]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -835,7 +835,7 @@ Plecs {
       Type          Subsystem
       Name          "SPWM"
       Show          on
-      Position      [285, 285]
+      Position      [305, 310]
       Direction     up
       Flipped       off
       LabelPosition south
