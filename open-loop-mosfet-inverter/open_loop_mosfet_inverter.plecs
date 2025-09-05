@@ -28,7 +28,8 @@ Plecs {
   AlgebraicLoopWithStateMachineMsg "3"
   AssertionAction "1"
   FixedPointDatatypeOverride "1"
-  InitializationCommands "Vln = 220*sqrt(2)"
+  InitializationCommands "Vln = 220*sqrt(2)\nph = [0 -2*pi/3 2*pi/3]\nVdc = 2*"
+"Vln\n\nfsw = 5e3"
   InitialState  "1"
   SystemState   ""
   TaskingMode   "1"
@@ -53,9 +54,9 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [0, 23; 1920, 989]
-    ZoomFactor    2.2459
-    SliderPosition [19, 0]
+    Location      [961, 31; 1919, 988]
+    ZoomFactor    1.71498
+    SliderPosition [130, 0]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -487,7 +488,7 @@ Plecs {
       SrcComponent  "Components/Control/Transformations/RRF->3ph"
       Name          "RRF->3ph"
       Show          on
-      Position      [390, 65]
+      Position      [495, 100]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -560,7 +561,7 @@ Plecs {
       Type          From
       Name          "From7"
       Show          off
-      Position      [350, 90]
+      Position      [455, 125]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -590,7 +591,7 @@ Plecs {
       LabelPosition north
       Parameter {
         Variable      "V"
-        Value         "1"
+        Value         "Vln"
         Show          off
       }
       Parameter {
@@ -600,7 +601,7 @@ Plecs {
       }
       Parameter {
         Variable      "phi"
-        Value         "0"
+        Value         "ph"
         Show          off
       }
       Parameter {
@@ -789,7 +790,7 @@ Plecs {
       LabelPosition east
       Parameter {
         Variable      "V"
-        Value         "1"
+        Value         "Vdc"
         Show          off
       }
     }
@@ -816,7 +817,7 @@ Plecs {
       Type          Subsystem
       Name          "SPWM"
       Show          on
-      Position      [550, 90]
+      Position      [655, 125]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1212,8 +1213,8 @@ Plecs {
     Component {
       Type          Constant
       Name          "Constant"
-      Show          on
-      Position      [460, 115]
+      Show          off
+      Position      [565, 150]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1233,7 +1234,7 @@ Plecs {
       Type          SignalDemux
       Name          "Demux"
       Show          off
-      Position      [630, 70]
+      Position      [735, 105]
       Direction     right
       Flipped       on
       LabelPosition south
@@ -1247,7 +1248,7 @@ Plecs {
       Type          SignalDemux
       Name          "Demux1"
       Show          off
-      Position      [630, 90]
+      Position      [735, 125]
       Direction     right
       Flipped       on
       LabelPosition south
@@ -1261,7 +1262,7 @@ Plecs {
       Type          SignalDemux
       Name          "Demux2"
       Show          off
-      Position      [630, 105]
+      Position      [735, 140]
       Direction     right
       Flipped       on
       LabelPosition south
@@ -1275,7 +1276,7 @@ Plecs {
       Type          Goto
       Name          "Goto3"
       Show          off
-      Position      [675, 65]
+      Position      [780, 100]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1299,7 +1300,7 @@ Plecs {
       Type          Goto
       Name          "Goto4"
       Show          off
-      Position      [675, 75]
+      Position      [780, 110]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1323,7 +1324,7 @@ Plecs {
       Type          Goto
       Name          "Goto5"
       Show          off
-      Position      [675, 85]
+      Position      [780, 120]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1347,7 +1348,7 @@ Plecs {
       Type          Goto
       Name          "Goto6"
       Show          off
-      Position      [675, 95]
+      Position      [780, 130]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1371,7 +1372,7 @@ Plecs {
       Type          Goto
       Name          "Goto7"
       Show          off
-      Position      [675, 105]
+      Position      [780, 140]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1395,7 +1396,7 @@ Plecs {
       Type          Goto
       Name          "Goto8"
       Show          off
-      Position      [675, 115]
+      Position      [780, 150]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1524,7 +1525,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From7"
       SrcTerminal   1
-      Points        [360, 90]
+      Points        [465, 125]
       DstComponent  "RRF->3ph"
       DstTerminal   3
     }
@@ -1683,7 +1684,7 @@ Plecs {
       Type          Signal
       SrcComponent  "RRF->3ph"
       SrcTerminal   2
-      Points        [480, 65; 480, 80]
+      Points        [585, 100; 585, 115]
       DstComponent  "SPWM"
       DstTerminal   1
     }
@@ -1691,7 +1692,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Constant"
       SrcTerminal   1
-      Points        [485, 100]
+      Points        [590, 135]
       DstComponent  "SPWM"
       DstTerminal   2
     }
@@ -1699,7 +1700,7 @@ Plecs {
       Type          Signal
       SrcComponent  "SPWM"
       SrcTerminal   3
-      Points        [610, 80]
+      Points        [715, 115]
       DstComponent  "Demux"
       DstTerminal   1
     }
@@ -1714,7 +1715,7 @@ Plecs {
       Type          Signal
       SrcComponent  "SPWM"
       SrcTerminal   5
-      Points        [610, 100]
+      Points        [715, 135]
       DstComponent  "Demux2"
       DstTerminal   1
     }
@@ -1750,7 +1751,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Demux2"
       SrcTerminal   2
-      Points        [650, 100; 650, 105]
+      Points        [755, 135; 755, 140]
       DstComponent  "Goto7"
       DstTerminal   1
     }
@@ -1758,7 +1759,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Demux2"
       SrcTerminal   3
-      Points        [645, 110; 645, 115]
+      Points        [750, 145; 750, 150]
       DstComponent  "Goto8"
       DstTerminal   1
     }
