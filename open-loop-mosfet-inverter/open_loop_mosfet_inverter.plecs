@@ -54,9 +54,9 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [961, 31; 1919, 988]
-    ZoomFactor    1.71498
-    SliderPosition [130, 0]
+    Location      [0, 23; 1920, 989]
+    ZoomFactor    2.2459
+    SliderPosition [-1, 0]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -585,7 +585,7 @@ Plecs {
       Type          ThreePhaseVoltageSource
       Name          "V_3ph"
       Show          on
-      Position      [840, 300]
+      Position      [890, 300]
       Direction     down
       Flipped       off
       LabelPosition north
@@ -614,7 +614,7 @@ Plecs {
       Type          ThreePhaseMeter
       Name          "3ph Meter"
       Show          off
-      Position      [780, 300]
+      Position      [830, 300]
       Direction     up
       Flipped       off
       LabelPosition southSoutheast
@@ -628,7 +628,7 @@ Plecs {
       Type          Ground
       Name          "Ground"
       Show          off
-      Position      [825, 335]
+      Position      [875, 335]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -637,7 +637,7 @@ Plecs {
       Type          Resistor
       Name          "R1"
       Show          off
-      Position      [605, 280]
+      Position      [655, 280]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -651,7 +651,7 @@ Plecs {
       Type          Resistor
       Name          "R2"
       Show          off
-      Position      [605, 300]
+      Position      [655, 300]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -665,7 +665,7 @@ Plecs {
       Type          Resistor
       Name          "R3"
       Show          off
-      Position      [605, 320]
+      Position      [655, 320]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -679,7 +679,7 @@ Plecs {
       Type          Inductor
       Name          "L1"
       Show          on
-      Position      [660, 280]
+      Position      [710, 280]
       Direction     left
       Flipped       off
       LabelPosition north
@@ -698,10 +698,10 @@ Plecs {
       Type          Inductor
       Name          "L2"
       Show          on
-      Position      [660, 300]
+      Position      [710, 300]
       Direction     left
       Flipped       off
-      LabelPosition north
+      LabelPosition northeast
       Parameter {
         Variable      "L"
         Value         "0.001"
@@ -717,7 +717,7 @@ Plecs {
       Type          Inductor
       Name          "L3"
       Show          on
-      Position      [660, 320]
+      Position      [710, 320]
       Direction     left
       Flipped       off
       LabelPosition north
@@ -736,7 +736,7 @@ Plecs {
       Type          Goto
       Name          "Goto"
       Show          off
-      Position      [795, 250]
+      Position      [845, 250]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -760,7 +760,7 @@ Plecs {
       Type          Goto
       Name          "Goto1"
       Show          off
-      Position      [765, 250]
+      Position      [815, 250]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -1097,6 +1097,63 @@ Plecs {
             Show          off
           }
         }
+        Component {
+          Type          Scope
+          Name          "Scope"
+          Show          on
+          Position      [260, 35]
+          Direction     up
+          Flipped       off
+          LabelPosition south
+          Location      [640, 276; 990, 503]
+          State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAb"
+"wBvAG0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAA"
+"AA/////wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAA"
+"AAPwBAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAAV4AAADI"
+"AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AA"
+"AAAAAAAAA=="
+          SavedViews    "AAAAAgAAAAA="
+          HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":107,\"Labels\""
+":[],\"VisualIdxs\":[]}"
+          PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+          Axes          "1"
+          TimeRange     "0.0"
+          ScrollingMode "1"
+          SingleTimeAxis "1"
+          Open          "0"
+          Ts            "-1"
+          SampleLimit   "0"
+          XAxisLabel    "Time / s"
+          ShowLegend    "1"
+          Axis {
+            Name          ""
+            AutoScale     1
+            MinValue      0
+            MaxValue      1
+            Signals       {}
+            SignalTypes   [ ]
+            Untangle      0
+            KeepBaseline  off
+            BaselineValue 0
+          }
+          Fourier {
+            SingleXAxis       on
+            AxisLabel         "Frequency / Hz"
+            Scaling           0
+            PhaseDisplay      0
+            ShowFourierLegend off
+            Axis {
+              Name          ""
+              AutoScale     1
+              MinValue      0
+              MaxValue      1
+              Signals       {}
+              Untangle      0
+              KeepBaseline  off
+              BaselineValue 0
+            }
+          }
+        }
         Connection {
           Type          Signal
           SrcComponent  "Vabc"
@@ -1111,13 +1168,6 @@ Plecs {
           Points        [125, 135; 125, 90]
           DstComponent  "Divide"
           DstTerminal   3
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "Divide"
-          SrcTerminal   1
-          DstComponent  "Demux"
-          DstTerminal   1
         }
         Connection {
           Type          Signal
@@ -1208,6 +1258,21 @@ Plecs {
             DstTerminal   2
           }
         }
+        Connection {
+          Type          Signal
+          SrcComponent  "Divide"
+          SrcTerminal   1
+          Points        [210, 85]
+          Branch {
+            DstComponent  "Demux"
+            DstTerminal   1
+          }
+          Branch {
+            Points        [210, 35]
+            DstComponent  "Scope"
+            DstTerminal   1
+          }
+        }
       }
     }
     Component {
@@ -1221,7 +1286,7 @@ Plecs {
       Frame         [-20, -10; 20, 10]
       Parameter {
         Variable      "Value"
-        Value         "Vln"
+        Value         "20"
         Show          off
       }
       Parameter {
@@ -1416,6 +1481,291 @@ Plecs {
         Show          off
       }
     }
+    Component {
+      Type          Resistor
+      Name          "R4"
+      Show          on
+      Position      [185, 220]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "R"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          ThreePhaseMeter
+      Name          "3ph Meter1"
+      Show          off
+      Position      [610, 300]
+      Direction     up
+      Flipped       off
+      LabelPosition southSoutheast
+      Parameter {
+        Variable      "voltage"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          Ground
+      Name          "Ground1"
+      Show          off
+      Position      [610, 330]
+      Direction     up
+      Flipped       off
+      LabelPosition east
+    }
+    Component {
+      Type          Scope
+      Name          "Scope"
+      Show          on
+      Position      [655, 240]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Location      [0, 27; 1920, 1042]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPcAAAA"
+"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
+"AAAAA=="
+      SavedViews    "AAAAAgAAAAA="
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":229,\"Labels\":[],"
+"\"VisualIdxs\":[]}"
+      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      Axes          "1"
+      TimeRange     "0.0"
+      ScrollingMode "1"
+      SingleTimeAxis "1"
+      Open          "0"
+      Ts            "-1"
+      SampleLimit   "0"
+      XAxisLabel    "Time / s"
+      ShowLegend    "1"
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Fourier {
+        SingleXAxis       on
+        AxisLabel         "Frequency / Hz"
+        Scaling           0
+        PhaseDisplay      0
+        ShowFourierLegend off
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+      }
+    }
+    Component {
+      Type          Constant
+      Name          "Constant1"
+      Show          on
+      Position      [365, 75]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Frame         [-25, -10; 25, 10]
+      Parameter {
+        Variable      "Value"
+        Value         "[20 0]"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
+      }
+    }
+    Component {
+      Type          Scope
+      Name          "Scope1"
+      Show          on
+      Position      [890, 200]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Location      [0, 23; 1920, 1011]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPBAAAA"
+"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
+"AAAAA=="
+      SavedViews    "AAAAAgAAAAA="
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":223,\"Labels\":[],"
+"\"VisualIdxs\":[]}"
+      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      Axes          "1"
+      TimeRange     "0.0"
+      ScrollingMode "1"
+      SingleTimeAxis "1"
+      Open          "0"
+      Ts            "-1"
+      SampleLimit   "0"
+      XAxisLabel    "Time / s"
+      ShowLegend    "1"
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Fourier {
+        SingleXAxis       on
+        AxisLabel         "Frequency / Hz"
+        Scaling           0
+        PhaseDisplay      0
+        ShowFourierLegend off
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+      }
+    }
+    Component {
+      Type          Scope
+      Name          "Scope2"
+      Show          on
+      Position      [275, 85]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Location      [640, 276; 990, 503]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAAV4AAADIAAAA"
+"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
+"AAAAA=="
+      SavedViews    "AAAAAgAAAAA="
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":178,\"Labels\":[],"
+"\"VisualIdxs\":[]}"
+      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      Axes          "1"
+      TimeRange     "0.0"
+      ScrollingMode "1"
+      SingleTimeAxis "1"
+      Open          "0"
+      Ts            "-1"
+      SampleLimit   "0"
+      XAxisLabel    "Time / s"
+      ShowLegend    "1"
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Fourier {
+        SingleXAxis       on
+        AxisLabel         "Frequency / Hz"
+        Scaling           0
+        PhaseDisplay      0
+        ShowFourierLegend off
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+      }
+    }
+    Component {
+      Type          Scope
+      Name          "Scope3"
+      Show          on
+      Position      [610, 60]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Location      [0, 27; 1920, 1024]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPKAAAA"
+"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
+"AAAAA=="
+      SavedViews    "AAAAAgAAAAA="
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":127,\"Labels\":[],"
+"\"VisualIdxs\":[]}"
+      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      Axes          "1"
+      TimeRange     "0.0"
+      ScrollingMode "1"
+      SingleTimeAxis "1"
+      Open          "0"
+      Ts            "-1"
+      SampleLimit   "0"
+      XAxisLabel    "Time / s"
+      ShowLegend    "1"
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Fourier {
+        SingleXAxis       on
+        AxisLabel         "Frequency / Hz"
+        Scaling           0
+        PhaseDisplay      0
+        ShowFourierLegend off
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+      }
+    }
     Connection {
       Type          Wire
       SrcComponent  "FETD2"
@@ -1430,8 +1780,7 @@ Plecs {
         Branch {
           Points        [225, 220]
           Branch {
-            Points        [145, 220]
-            DstComponent  "V_dc"
+            DstComponent  "R4"
             DstTerminal   1
           }
           Branch {
@@ -1516,13 +1865,6 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Three-Phase PLL"
-      SrcTerminal   2
-      DstComponent  "Goto2"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Signal
       SrcComponent  "From7"
       SrcTerminal   1
       Points        [465, 125]
@@ -1554,9 +1896,9 @@ Plecs {
       Type          Wire
       SrcComponent  "3ph Meter"
       SrcTerminal   9
-      Points        [825, 320]
+      Points        [875, 320]
       Branch {
-        Points        [860, 320]
+        Points        [910, 320]
         DstComponent  "V_3ph"
         DstTerminal   4
       }
@@ -1576,7 +1918,7 @@ Plecs {
       Type          Wire
       SrcComponent  "L1"
       SrcTerminal   2
-      Points        [700, 280; 700, 290]
+      Points        [750, 280; 750, 290]
       DstComponent  "3ph Meter"
       DstTerminal   1
     }
@@ -1605,23 +1947,15 @@ Plecs {
       Type          Wire
       SrcComponent  "L3"
       SrcTerminal   2
-      Points        [700, 320; 700, 310]
+      Points        [750, 320; 750, 310]
       DstComponent  "3ph Meter"
       DstTerminal   3
     }
     Connection {
       Type          Signal
       SrcComponent  "3ph Meter"
-      SrcTerminal   7
-      Points        [775, 275; 765, 275]
-      DstComponent  "Goto1"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "3ph Meter"
       SrcTerminal   8
-      Points        [785, 275; 795, 275]
+      Points        [835, 275; 845, 275]
       DstComponent  "Goto"
       DstTerminal   1
     }
@@ -1629,42 +1963,14 @@ Plecs {
       Type          Wire
       SrcComponent  "FETD"
       SrcTerminal   2
-      Points        [320, 280]
+      Points        [320, 290]
       Branch {
         DstComponent  "FETD1"
         DstTerminal   1
       }
       Branch {
-        DstComponent  "R1"
-        DstTerminal   2
-      }
-    }
-    Connection {
-      Type          Wire
-      SrcComponent  "FETD2"
-      SrcTerminal   2
-      Points        [420, 300]
-      Branch {
-        DstComponent  "FETD3"
+        DstComponent  "3ph Meter1"
         DstTerminal   1
-      }
-      Branch {
-        DstComponent  "R2"
-        DstTerminal   2
-      }
-    }
-    Connection {
-      Type          Wire
-      SrcComponent  "FETD4"
-      SrcTerminal   2
-      Points        [510, 320]
-      Branch {
-        DstComponent  "FETD5"
-        DstTerminal   1
-      }
-      Branch {
-        DstComponent  "R3"
-        DstTerminal   2
       }
     }
     Connection {
@@ -1679,14 +1985,6 @@ Plecs {
         DstComponent  "C1"
         DstTerminal   2
       }
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "RRF->3ph"
-      SrcTerminal   2
-      Points        [585, 100; 585, 115]
-      DstComponent  "SPWM"
-      DstTerminal   1
     }
     Connection {
       Type          Signal
@@ -1762,6 +2060,135 @@ Plecs {
       Points        [750, 145; 750, 150]
       DstComponent  "Goto8"
       DstTerminal   1
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "V_dc"
+      SrcTerminal   1
+      Points        [145, 220]
+      DstComponent  "R4"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "R1"
+      SrcTerminal   2
+      Points        [625, 280]
+      DstComponent  "3ph Meter1"
+      DstTerminal   4
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "3ph Meter1"
+      SrcTerminal   5
+      DstComponent  "R2"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "R3"
+      SrcTerminal   2
+      Points        [625, 320]
+      DstComponent  "3ph Meter1"
+      DstTerminal   6
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "FETD2"
+      SrcTerminal   2
+      Points        [420, 300]
+      Branch {
+        DstComponent  "FETD3"
+        DstTerminal   1
+      }
+      Branch {
+        DstComponent  "3ph Meter1"
+        DstTerminal   2
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "FETD4"
+      SrcTerminal   2
+      Points        [510, 310]
+      Branch {
+        DstComponent  "FETD5"
+        DstTerminal   1
+      }
+      Branch {
+        DstComponent  "3ph Meter1"
+        DstTerminal   3
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "Ground1"
+      SrcTerminal   1
+      DstComponent  "3ph Meter1"
+      DstTerminal   9
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "3ph Meter1"
+      SrcTerminal   7
+      Points        [605, 240]
+      DstComponent  "Scope"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Constant1"
+      SrcTerminal   1
+      Points        [430, 75; 430, 95]
+      DstComponent  "RRF->3ph"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "3ph Meter"
+      SrcTerminal   7
+      Points        [825, 275]
+      Branch {
+        Points        [815, 275]
+        DstComponent  "Goto1"
+        DstTerminal   1
+      }
+      Branch {
+        Points        [825, 200]
+        DstComponent  "Scope1"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Three-Phase PLL"
+      SrcTerminal   2
+      Points        [205, 125]
+      Branch {
+        DstComponent  "Goto2"
+        DstTerminal   1
+      }
+      Branch {
+        Points        [205, 85]
+        DstComponent  "Scope2"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "RRF->3ph"
+      SrcTerminal   2
+      Points        [540, 100]
+      Branch {
+        Points        [585, 100; 585, 115]
+        DstComponent  "SPWM"
+        DstTerminal   1
+      }
+      Branch {
+        Points        [540, 60]
+        DstComponent  "Scope3"
+        DstTerminal   1
+      }
     }
   }
 }
