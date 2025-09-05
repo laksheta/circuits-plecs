@@ -55,8 +55,8 @@ Plecs {
   ScriptsDialogSplitterPos "0"
   Schematic {
     Location      [0, 23; 1920, 989]
-    ZoomFactor    1.71498
-    SliderPosition [0, 0]
+    ZoomFactor    2.94117
+    SliderPosition [-1, 311]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -716,7 +716,7 @@ Plecs {
       Type          Scope
       Name          "Scope2"
       Show          on
-      Position      [670, 170]
+      Position      [645, 25]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -773,7 +773,7 @@ Plecs {
       Type          SignalMux
       Name          "Mux1"
       Show          off
-      Position      [620, 170]
+      Position      [595, 25]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -787,7 +787,7 @@ Plecs {
       Type          From
       Name          "From9"
       Show          off
-      Position      [585, 190]
+      Position      [560, 45]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -811,7 +811,7 @@ Plecs {
       Type          From
       Name          "From10"
       Show          off
-      Position      [585, 165]
+      Position      [560, 20]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -829,6 +829,403 @@ Plecs {
         Variable      "NoMatchingCounterpartAction"
         Value         "1"
         Show          off
+      }
+    }
+    Component {
+      Type          Subsystem
+      Name          "SPWM"
+      Show          on
+      Position      [285, 285]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Frame         [-40, -15; 40, 15]
+      SampleTime    "-1"
+      CodeGenDiscretizationMethod "2"
+      CodeGenTarget "Generic"
+      MaskDisplayLang "2"
+      MaskIconFrame on
+      MaskIconOpaque off
+      MaskIconRotates on
+      Terminal {
+        Type          Input
+        Position      [-40, -10]
+        Direction     left
+      }
+      Terminal {
+        Type          Input
+        Position      [-40, 10]
+        Direction     left
+      }
+      Terminal {
+        Type          Output
+        Position      [44, -10]
+        Direction     right
+      }
+      Terminal {
+        Type          Output
+        Position      [44, 0]
+        Direction     right
+      }
+      Terminal {
+        Type          Output
+        Position      [44, 10]
+        Direction     right
+      }
+      Schematic {
+        Location      [0, 27; 1920, 993]
+        ZoomFactor    2.94117
+        SliderPosition [0, 0]
+        ShowBrowser   off
+        BrowserWidth  100
+        Component {
+          Type          Input
+          Name          "Vabc"
+          Show          on
+          Position      [60, 80]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Index"
+            Value         "1"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Input
+          Name          "amp"
+          Show          on
+          Position      [60, 135]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Index"
+            Value         "2"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Product
+          Name          "Divide"
+          Show          off
+          Position      [175, 85]
+          Direction     up
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "IconShape"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Inputs"
+            Value         "*/"
+            Show          off
+          }
+          Parameter {
+            Variable      "DataType"
+            Value         "11"
+            Show          off
+          }
+          Parameter {
+            Variable      "DataTypeOverflowMode"
+            Value         "1"
+            Show          off
+          }
+        }
+        Component {
+          Type          SignalDemux
+          Name          "Demux"
+          Show          off
+          Position      [230, 85]
+          Direction     right
+          Flipped       on
+          LabelPosition south
+          Parameter {
+            Variable      "Width"
+            Value         "3"
+            Show          off
+          }
+        }
+        Component {
+          Type          LogicalOperator
+          Name          "Logical\nOperator"
+          Show          off
+          Position      [360, 60]
+          Direction     up
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Operator"
+            Value         "6"
+            Show          off
+          }
+          Parameter {
+            Variable      "Inputs"
+            Value         "2"
+            Show          off
+          }
+        }
+        Component {
+          Type          LogicalOperator
+          Name          "Logical\nOperator1"
+          Show          off
+          Position      [360, 110]
+          Direction     up
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Operator"
+            Value         "6"
+            Show          off
+          }
+          Parameter {
+            Variable      "Inputs"
+            Value         "2"
+            Show          off
+          }
+        }
+        Component {
+          Type          LogicalOperator
+          Name          "Logical\nOperator2"
+          Show          off
+          Position      [360, 150]
+          Direction     up
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Operator"
+            Value         "6"
+            Show          off
+          }
+          Parameter {
+            Variable      "Inputs"
+            Value         "2"
+            Show          off
+          }
+        }
+        Component {
+          Type          Output
+          Name          "PWM_a"
+          Show          on
+          Position      [480, 55]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Index"
+            Value         "3"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Output
+          Name          "PWM_b"
+          Show          on
+          Position      [480, 105]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Index"
+            Value         "4"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Output
+          Name          "PWM_c"
+          Show          on
+          Position      [480, 145]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Index"
+            Value         "5"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          SignalMux
+          Name          "Mux"
+          Show          off
+          Position      [440, 55]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Width"
+            Value         "2"
+            Show          off
+          }
+        }
+        Component {
+          Type          SignalMux
+          Name          "Mux1"
+          Show          off
+          Position      [440, 105]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Width"
+            Value         "2"
+            Show          off
+          }
+        }
+        Component {
+          Type          SignalMux
+          Name          "Mux2"
+          Show          off
+          Position      [440, 145]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Width"
+            Value         "2"
+            Show          off
+          }
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Vabc"
+          SrcTerminal   1
+          DstComponent  "Divide"
+          DstTerminal   2
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "amp"
+          SrcTerminal   1
+          Points        [125, 135; 125, 90]
+          DstComponent  "Divide"
+          DstTerminal   3
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Divide"
+          SrcTerminal   1
+          DstComponent  "Demux"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Mux"
+          SrcTerminal   1
+          DstComponent  "PWM_a"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Mux1"
+          SrcTerminal   1
+          DstComponent  "PWM_b"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Mux2"
+          SrcTerminal   1
+          DstComponent  "PWM_c"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Logical\nOperator"
+          SrcTerminal   1
+          DstComponent  "Mux"
+          DstTerminal   3
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Demux"
+          SrcTerminal   2
+          Points        [285, 75; 285, 60]
+          Branch {
+            DstComponent  "Logical\nOperator"
+            DstTerminal   2
+          }
+          Branch {
+            Points        [285, 45; 420, 45; 420, 50]
+            DstComponent  "Mux"
+            DstTerminal   2
+          }
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Logical\nOperator1"
+          SrcTerminal   1
+          DstComponent  "Mux1"
+          DstTerminal   3
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Demux"
+          SrcTerminal   3
+          Points        [285, 85; 285, 95]
+          Branch {
+            Points        [285, 110]
+            DstComponent  "Logical\nOperator1"
+            DstTerminal   2
+          }
+          Branch {
+            Points        [420, 95; 420, 100]
+            DstComponent  "Mux1"
+            DstTerminal   2
+          }
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Logical\nOperator2"
+          SrcTerminal   1
+          DstComponent  "Mux2"
+          DstTerminal   3
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Demux"
+          SrcTerminal   4
+          Points        [265, 95; 265, 130]
+          Branch {
+            Points        [265, 150]
+            DstComponent  "Logical\nOperator2"
+            DstTerminal   2
+          }
+          Branch {
+            Points        [425, 130]
+            DstComponent  "Mux2"
+            DstTerminal   2
+          }
+        }
       }
     }
     Connection {
@@ -999,7 +1396,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From9"
       SrcTerminal   1
-      Points        [600, 190; 600, 175]
+      Points        [575, 45; 575, 30]
       DstComponent  "Mux1"
       DstTerminal   3
     }
