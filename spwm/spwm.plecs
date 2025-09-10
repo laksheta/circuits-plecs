@@ -71,17 +71,17 @@ Plecs {
       CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Min"
-        Value         "-1"
+        Value         "-amp_carrier"
         Show          off
       }
       Parameter {
         Variable      "Max"
-        Value         "1"
+        Value         "amp_carrier"
         Show          off
       }
       Parameter {
         Variable      "f"
-        Value         "fsw"
+        Value         "freq_carrier"
         Show          off
       }
       Parameter {
@@ -554,18 +554,17 @@ Plecs {
       Flipped       off
       LabelPosition south
       CommentOut    DisabledOpenCircuit
-      Location      [0, 27; 1920, 1042]
+      Location      [0, 27; 1920, 1051]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAAF4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPcAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPlAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
       HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":158,\"Labels\":[],"
 "\"VisualIdxs\":[]}"
-      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
-"AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
       Axes          "1"
       TimeRange     "0.0"
       ScrollingMode "1"
@@ -1484,7 +1483,7 @@ Plecs {
       CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "K"
-        Value         "1/Vln"
+        Value         "1/amp_ref"
         Show          off
       }
       Parameter {
