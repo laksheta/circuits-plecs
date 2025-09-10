@@ -53,8 +53,8 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [0, 27; 1920, 993]
-    ZoomFactor    1.71498
+    Location      [1, 31; 959, 988]
+    ZoomFactor    1.49863
     SliderPosition [0, 0]
     ShowBrowser   off
     BrowserWidth  100
@@ -317,7 +317,7 @@ Plecs {
     }
     Component {
       Type          Subsystem
-      Name          "abc->alpha-beta"
+      Name          "Clarke"
       Show          on
       Position      [420, 95]
       Direction     up
@@ -472,7 +472,7 @@ Plecs {
     }
     Component {
       Type          Subsystem
-      Name          "alpha-beta->abc"
+      Name          "Inverse Clarke"
       Show          on
       Position      [420, 250]
       Direction     up
@@ -1341,7 +1341,7 @@ Plecs {
       Points        [365, 125]
       Branch {
         Points        [365, 90]
-        DstComponent  "abc->alpha-beta"
+        DstComponent  "Clarke"
         DstTerminal   1
       }
       Branch {
@@ -1360,7 +1360,7 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "abc->alpha-beta"
+      SrcComponent  "Clarke"
       SrcTerminal   2
       Points        [470, 100]
       Branch {
@@ -1379,7 +1379,7 @@ Plecs {
       SrcTerminal   1
       Points        [365, 245]
       Branch {
-        DstComponent  "alpha-beta->abc"
+        DstComponent  "Inverse Clarke"
         DstTerminal   1
       }
       Branch {
@@ -1398,7 +1398,7 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "alpha-beta->abc"
+      SrcComponent  "Inverse Clarke"
       SrcTerminal   2
       Points        [470, 255; 470, 280]
       DstComponent  "Scope2"
@@ -1466,4 +1466,4 @@ Plecs {
     }
   }
 }
-DemoSignature "vNucFSxUEha4kx017Hn4X8B87MzUCi2VIszvuEf4anQ="
+DemoSignature "0bXNpf63nnwCGgBu924qaR3CCWhhe6bsCduW88RdoaM="
