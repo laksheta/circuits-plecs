@@ -28,8 +28,9 @@ Plecs {
   AlgebraicLoopWithStateMachineMsg "3"
   AssertionAction "1"
   FixedPointDatatypeOverride "1"
-  InitializationCommands "Vln = 220*sqrt(2)\nph = [0 -2*pi/3 2*pi/3]\nVdc = 2*"
-"Vln\n\nfsw = 5e3"
+  InitializationCommands "amp_ref = 220*sqrt(2)\namp_carrier = 1\n\nph = [0 -1"
+"20 120]\n\n\n\n\nfreq_carrier = 5e3\nfreq_ref     = 50\n\namp_modulation = am"
+"p_ref/amp_carrier\nfreq_modulation = freq_carrier/freq_ref"
   InitialState  "1"
   SystemState   ""
   TaskingMode   "1"
@@ -55,8 +56,8 @@ Plecs {
   ScriptsDialogSplitterPos "0"
   Schematic {
     Location      [0, 27; 1920, 993]
-    ZoomFactor    1.96257
-    SliderPosition [0, 22]
+    ZoomFactor    1.49863
+    SliderPosition [0, 0]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -1062,17 +1063,17 @@ Plecs {
           LabelPosition south
           Parameter {
             Variable      "Min"
-            Value         "-1"
+            Value         "-amp_carrier"
             Show          off
           }
           Parameter {
             Variable      "Max"
-            Value         "1"
+            Value         "amp_carrier"
             Show          off
           }
           Parameter {
             Variable      "f"
-            Value         "fsw"
+            Value         "freq_carrier"
             Show          off
           }
           Parameter {
@@ -1326,7 +1327,7 @@ Plecs {
     Component {
       Type          Constant
       Name          "Constant"
-      Show          on
+      Show          off
       Position      [100, 285]
       Direction     right
       Flipped       off
@@ -1334,7 +1335,7 @@ Plecs {
       Frame         [-25, -10; 25, 10]
       Parameter {
         Variable      "Value"
-        Value         "Vln"
+        Value         "amp_ref"
         Show          off
       }
       Parameter {
@@ -1346,16 +1347,16 @@ Plecs {
     Component {
       Type          Scope
       Name          "Scope3"
-      Show          on
+      Show          off
       Position      [335, 260]
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 27; 1920, 1069]
+      Location      [0, 27; 1920, 1078]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAP3AAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAQAAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -1424,7 +1425,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "Amplitude"
-        Value         "Vln"
+        Value         "amp_ref"
         Show          off
       }
       Parameter {
@@ -1434,7 +1435,7 @@ Plecs {
       }
       Parameter {
         Variable      "Frequency"
-        Value         "50"
+        Value         "freq_ref"
         Show          off
       }
       Parameter {
@@ -1444,7 +1445,7 @@ Plecs {
       }
       Parameter {
         Variable      "Units"
-        Value         "1"
+        Value         "3"
         Show          off
       }
     }
