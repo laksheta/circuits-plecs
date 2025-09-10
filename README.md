@@ -14,6 +14,5 @@ Each folder represents one simulation case with its own setup, circuit files, an
 
 ---
 
-## Author
-Krishna Laksheta  
-krishnalaksheta@gmail.com
+
+©kl · krishnalaksheta@gmail.com
