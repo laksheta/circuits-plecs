@@ -54,53 +54,20 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [0, 23; 1920, 989]
-    ZoomFactor    2.2459
-    SliderPosition [0, 0]
+    Location      [0, 27; 1920, 993]
+    ZoomFactor    1.96257
+    SliderPosition [0, 22]
     ShowBrowser   off
     BrowserWidth  100
-    Component {
-      Type          SineGenerator
-      Name          "Sine Wave"
-      Show          on
-      Position      [135, 130]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      Parameter {
-        Variable      "Amplitude"
-        Value         "Vln"
-        Show          off
-      }
-      Parameter {
-        Variable      "Bias"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "Frequency"
-        Value         "50"
-        Show          off
-      }
-      Parameter {
-        Variable      "Phase"
-        Value         "ph"
-        Show          off
-      }
-      Parameter {
-        Variable      "Units"
-        Value         "1"
-        Show          off
-      }
-    }
     Component {
       Type          TriangleGenerator
       Name          "Triangular Wave"
       Show          on
-      Position      [135, 215]
+      Position      [705, 465]
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Min"
         Value         "-1"
@@ -128,95 +95,14 @@ Plecs {
       }
     }
     Component {
-      Type          Gain
-      Name          "Gain"
-      Show          on
-      Position      [210, 130]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      Parameter {
-        Variable      "K"
-        Value         "1/Vln"
-        Show          off
-      }
-      Parameter {
-        Variable      "Multiplication"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "OutputDataType"
-        Value         "11"
-        Show          off
-      }
-      Parameter {
-        Variable      "DataTypeOverflowMode"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "GainDataType"
-        Value         "11"
-        Show          off
-      }
-    }
-    Component {
-      Type          Goto
-      Name          "Goto"
-      Show          off
-      Position      [170, 95]
-      Direction     up
-      Flipped       off
-      LabelPosition east
-      Parameter {
-        Variable      "Tag"
-        Value         "sine"
-        Show          off
-      }
-      Parameter {
-        Variable      "Visibility"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "2"
-        Show          off
-      }
-    }
-    Component {
-      Type          Goto
-      Name          "Goto1"
-      Show          off
-      Position      [255, 95]
-      Direction     up
-      Flipped       off
-      LabelPosition east
-      Parameter {
-        Variable      "Tag"
-        Value         "sine_norm"
-        Show          off
-      }
-      Parameter {
-        Variable      "Visibility"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "2"
-        Show          off
-      }
-    }
-    Component {
       Type          Goto
       Name          "Goto2"
       Show          off
-      Position      [195, 215]
+      Position      [765, 465]
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Tag"
         Value         "ref"
@@ -237,10 +123,11 @@ Plecs {
       Type          Scope
       Name          "Scope"
       Show          on
-      Position      [445, 30]
+      Position      [685, 140]
       Direction     up
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Location      [640, 276; 990, 521]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAF4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
@@ -316,10 +203,11 @@ Plecs {
       Type          From
       Name          "From"
       Show          off
-      Position      [390, 15]
+      Position      [630, 125]
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Tag"
         Value         "sine"
@@ -340,10 +228,11 @@ Plecs {
       Type          From
       Name          "From1"
       Show          off
-      Position      [390, 45]
+      Position      [630, 155]
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Tag"
         Value         "sine_norm"
@@ -364,10 +253,11 @@ Plecs {
       Type          SignalDemux
       Name          "Demux"
       Show          off
-      Position      [370, 130]
+      Position      [800, 215]
       Direction     right
       Flipped       on
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Width"
         Value         "3"
@@ -378,10 +268,11 @@ Plecs {
       Type          From
       Name          "From2"
       Show          off
-      Position      [340, 130]
+      Position      [770, 215]
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Tag"
         Value         "sine_norm"
@@ -402,10 +293,11 @@ Plecs {
       Type          From
       Name          "From3"
       Show          off
-      Position      [475, 250]
+      Position      [615, 235]
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Tag"
         Value         "ref"
@@ -426,10 +318,11 @@ Plecs {
       Type          Goto
       Name          "Goto3"
       Show          off
-      Position      [420, 110]
+      Position      [850, 195]
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Tag"
         Value         "norm_a"
@@ -450,10 +343,11 @@ Plecs {
       Type          Goto
       Name          "Goto4"
       Show          off
-      Position      [420, 130]
+      Position      [850, 215]
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Tag"
         Value         "norm_b"
@@ -474,10 +368,11 @@ Plecs {
       Type          Goto
       Name          "Goto5"
       Show          off
-      Position      [420, 150]
+      Position      [850, 235]
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Tag"
         Value         "norm_c"
@@ -498,19 +393,21 @@ Plecs {
       Type          Comparator
       Name          "Comparator"
       Show          off
-      Position      [525, 230]
+      Position      [665, 215]
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
     }
     Component {
       Type          From
       Name          "From4"
       Show          off
-      Position      [475, 225]
+      Position      [615, 210]
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Tag"
         Value         "norm_a"
@@ -531,10 +428,11 @@ Plecs {
       Type          From
       Name          "From5"
       Show          off
-      Position      [475, 310]
+      Position      [615, 295]
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Tag"
         Value         "ref"
@@ -555,19 +453,21 @@ Plecs {
       Type          Comparator
       Name          "Comparator1"
       Show          off
-      Position      [525, 290]
+      Position      [665, 275]
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
     }
     Component {
       Type          From
       Name          "From6"
       Show          off
-      Position      [475, 285]
+      Position      [615, 270]
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Tag"
         Value         "norm_b"
@@ -588,10 +488,11 @@ Plecs {
       Type          From
       Name          "From7"
       Show          off
-      Position      [475, 370]
+      Position      [615, 355]
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Tag"
         Value         "ref"
@@ -612,19 +513,21 @@ Plecs {
       Type          Comparator
       Name          "Comparator2"
       Show          off
-      Position      [525, 350]
+      Position      [665, 335]
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
     }
     Component {
       Type          From
       Name          "From8"
       Show          off
-      Position      [475, 345]
+      Position      [615, 330]
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Tag"
         Value         "norm_c"
@@ -645,21 +548,23 @@ Plecs {
       Type          Scope
       Name          "Scope1"
       Show          on
-      Position      [640, 290]
+      Position      [780, 275]
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 27; 1920, 1024]
+      CommentOut    DisabledOpenCircuit
+      Location      [0, 27; 1920, 1042]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"G0AQQByAGUAYQAAAAAA/////wAAAF4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPKAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPcAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":133,\"Labels\":[],"
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":158,\"Labels\":[],"
 "\"VisualIdxs\":[]}"
-      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
+"AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
       Axes          "1"
       TimeRange     "0.0"
       ScrollingMode "1"
@@ -702,10 +607,11 @@ Plecs {
       Type          SignalMux
       Name          "Mux"
       Show          off
-      Position      [595, 290]
+      Position      [735, 275]
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Width"
         Value         "3"
@@ -716,10 +622,11 @@ Plecs {
       Type          Scope
       Name          "Scope2"
       Show          on
-      Position      [645, 25]
+      Position      [840, 145]
       Direction     up
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Location      [0, 23; 1920, 1011]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
@@ -773,10 +680,11 @@ Plecs {
       Type          SignalMux
       Name          "Mux1"
       Show          off
-      Position      [595, 25]
+      Position      [790, 145]
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Width"
         Value         "2"
@@ -787,10 +695,11 @@ Plecs {
       Type          From
       Name          "From9"
       Show          off
-      Position      [560, 45]
+      Position      [755, 165]
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Tag"
         Value         "ref"
@@ -811,10 +720,11 @@ Plecs {
       Type          From
       Name          "From10"
       Show          off
-      Position      [560, 20]
+      Position      [755, 140]
       Direction     right
       Flipped       off
       LabelPosition south
+      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Tag"
         Value         "norm_a"
@@ -835,7 +745,7 @@ Plecs {
       Type          Subsystem
       Name          "SPWM"
       Show          on
-      Position      [305, 310]
+      Position      [210, 260]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1389,27 +1299,263 @@ Plecs {
         }
       }
     }
-    Connection {
-      Type          Signal
-      SrcComponent  "Sine Wave"
-      SrcTerminal   1
-      Points        [170, 130]
-      Branch {
-        DstComponent  "Gain"
-        DstTerminal   1
+    Component {
+      Type          From
+      Name          "From11"
+      Show          off
+      Position      [130, 250]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "sine"
+        Show          off
       }
-      Branch {
-        DstComponent  "Goto"
-        DstTerminal   1
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "1"
+        Show          off
       }
     }
-    Connection {
-      Type          Signal
-      SrcComponent  "Gain"
-      SrcTerminal   2
-      Points        [255, 130]
-      DstComponent  "Goto1"
-      DstTerminal   1
+    Component {
+      Type          Constant
+      Name          "Constant"
+      Show          on
+      Position      [100, 285]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Frame         [-25, -10; 25, 10]
+      Parameter {
+        Variable      "Value"
+        Value         "Vln"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
+      }
+    }
+    Component {
+      Type          Scope
+      Name          "Scope3"
+      Show          on
+      Position      [335, 260]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Location      [0, 27; 1920, 1069]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAP3AAAA"
+"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
+"AAAAA=="
+      SavedViews    "AAAAAgAAAAA="
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":158,\"Labels\":[],"
+"\"VisualIdxs\":[]}"
+      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      Axes          "1"
+      TimeRange     "0.0"
+      ScrollingMode "1"
+      SingleTimeAxis "1"
+      Open          "0"
+      Ts            "-1"
+      SampleLimit   "0"
+      XAxisLabel    "Time / s"
+      ShowLegend    "1"
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      1
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Fourier {
+        SingleXAxis       on
+        AxisLabel         "Frequency / Hz"
+        Scaling           0
+        PhaseDisplay      0
+        ShowFourierLegend off
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+      }
+    }
+    Component {
+      Type          SignalMux
+      Name          "Mux2"
+      Show          off
+      Position      [290, 260]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Width"
+        Value         "[2 2 2]"
+        Show          off
+      }
+    }
+    Component {
+      Type          SineGenerator
+      Name          "Sine Wave"
+      Show          on
+      Position      [190, 180]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Amplitude"
+        Value         "Vln"
+        Show          off
+      }
+      Parameter {
+        Variable      "Bias"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Frequency"
+        Value         "50"
+        Show          off
+      }
+      Parameter {
+        Variable      "Phase"
+        Value         "ph"
+        Show          off
+      }
+      Parameter {
+        Variable      "Units"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          Goto
+      Name          "Goto"
+      Show          off
+      Position      [250, 180]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "sine"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          Gain
+      Name          "Gain"
+      Show          on
+      Position      [735, 390]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      CommentOut    DisabledOpenCircuit
+      Parameter {
+        Variable      "K"
+        Value         "1/Vln"
+        Show          off
+      }
+      Parameter {
+        Variable      "Multiplication"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "OutputDataType"
+        Value         "11"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataTypeOverflowMode"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "GainDataType"
+        Value         "11"
+        Show          off
+      }
+    }
+    Component {
+      Type          Goto
+      Name          "Goto1"
+      Show          off
+      Position      [780, 355]
+      Direction     up
+      Flipped       off
+      LabelPosition east
+      CommentOut    DisabledOpenCircuit
+      Parameter {
+        Variable      "Tag"
+        Value         "sine_norm"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          From
+      Name          "From12"
+      Show          off
+      Position      [665, 390]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      CommentOut    DisabledOpenCircuit
+      Parameter {
+        Variable      "Tag"
+        Value         "sine"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "1"
+        Show          off
+      }
     }
     Connection {
       Type          Signal
@@ -1422,7 +1568,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From"
       SrcTerminal   1
-      Points        [410, 15; 410, 25]
+      Points        [650, 125; 650, 135]
       DstComponent  "Scope"
       DstTerminal   1
     }
@@ -1430,7 +1576,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From1"
       SrcTerminal   1
-      Points        [410, 45; 410, 35]
+      Points        [650, 155; 650, 145]
       DstComponent  "Scope"
       DstTerminal   2
     }
@@ -1445,7 +1591,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Demux"
       SrcTerminal   2
-      Points        [390, 120; 390, 110]
+      Points        [820, 205; 820, 195]
       DstComponent  "Goto3"
       DstTerminal   1
     }
@@ -1460,7 +1606,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Demux"
       SrcTerminal   4
-      Points        [390, 140; 390, 150]
+      Points        [820, 225; 820, 235]
       DstComponent  "Goto5"
       DstTerminal   1
     }
@@ -1468,7 +1614,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From3"
       SrcTerminal   1
-      Points        [490, 250; 490, 235]
+      Points        [630, 235; 630, 220]
       DstComponent  "Comparator"
       DstTerminal   2
     }
@@ -1483,7 +1629,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From5"
       SrcTerminal   1
-      Points        [490, 310; 490, 295]
+      Points        [630, 295; 630, 280]
       DstComponent  "Comparator1"
       DstTerminal   2
     }
@@ -1498,7 +1644,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From7"
       SrcTerminal   1
-      Points        [490, 370; 490, 355]
+      Points        [630, 355; 630, 340]
       DstComponent  "Comparator2"
       DstTerminal   2
     }
@@ -1520,7 +1666,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Comparator"
       SrcTerminal   3
-      Points        [565, 230; 565, 280]
+      Points        [705, 215; 705, 265]
       DstComponent  "Mux"
       DstTerminal   2
     }
@@ -1535,7 +1681,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Comparator2"
       SrcTerminal   3
-      Points        [565, 350; 565, 300]
+      Points        [705, 335; 705, 285]
       DstComponent  "Mux"
       DstTerminal   4
     }
@@ -1557,9 +1703,90 @@ Plecs {
       Type          Signal
       SrcComponent  "From9"
       SrcTerminal   1
-      Points        [575, 45; 575, 30]
+      Points        [770, 165; 770, 150]
       DstComponent  "Mux1"
       DstTerminal   3
     }
+    Connection {
+      Type          Signal
+      SrcComponent  "From11"
+      SrcTerminal   1
+      DstComponent  "SPWM"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Constant"
+      SrcTerminal   1
+      Points        [145, 285; 145, 270]
+      DstComponent  "SPWM"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Mux2"
+      SrcTerminal   1
+      DstComponent  "Scope3"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "SPWM"
+      SrcTerminal   3
+      DstComponent  "Mux2"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "SPWM"
+      SrcTerminal   4
+      DstComponent  "Mux2"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "SPWM"
+      SrcTerminal   5
+      DstComponent  "Mux2"
+      DstTerminal   4
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Gain"
+      SrcTerminal   2
+      Points        [780, 390]
+      DstComponent  "Goto1"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From12"
+      SrcTerminal   1
+      DstComponent  "Gain"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Sine Wave"
+      SrcTerminal   1
+      DstComponent  "Goto"
+      DstTerminal   1
+    }
+    RectangleAnnotation {
+      Position     [745, 290]
+      Width        380
+      Height       460
+      CornerRadius 3
+      Thickness    2
+      PenColor     4278190080
+      PenAlpha     1
+      BrushColor   0
+      BrushAlpha   0
+    } 
+    Annotation {
+      Name          "<html><body>\n<p><span style=\" font-weight:700;\">Testin"
+"g</span></p></body></html>"
+      Position      [760, 80]
+    } 
   }
 }
