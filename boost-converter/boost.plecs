@@ -53,30 +53,16 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [1, 31; 959, 988]
-    ZoomFactor    1.49863
+    Location      [0, 23; 1920, 989]
+    ZoomFactor    1.96257
     SliderPosition [0, 0]
     ShowBrowser   off
     BrowserWidth  100
     Component {
-      Type          DCVoltageSource
-      Name          "V_dc"
-      Show          off
-      Position      [70, 325]
-      Direction     down
-      Flipped       on
-      LabelPosition east
-      Parameter {
-        Variable      "V"
-        Value         "180"
-        Show          on
-      }
-    }
-    Component {
       Type          Diode
       Name          "D1"
       Show          off
-      Position      [270, 280]
+      Position      [380, 285]
       Direction     right
       Flipped       on
       LabelPosition north
@@ -120,7 +106,7 @@ Plecs {
       Type          Mosfet
       Name          "T1"
       Show          off
-      Position      [225, 325]
+      Position      [335, 330]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -154,7 +140,7 @@ Plecs {
       Type          Inductor
       Name          "L1"
       Show          off
-      Position      [130, 280]
+      Position      [240, 285]
       Direction     left
       Flipped       off
       LabelPosition north
@@ -173,7 +159,7 @@ Plecs {
       Type          Resistor
       Name          "R1"
       Show          off
-      Position      [370, 325]
+      Position      [480, 330]
       Direction     down
       Flipped       off
       LabelPosition west
@@ -187,7 +173,7 @@ Plecs {
       Type          Capacitor
       Name          "C1"
       Show          off
-      Position      [315, 325]
+      Position      [425, 330]
       Direction     down
       Flipped       on
       LabelPosition west
@@ -206,7 +192,7 @@ Plecs {
       Type          Ammeter
       Name          "Am1"
       Show          off
-      Position      [185, 280]
+      Position      [295, 285]
       Direction     left
       Flipped       off
       LabelPosition south
@@ -215,7 +201,7 @@ Plecs {
       Type          Voltmeter
       Name          "Vm1"
       Show          off
-      Position      [420, 325]
+      Position      [530, 330]
       Direction     up
       Flipped       off
       LabelPosition west
@@ -224,7 +210,7 @@ Plecs {
       Type          Scope
       Name          "Scope"
       Show          on
-      Position      [470, 260]
+      Position      [580, 265]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -305,7 +291,7 @@ Plecs {
       Type          PulseGenerator
       Name          "Pulse\nGenerator"
       Show          off
-      Position      [150, 325]
+      Position      [260, 330]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -344,15 +330,15 @@ Plecs {
       Type          Scope
       Name          "Scope1"
       Show          on
-      Position      [470, 200]
+      Position      [580, 205]
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 27; 1920, 1051]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAAD5fwCAAAAA/sAAAAQAFoAbwBvA"
+      Location      [0, 23; 1920, 1059]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAAD9fwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAF4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMBAAAAMAAAA+UAAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAABsgAAAPlAAAA"
+"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAMAAAA/UAAABoAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPxAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -364,7 +350,7 @@ Plecs {
       TimeRange     "0.0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "0"
+      Open          "1"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    "Time / s"
@@ -423,26 +409,88 @@ Plecs {
       Type          Ammeter
       Name          "Am2"
       Show          on
-      Position      [345, 280]
+      Position      [455, 285]
       Direction     left
       Flipped       off
       LabelPosition south
+    }
+    Component {
+      Type          VoltageSource
+      Name          "V"
+      Show          on
+      Position      [180, 330]
+      Direction     down
+      Flipped       on
+      LabelPosition east
+      Parameter {
+        Variable      "DiscretizationBehavior"
+        Value         "2"
+        Show          off
+      }
+      Parameter {
+        Variable      "StateSpaceInlining"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          Step
+      Name          "Step"
+      Show          on
+      Position      [110, 330]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Time"
+        Value         "5"
+        Show          off
+      }
+      Parameter {
+        Variable      "Before"
+        Value         "180"
+        Show          off
+      }
+      Parameter {
+        Variable      "After"
+        Value         "370"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
+      }
+    }
+    Component {
+      Type          DCVoltageSource
+      Name          "V_dc"
+      Show          off
+      Position      [295, 190]
+      Direction     down
+      Flipped       on
+      LabelPosition east
+      Parameter {
+        Variable      "V"
+        Value         "180"
+        Show          on
+      }
     }
     Connection {
       Type          Wire
       SrcComponent  "T1"
       SrcTerminal   2
-      Points        [225, 365]
+      Points        [335, 370]
       Branch {
-        Points        [315, 365]
+        Points        [425, 370]
         Branch {
-          Points        [370, 365]
+          Points        [480, 370]
           Branch {
             DstComponent  "R1"
             DstTerminal   1
           }
           Branch {
-            Points        [420, 365]
+            Points        [530, 370]
             DstComponent  "Vm1"
             DstTerminal   2
           }
@@ -453,8 +501,8 @@ Plecs {
         }
       }
       Branch {
-        Points        [70, 365]
-        DstComponent  "V_dc"
+        Points        [180, 370]
+        DstComponent  "V"
         DstTerminal   2
       }
     }
@@ -462,7 +510,7 @@ Plecs {
       Type          Wire
       SrcComponent  "C1"
       SrcTerminal   1
-      Points        [315, 280]
+      Points        [425, 285]
       Branch {
         DstComponent  "Am2"
         DstTerminal   1
@@ -476,22 +524,22 @@ Plecs {
       Type          Wire
       SrcComponent  "R1"
       SrcTerminal   2
-      Points        [370, 280]
+      Points        [480, 285]
       Branch {
         DstComponent  "Am2"
         DstTerminal   2
       }
       Branch {
-        Points        [420, 280]
+        Points        [530, 285]
         DstComponent  "Vm1"
         DstTerminal   1
       }
     }
     Connection {
       Type          Wire
-      SrcComponent  "V_dc"
+      SrcComponent  "V"
       SrcTerminal   1
-      Points        [70, 280]
+      Points        [180, 285]
       DstComponent  "L1"
       DstTerminal   1
     }
@@ -506,7 +554,7 @@ Plecs {
       Type          Wire
       SrcComponent  "Am1"
       SrcTerminal   2
-      Points        [225, 280]
+      Points        [335, 285]
       Branch {
         DstComponent  "T1"
         DstTerminal   1
@@ -527,7 +575,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Am1"
       SrcTerminal   3
-      Points        [185, 255]
+      Points        [295, 260]
       DstComponent  "Scope"
       DstTerminal   1
     }
@@ -535,13 +583,13 @@ Plecs {
       Type          Signal
       SrcComponent  "Vm1"
       SrcTerminal   3
-      Points        [435, 265]
+      Points        [545, 270]
       Branch {
         DstComponent  "Scope"
         DstTerminal   2
       }
       Branch {
-        Points        [435, 205]
+        Points        [545, 210]
         DstComponent  "Scope1"
         DstTerminal   2
       }
@@ -550,9 +598,16 @@ Plecs {
       Type          Signal
       SrcComponent  "Am2"
       SrcTerminal   3
-      Points        [400, 265; 400, 195]
+      Points        [510, 270; 510, 200]
       DstComponent  "Scope1"
       DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Step"
+      SrcTerminal   1
+      DstComponent  "V"
+      DstTerminal   3
     }
     Annotation {
       Name          "<html><body>\n<p align=\"center\">Boost Converter</p></bo"
@@ -561,4 +616,4 @@ Plecs {
     } 
   }
 }
-DemoSignature "F734klVYr2DCMPHMFHmIUgeGn6tTbYV6hckswT6ZL18="
+DemoSignature "sfAws531+I3fSSNXoRVaZfz37Iji3wWjh02Eg062bcA="
