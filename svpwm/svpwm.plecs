@@ -250,7 +250,7 @@ Plecs {
     Component {
       Type          Trigonometry
       Name          "Trigonometric\nFunction"
-      Show          on
+      Show          off
       Position      [260, 280]
       Direction     right
       Flipped       off
@@ -262,7 +262,7 @@ Plecs {
       }
       Parameter {
         Variable      "Unit"
-        Value         "1"
+        Value         "2"
         Show          off
       }
     }
@@ -280,19 +280,29 @@ Plecs {
         Show          off
       }
     }
-    Connection {
-      Type          Signal
-      SrcComponent  "Demux"
-      SrcTerminal   2
-      DstComponent  "Trigonometric\nFunction"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Demux"
-      SrcTerminal   3
-      DstComponent  "Trigonometric\nFunction"
-      DstTerminal   3
+    Component {
+      Type          Goto
+      Name          "Goto"
+      Show          off
+      Position      [315, 280]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "angle"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "2"
+        Show          off
+      }
     }
     Connection {
       Type          Signal
@@ -308,6 +318,29 @@ Plecs {
       DstComponent  "Clarke"
       DstTerminal   1
     }
+    Connection {
+      Type          Signal
+      SrcComponent  "Demux"
+      SrcTerminal   2
+      Points        [220, 275; 220, 285]
+      DstComponent  "Trigonometric\nFunction"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Demux"
+      SrcTerminal   3
+      Points        [220, 285; 220, 275]
+      DstComponent  "Trigonometric\nFunction"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Trigonometric\nFunction"
+      SrcTerminal   2
+      DstComponent  "Goto"
+      DstTerminal   1
+    }
   }
 }
-DemoSignature "EjkWzCdFOZR9cUxXZfMJMv6lDoLwW8sajfrneaDPtuk="
+DemoSignature "ZBgea6/D3USO5h9wPK4FWBi+eA1eUn96Ap9/PFaXdY0="
