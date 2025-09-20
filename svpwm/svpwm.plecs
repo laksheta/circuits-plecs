@@ -54,8 +54,8 @@ Plecs {
   ScriptsDialogSplitterPos "0"
   Schematic {
     Location      [0, 23; 1920, 989]
-    ZoomFactor    2.94117
-    SliderPosition [0, 691]
+    ZoomFactor    1.49863
+    SliderPosition [0, 0]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -389,11 +389,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 27; 1920, 1051]
+      Location      [1, 31; 959, 1010]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAF4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAeAAAAAmfw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABSAP///wAAB4AAAANIAAAA"
+"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAO+AAAAmfw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAA74AAABSAP///wAAA74AAAMbAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -1597,7 +1597,7 @@ Plecs {
         Direction     left
       }
       Schematic {
-        Location      [0, 27; 1920, 993]
+        Location      [1, 31; 959, 988]
         ZoomFactor    3.36578
         SliderPosition [0, 0]
         ShowBrowser   off
@@ -1734,11 +1734,11 @@ Plecs {
           Direction     up
           Flipped       off
           LabelPosition south
-          Location      [0, 23; 1920, 1011]
+          Location      [0, 27; 1920, 1033]
           State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAb"
 "wBvAG0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAA"
 "AA/////wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAA"
-"AAPwBAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPB"
+"AAPwBAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPT"
 "AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AA"
 "AAAAAAAAA=="
           SavedViews    "AAAAAgAAAAA="
@@ -1921,8 +1921,8 @@ Plecs {
         Direction     right
       }
       Schematic {
-        Location      [961, 31; 1919, 988]
-        ZoomFactor    1.49863
+        Location      [1, 31; 959, 988]
+        ZoomFactor    1.30957
         SliderPosition [0, 0]
         ShowBrowser   off
         BrowserWidth  100
@@ -3023,6 +3023,63 @@ Plecs {
             Show          off
           }
         }
+        Component {
+          Type          Scope
+          Name          "Scope"
+          Show          on
+          Position      [485, 50]
+          Direction     up
+          Flipped       off
+          LabelPosition south
+          Location      [1, 31; 959, 1010]
+          State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAb"
+"wBvAG0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAA"
+"AA/////wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAA"
+"AAPwBAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAA74AAAO4"
+"AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AA"
+"AAAAAAAAA=="
+          SavedViews    "AAAAAgAAAAA="
+          HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":120,\"Labels\""
+":[],\"VisualIdxs\":[]}"
+          PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+          Axes          "1"
+          TimeRange     "0.0"
+          ScrollingMode "1"
+          SingleTimeAxis "1"
+          Open          "0"
+          Ts            "-1"
+          SampleLimit   "0"
+          XAxisLabel    "Time / s"
+          ShowLegend    "1"
+          Axis {
+            Name          ""
+            AutoScale     1
+            MinValue      0
+            MaxValue      1
+            Signals       {}
+            SignalTypes   [ ]
+            Untangle      0
+            KeepBaseline  off
+            BaselineValue 0
+          }
+          Fourier {
+            SingleXAxis       on
+            AxisLabel         "Frequency / Hz"
+            Scaling           0
+            PhaseDisplay      0
+            ShowFourierLegend off
+            Axis {
+              Name          ""
+              AutoScale     1
+              MinValue      0
+              MaxValue      1
+              Signals       {}
+              Untangle      0
+              KeepBaseline  off
+              BaselineValue 0
+            }
+          }
+        }
         Connection {
           Type          Signal
           SrcComponent  "T1"
@@ -3216,14 +3273,6 @@ Plecs {
         }
         Connection {
           Type          Signal
-          SrcComponent  "From12"
-          SrcTerminal   1
-          Points        [420, 65]
-          DstComponent  "Dynamic Signal Selector"
-          DstTerminal   2
-        }
-        Connection {
-          Type          Signal
           SrcComponent  "Mux4"
           SrcTerminal   1
           DstComponent  "Dynamic Signal Selector1"
@@ -3353,6 +3402,21 @@ Plecs {
             DstTerminal   7
           }
         }
+        Connection {
+          Type          Signal
+          SrcComponent  "From12"
+          SrcTerminal   1
+          Points        [420, 65]
+          Branch {
+            DstComponent  "Dynamic Signal Selector"
+            DstTerminal   2
+          }
+          Branch {
+            Points        [420, 50]
+            DstComponent  "Scope"
+            DstTerminal   1
+          }
+        }
       }
     }
     Component {
@@ -3459,11 +3523,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 27; 1920, 1051]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAADKvwCAAAAA/sAAAAQAFoAbwBvA"
+      Location      [0, 27; 1920, 1067]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAADOvwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAK4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMBAAAAMAAAAyoAAABoAP///wAAAAMAAAeAAAAAt/w"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABSAP///wAABsgAAAMqAAAA"
+"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMBAAAAMAAAAzoAAABoAP///wAAAAMAAAeAAAAAt/w"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABSAP///wAABsgAAAM6AAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -3621,8 +3685,8 @@ Plecs {
       }
       Schematic {
         Location      [961, 31; 1919, 988]
-        ZoomFactor    1.14437
-        SliderPosition [0, 0]
+        ZoomFactor    1.96257
+        SliderPosition [36, 0]
         ShowBrowser   off
         BrowserWidth  100
         Component {
@@ -4152,30 +4216,6 @@ Plecs {
         }
         Component {
           Type          Goto
-          Name          "Goto6"
-          Show          off
-          Position      [110, 80]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Parameter {
-            Variable      "Tag"
-            Value         "mag"
-            Show          off
-          }
-          Parameter {
-            Variable      "Visibility"
-            Value         "2"
-            Show          off
-          }
-          Parameter {
-            Variable      "NoMatchingCounterpartAction"
-            Value         "2"
-            Show          off
-          }
-        }
-        Component {
-          Type          Goto
           Name          "Goto7"
           Show          off
           Position      [150, 290]
@@ -4318,6 +4358,50 @@ Plecs {
             Show          off
           }
         }
+        Component {
+          Type          Constant
+          Name          "Constant"
+          Show          on
+          Position      [60, 40]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Frame         [-10, -10; 10, 10]
+          Parameter {
+            Variable      "Value"
+            Value         "240"
+            Show          off
+          }
+          Parameter {
+            Variable      "DataType"
+            Value         "10"
+            Show          off
+          }
+        }
+        Component {
+          Type          Goto
+          Name          "Goto6"
+          Show          off
+          Position      [120, 50]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Tag"
+            Value         "mag"
+            Show          off
+          }
+          Parameter {
+            Variable      "Visibility"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "NoMatchingCounterpartAction"
+            Value         "2"
+            Show          off
+          }
+        }
         Connection {
           Type          Signal
           SrcComponent  "Mux1"
@@ -4428,8 +4512,7 @@ Plecs {
           Type          Signal
           SrcComponent  "mag"
           SrcTerminal   1
-          DstComponent  "Goto6"
-          DstTerminal   1
+          Points        [105, 80]
         }
         Connection {
           Type          Signal
@@ -4478,6 +4561,14 @@ Plecs {
           SrcComponent  "mult"
           SrcTerminal   2
           DstComponent  "Goto5"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Constant"
+          SrcTerminal   1
+          Points        [90, 40; 90, 50]
+          DstComponent  "Goto6"
           DstTerminal   1
         }
       }
@@ -4626,18 +4717,87 @@ Plecs {
         Show          off
       }
     }
+    Component {
+      Type          Goto
+      Name          "Goto8"
+      Show          off
+      Position      [105, 240]
+      Direction     up
+      Flipped       off
+      LabelPosition east
+      Parameter {
+        Variable      "Tag"
+        Value         "sine"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          SignalMux
+      Name          "Mux"
+      Show          off
+      Position      [520, 470]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Width"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          SignalDemux
+      Name          "Demux1"
+      Show          off
+      Position      [450, 460]
+      Direction     right
+      Flipped       on
+      LabelPosition south
+      Parameter {
+        Variable      "Width"
+        Value         "3"
+        Show          off
+      }
+    }
+    Component {
+      Type          From
+      Name          "From5"
+      Show          off
+      Position      [415, 460]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "sine"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "1"
+        Show          off
+      }
+    }
     Connection {
       Type          Signal
       SrcComponent  "Clarke"
       SrcTerminal   2
       DstComponent  "Demux"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Sine Wave"
-      SrcTerminal   1
-      DstComponent  "Clarke"
       DstTerminal   1
     }
     Connection {
@@ -4713,21 +4873,6 @@ Plecs {
       SrcTerminal   1
       DstComponent  "Subsystem1"
       DstTerminal   4
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Sector-Selection"
-      SrcTerminal   2
-      Points        [485, 385]
-      Branch {
-        DstComponent  "Goto3"
-        DstTerminal   1
-      }
-      Branch {
-        Points        [485, 495]
-        DstComponent  "Scope2"
-        DstTerminal   1
-      }
     }
     Connection {
       Type          Signal
@@ -4820,6 +4965,58 @@ Plecs {
       DstComponent  "Scope2"
       DstTerminal   4
     }
+    Connection {
+      Type          Signal
+      SrcComponent  "Sine Wave"
+      SrcTerminal   1
+      Points        [105, 270]
+      Branch {
+        DstComponent  "Clarke"
+        DstTerminal   1
+      }
+      Branch {
+        DstComponent  "Goto8"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Demux1"
+      SrcTerminal   2
+      Points        [480, 450; 480, 475]
+      DstComponent  "Mux"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Sector-Selection"
+      SrcTerminal   2
+      Points        [485, 385]
+      Branch {
+        DstComponent  "Goto3"
+        DstTerminal   1
+      }
+      Branch {
+        Points        [485, 465]
+        DstComponent  "Mux"
+        DstTerminal   2
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Mux"
+      SrcTerminal   1
+      Points        [530, 495]
+      DstComponent  "Scope2"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From5"
+      SrcTerminal   1
+      DstComponent  "Demux1"
+      DstTerminal   1
+    }
   }
 }
-DemoSignature "JhHaQjHrGCGJm90hb3c5DZZ1z/taGGXarfF0Pfp7xeI="
+DemoSignature "Nu3+x3MFBvnwA2f7aXPUZbWIUMbpbAGnJfyFKpkjGEI="
