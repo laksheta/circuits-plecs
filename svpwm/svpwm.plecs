@@ -54,7 +54,7 @@ Plecs {
   ScriptsDialogSplitterPos "0"
   Schematic {
     Location      [1, 31; 959, 988]
-    ZoomFactor    1.30957
+    ZoomFactor    1.14437
     SliderPosition [0, 0]
     ShowBrowser   off
     BrowserWidth  100
@@ -1767,11 +1767,11 @@ Plecs {
       Type          Subsystem
       Name          "Subsystem"
       Show          on
-      Position      [165, 530]
+      Position      [165, 545]
       Direction     up
       Flipped       off
       LabelPosition south
-      Frame         [-25, -15; 25, 15]
+      Frame         [-25, -30; 25, 30]
       SampleTime    "-1"
       CodeGenDiscretizationMethod "2"
       CodeGenTarget "Generic"
@@ -1781,38 +1781,53 @@ Plecs {
       MaskIconRotates on
       Terminal {
         Type          Input
-        Position      [-25, 0]
+        Position      [-25, -15]
         Direction     left
       }
       Terminal {
         Type          Output
-        Position      [29, -10]
+        Position      [29, -25]
         Direction     right
       }
       Terminal {
         Type          Input
-        Position      [-25, -10]
+        Position      [-25, -25]
         Direction     left
       }
       Terminal {
         Type          Input
-        Position      [-25, 10]
+        Position      [-25, -5]
         Direction     left
       }
       Terminal {
         Type          Output
-        Position      [29, 0]
+        Position      [29, -15]
         Direction     right
       }
       Terminal {
         Type          Output
-        Position      [29, 10]
+        Position      [29, -5]
+        Direction     right
+      }
+      Terminal {
+        Type          Output
+        Position      [29, 5]
+        Direction     right
+      }
+      Terminal {
+        Type          Output
+        Position      [29, 15]
+        Direction     right
+      }
+      Terminal {
+        Type          Output
+        Position      [29, 25]
         Direction     right
       }
       Schematic {
-        Location      [1, 31; 959, 988]
-        ZoomFactor    1.96257
-        SliderPosition [27, 0]
+        Location      [961, 31; 1919, 988]
+        ZoomFactor    1.30957
+        SliderPosition [0, 0]
         ShowBrowser   off
         BrowserWidth  100
         Component {
@@ -2064,6 +2079,189 @@ Plecs {
             Show          off
           }
         }
+        Component {
+          Type          Constant
+          Name          "Tz1"
+          Show          on
+          Position      [130, 515]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Frame         [-50, -10; 50, 10]
+          Parameter {
+            Variable      "Value"
+            Value         "1/f_carrier"
+            Show          off
+          }
+          Parameter {
+            Variable      "DataType"
+            Value         "10"
+            Show          off
+          }
+        }
+        Component {
+          Type          Function
+          Name          "T_3"
+          Show          on
+          Position      [330, 525]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Frame         [-35, -10; 35, 10]
+          Parameter {
+            Variable      "f(u)"
+            Value         "(sqrt(3)*u[1]*u[2]) / V_dc"
+            Show          off
+          }
+        }
+        Component {
+          Type          SignalMux
+          Name          "Mux2"
+          Show          off
+          Position      [255, 525]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Width"
+            Value         "2"
+            Show          off
+          }
+        }
+        Component {
+          Type          Scope
+          Name          "Scope"
+          Show          on
+          Position      [405, 525]
+          Direction     up
+          Flipped       off
+          LabelPosition south
+          Location      [0, 27; 1920, 1024]
+          State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAb"
+"wBvAG0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAA"
+"AA/////wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAeAAAA"
+"AdfwBAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABSAP///wAAB4AAAANR"
+"AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AA"
+"AAAAAAAAA=="
+          SavedViews    "AAAAAgAAAAA="
+          HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":83,\"Labels"
+"\":[],\"VisualIdxs\":[]}"
+          PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+          Axes          "1"
+          TimeRange     "0.0"
+          ScrollingMode "1"
+          SingleTimeAxis "1"
+          Open          "0"
+          Ts            "-1"
+          SampleLimit   "0"
+          XAxisLabel    "Time / s"
+          ShowLegend    "1"
+          Axis {
+            Name          ""
+            AutoScale     1
+            MinValue      0
+            MaxValue      1
+            Signals       {}
+            SignalTypes   [ ]
+            Untangle      0
+            KeepBaseline  off
+            BaselineValue 0
+          }
+          Fourier {
+            SingleXAxis       on
+            AxisLabel         "Frequency / Hz"
+            Scaling           0
+            PhaseDisplay      0
+            ShowFourierLegend off
+            Axis {
+              Name          ""
+              AutoScale     1
+              MinValue      0
+              MaxValue      1
+              Signals       {}
+              Untangle      0
+              KeepBaseline  off
+              BaselineValue 0
+            }
+          }
+        }
+        Component {
+          Type          Constant
+          Name          "Constant2"
+          Show          on
+          Position      [190, 590]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Frame         [-10, -10; 10, 10]
+          Parameter {
+            Variable      "Value"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "DataType"
+            Value         "10"
+            Show          off
+          }
+        }
+        Component {
+          Type          Output
+          Name          "T1_1"
+          Show          on
+          Position      [485, 525]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Index"
+            Value         "7"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Output
+          Name          "T2_1"
+          Show          on
+          Position      [485, 565]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Index"
+            Value         "8"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Output
+          Name          "T0_1"
+          Show          on
+          Position      [485, 600]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Index"
+            Value         "9"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
         Connection {
           Type          Signal
           SrcComponent  "angle"
@@ -2153,16 +2351,47 @@ Plecs {
           Type          Signal
           SrcComponent  "Constant1"
           SrcTerminal   1
-          Points        [160, 245]
-          Branch {
-            Points        [160, 110]
-            DstComponent  "Mux"
-            DstTerminal   5
-          }
-          Branch {
-            DstComponent  "Mux1"
-            DstTerminal   4
-          }
+          Points        [160, 245; 160, 110]
+          DstComponent  "Mux"
+          DstTerminal   5
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Tz1"
+          SrcTerminal   1
+          Points        [215, 515; 215, 520]
+          DstComponent  "Mux2"
+          DstTerminal   2
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Mux2"
+          SrcTerminal   1
+          DstComponent  "T_3"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "T_3"
+          SrcTerminal   2
+          DstComponent  "Scope"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Constant2"
+          SrcTerminal   1
+          Points        [225, 590; 225, 530]
+          DstComponent  "Mux2"
+          DstTerminal   3
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Tz"
+          SrcTerminal   1
+          Points        [240, 290; 240, 245]
+          DstComponent  "Mux1"
+          DstTerminal   4
         }
       }
     }
@@ -3888,4 +4117,4 @@ Plecs {
     }
   }
 }
-DemoSignature "qFUSbN6KahstnPhKGzYM8pKT0J4kPg2tez+1e10SqBQ="
+DemoSignature "smq8PTsn7omNEewQQYJE5pAXWHA8MnguL/JMtLIifs8="
