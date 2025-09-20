@@ -53,9 +53,9 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [1, 31; 959, 988]
-    ZoomFactor    1.71498
-    SliderPosition [0, 155]
+    Location      [961, 31; 1919, 988]
+    ZoomFactor    1.49863
+    SliderPosition [0, 15]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -223,7 +223,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "Amplitude"
-        Value         "220*sqrt(2)"
+        Value         "1"
         Show          off
       }
       Parameter {
@@ -520,7 +520,7 @@ Plecs {
           Type          Input
           Name          "angle"
           Show          on
-          Position      [150, 70]
+          Position      [75, 70]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -1160,6 +1160,40 @@ Plecs {
             Show          off
           }
         }
+        Component {
+          Type          Gain
+          Name          "Gain6"
+          Show          on
+          Position      [145, 70]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "K"
+            Value         "180/pi"
+            Show          off
+          }
+          Parameter {
+            Variable      "Multiplication"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "OutputDataType"
+            Value         "11"
+            Show          off
+          }
+          Parameter {
+            Variable      "DataTypeOverflowMode"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "GainDataType"
+            Value         "11"
+            Show          off
+          }
+        }
         Connection {
           Type          Signal
           SrcComponent  "Compare to\nConstant"
@@ -1255,92 +1289,6 @@ Plecs {
           Points        [300, 365; 300, 345]
           DstComponent  "Logical\nOperator5"
           DstTerminal   3
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "angle"
-          SrcTerminal   1
-          Points        [200, 70]
-          Branch {
-            Points        [365, 70]
-            Branch {
-              DstComponent  "Compare to\nConstant"
-              DstTerminal   1
-            }
-            Branch {
-              Points        [365, 120]
-              Branch {
-                DstComponent  "Compare to\nConstant1"
-                DstTerminal   1
-              }
-              Branch {
-                Points        [365, 165]
-                Branch {
-                  DstComponent  "Compare to\nConstant4"
-                  DstTerminal   1
-                }
-                Branch {
-                  Points        [365, 215]
-                  Branch {
-                    DstComponent  "Compare to\nConstant5"
-                    DstTerminal   1
-                  }
-                  Branch {
-                    Points        [365, 265]
-                    Branch {
-                      DstComponent  "Compare to\nConstant8"
-                      DstTerminal   1
-                    }
-                    Branch {
-                      Points        [365, 315]
-                      DstComponent  "Compare to\nConstant9"
-                      DstTerminal   1
-                    }
-                  }
-                }
-              }
-            }
-          }
-          Branch {
-            Points        [200, 120]
-            Branch {
-              Points        [200, 170]
-              Branch {
-                Points        [200, 215]
-                Branch {
-                  Points        [200, 265]
-                  Branch {
-                    Points        [200, 315]
-                    Branch {
-                      Points        [200, 365]
-                      DstComponent  "Compare to\nConstant11"
-                      DstTerminal   1
-                    }
-                    Branch {
-                      DstComponent  "Compare to\nConstant10"
-                      DstTerminal   1
-                    }
-                  }
-                  Branch {
-                    DstComponent  "Compare to\nConstant7"
-                    DstTerminal   1
-                  }
-                }
-                Branch {
-                  DstComponent  "Compare to\nConstant6"
-                  DstTerminal   1
-                }
-              }
-              Branch {
-                DstComponent  "Compare to\nConstant3"
-                DstTerminal   1
-              }
-            }
-            Branch {
-              DstComponent  "Compare to\nConstant2"
-              DstTerminal   1
-            }
-          }
         }
         Connection {
           Type          Signal
@@ -1444,6 +1392,99 @@ Plecs {
           SrcTerminal   2
           DstComponent  "sector"
           DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "angle"
+          SrcTerminal   1
+          DstComponent  "Gain6"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Gain6"
+          SrcTerminal   2
+          Points        [200, 70]
+          Branch {
+            Points        [365, 70]
+            Branch {
+              DstComponent  "Compare to\nConstant"
+              DstTerminal   1
+            }
+            Branch {
+              Points        [365, 120]
+              Branch {
+                DstComponent  "Compare to\nConstant1"
+                DstTerminal   1
+              }
+              Branch {
+                Points        [365, 165]
+                Branch {
+                  DstComponent  "Compare to\nConstant4"
+                  DstTerminal   1
+                }
+                Branch {
+                  Points        [365, 215]
+                  Branch {
+                    DstComponent  "Compare to\nConstant5"
+                    DstTerminal   1
+                  }
+                  Branch {
+                    Points        [365, 265]
+                    Branch {
+                      DstComponent  "Compare to\nConstant8"
+                      DstTerminal   1
+                    }
+                    Branch {
+                      Points        [365, 315]
+                      DstComponent  "Compare to\nConstant9"
+                      DstTerminal   1
+                    }
+                  }
+                }
+              }
+            }
+          }
+          Branch {
+            Points        [200, 120]
+            Branch {
+              Points        [200, 170]
+              Branch {
+                Points        [200, 215]
+                Branch {
+                  Points        [200, 265]
+                  Branch {
+                    Points        [200, 315]
+                    Branch {
+                      Points        [200, 365]
+                      DstComponent  "Compare to\nConstant11"
+                      DstTerminal   1
+                    }
+                    Branch {
+                      DstComponent  "Compare to\nConstant10"
+                      DstTerminal   1
+                    }
+                  }
+                  Branch {
+                    DstComponent  "Compare to\nConstant7"
+                    DstTerminal   1
+                  }
+                }
+                Branch {
+                  DstComponent  "Compare to\nConstant6"
+                  DstTerminal   1
+                }
+              }
+              Branch {
+                DstComponent  "Compare to\nConstant3"
+                DstTerminal   1
+              }
+            }
+            Branch {
+              DstComponent  "Compare to\nConstant2"
+              DstTerminal   1
+            }
+          }
         }
       }
     }
@@ -1556,8 +1597,8 @@ Plecs {
         Direction     left
       }
       Schematic {
-        Location      [0, 23; 1920, 989]
-        ZoomFactor    2.57013
+        Location      [0, 27; 1920, 993]
+        ZoomFactor    3.36578
         SliderPosition [0, 0]
         ShowBrowser   off
         BrowserWidth  100
@@ -1576,7 +1617,7 @@ Plecs {
           }
           Parameter {
             Variable      "Unit"
-            Value         "2"
+            Value         "1"
             Show          off
           }
         }
@@ -1685,18 +1726,68 @@ Plecs {
             Show          off
           }
         }
+        Component {
+          Type          Scope
+          Name          "Scope"
+          Show          on
+          Position      [265, 40]
+          Direction     up
+          Flipped       off
+          LabelPosition south
+          Location      [0, 23; 1920, 1011]
+          State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAb"
+"wBvAG0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAA"
+"AA/////wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAA"
+"AAPwBAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPB"
+"AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AA"
+"AAAAAAAAA=="
+          SavedViews    "AAAAAgAAAAA="
+          HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":186,\"Labels\""
+":[],\"VisualIdxs\":[]}"
+          PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+          Axes          "1"
+          TimeRange     "0.0"
+          ScrollingMode "1"
+          SingleTimeAxis "1"
+          Open          "0"
+          Ts            "-1"
+          SampleLimit   "0"
+          XAxisLabel    "Time / s"
+          ShowLegend    "1"
+          Axis {
+            Name          ""
+            AutoScale     1
+            MinValue      0
+            MaxValue      1
+            Signals       {}
+            SignalTypes   [ ]
+            Untangle      0
+            KeepBaseline  off
+            BaselineValue 0
+          }
+          Fourier {
+            SingleXAxis       on
+            AxisLabel         "Frequency / Hz"
+            Scaling           0
+            PhaseDisplay      0
+            ShowFourierLegend off
+            Axis {
+              Name          ""
+              AutoScale     1
+              MinValue      0
+              MaxValue      1
+              Signals       {}
+              Untangle      0
+              KeepBaseline  off
+              BaselineValue 0
+            }
+          }
+        }
         Connection {
           Type          Signal
           SrcComponent  "Mux"
           SrcTerminal   1
           DstComponent  "Fcn"
-          DstTerminal   1
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "Trigonometric\nFunction"
-          SrcTerminal   2
-          DstComponent  "angle"
           DstTerminal   1
         }
         Connection {
@@ -1735,6 +1826,21 @@ Plecs {
           Branch {
             DstComponent  "Mux"
             DstTerminal   3
+          }
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Trigonometric\nFunction"
+          SrcTerminal   2
+          Points        [155, 75]
+          Branch {
+            DstComponent  "angle"
+            DstTerminal   1
+          }
+          Branch {
+            Points        [155, 40]
+            DstComponent  "Scope"
+            DstTerminal   1
           }
         }
       }
@@ -1826,8 +1932,8 @@ Plecs {
       }
       Schematic {
         Location      [961, 31; 1919, 988]
-        ZoomFactor    1.96257
-        SliderPosition [189, 546]
+        ZoomFactor    1.71498
+        SliderPosition [0, 242]
         ShowBrowser   off
         BrowserWidth  100
         Component {
@@ -2136,16 +2242,16 @@ Plecs {
           Direction     left
           Flipped       off
           LabelPosition east
-          Location      [0, 27; 1920, 1024]
+          Location      [0, 27; 1920, 1033]
           State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAb"
 "wBvAG0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAA"
 "AA/////wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAeAAAA"
-"AdfwBAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABSAP///wAAB4AAAANR"
+"AdfwBAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABSAP///wAAB4AAAANa"
 "AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AA"
 "AAAAAAAAA=="
           SavedViews    "AAAAAgAAAAA="
-          HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":83,\"Labels"
-"\":[],\"VisualIdxs\":[]}"
+          HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":83,\"Labels\":"
+"[],\"VisualIdxs\":[]}"
           PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
           Axes          "1"
           TimeRange     "0.0"
@@ -4238,11 +4344,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 27; 1920, 1060]
+      Location      [0, 27; 1920, 1067]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPuAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAP1AAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -4295,11 +4401,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 27; 1920, 1042]
+      Location      [0, 27; 1920, 1051]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAF4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPcAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPlAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -5832,4 +5938,4 @@ Plecs {
     }
   }
 }
-DemoSignature "U6DDt82hA2JAoyZVjxXft7zcZ0EAh564+EuvVuS9VZI="
+DemoSignature "MKPFGL8roYfxy9Pv81LHgGxgcttXeGG26rAQk7S535I="
