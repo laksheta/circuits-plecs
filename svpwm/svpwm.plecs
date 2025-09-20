@@ -55,7 +55,7 @@ Plecs {
   Schematic {
     Location      [0, 23; 1920, 989]
     ZoomFactor    1.96257
-    SliderPosition [0, 336]
+    SliderPosition [0, 150]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -1871,1244 +1871,6 @@ Plecs {
     }
     Component {
       Type          Subsystem
-      Name          "Subsystem"
-      Show          on
-      Position      [165, 545]
-      Direction     up
-      Flipped       off
-      LabelPosition south
-      Frame         [-25, -30; 25, 30]
-      SampleTime    "-1"
-      CodeGenDiscretizationMethod "2"
-      CodeGenTarget "Generic"
-      MaskDisplayLang "2"
-      MaskIconFrame on
-      MaskIconOpaque off
-      MaskIconRotates on
-      Terminal {
-        Type          Input
-        Position      [-25, -15]
-        Direction     left
-      }
-      Terminal {
-        Type          Output
-        Position      [29, -25]
-        Direction     right
-      }
-      Terminal {
-        Type          Input
-        Position      [-25, -25]
-        Direction     left
-      }
-      Terminal {
-        Type          Input
-        Position      [-25, -5]
-        Direction     left
-      }
-      Terminal {
-        Type          Output
-        Position      [29, -15]
-        Direction     right
-      }
-      Terminal {
-        Type          Output
-        Position      [29, -5]
-        Direction     right
-      }
-      Terminal {
-        Type          Output
-        Position      [29, 5]
-        Direction     right
-      }
-      Terminal {
-        Type          Output
-        Position      [29, 15]
-        Direction     right
-      }
-      Terminal {
-        Type          Output
-        Position      [29, 25]
-        Direction     right
-      }
-      Schematic {
-        Location      [961, 31; 1919, 988]
-        ZoomFactor    1.30957
-        SliderPosition [0, 0]
-        ShowBrowser   off
-        BrowserWidth  100
-        Component {
-          Type          Input
-          Name          "mag"
-          Show          on
-          Position      [60, 80]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Parameter {
-            Variable      "Index"
-            Value         "1"
-            Show          on
-          }
-          Parameter {
-            Variable      "Width"
-            Value         "-1"
-            Show          off
-          }
-        }
-        Component {
-          Type          Output
-          Name          "T1"
-          Show          on
-          Position      [635, 270]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Parameter {
-            Variable      "Index"
-            Value         "2"
-            Show          on
-          }
-          Parameter {
-            Variable      "Width"
-            Value         "-1"
-            Show          off
-          }
-        }
-        Component {
-          Type          Input
-          Name          "angle"
-          Show          on
-          Position      [60, 120]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Parameter {
-            Variable      "Index"
-            Value         "3"
-            Show          on
-          }
-          Parameter {
-            Variable      "Width"
-            Value         "-1"
-            Show          off
-          }
-        }
-        Component {
-          Type          Input
-          Name          "sector"
-          Show          on
-          Position      [60, 155]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Parameter {
-            Variable      "Index"
-            Value         "4"
-            Show          on
-          }
-          Parameter {
-            Variable      "Width"
-            Value         "-1"
-            Show          off
-          }
-        }
-        Component {
-          Type          Output
-          Name          "T2"
-          Show          on
-          Position      [635, 310]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Parameter {
-            Variable      "Index"
-            Value         "5"
-            Show          on
-          }
-          Parameter {
-            Variable      "Width"
-            Value         "-1"
-            Show          off
-          }
-        }
-        Component {
-          Type          Output
-          Name          "T0"
-          Show          on
-          Position      [635, 345]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Parameter {
-            Variable      "Index"
-            Value         "6"
-            Show          on
-          }
-          Parameter {
-            Variable      "Width"
-            Value         "-1"
-            Show          off
-          }
-        }
-        Component {
-          Type          Constant
-          Name          "Tz"
-          Show          on
-          Position      [70, 290]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Frame         [-50, -10; 50, 10]
-          Parameter {
-            Variable      "Value"
-            Value         "1/f_carrier"
-            Show          off
-          }
-          Parameter {
-            Variable      "DataType"
-            Value         "10"
-            Show          off
-          }
-        }
-        Component {
-          Type          Function
-          Name          "T_1"
-          Show          on
-          Position      [300, 95]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Frame         [-35, -10; 35, 10]
-          Parameter {
-            Variable      "f(u)"
-            Value         "((sqrt(3)*u[4]*u[1]) / V_dc) * (sin((u[3]/3)*pi)*co"
-"s(u[2]) - cos((u[3]/3)*pi)*sin(u[2]))\n"
-            Show          off
-          }
-        }
-        Component {
-          Type          SignalMux
-          Name          "Mux"
-          Show          off
-          Position      [210, 95]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Parameter {
-            Variable      "Width"
-            Value         "4"
-            Show          off
-          }
-        }
-        Component {
-          Type          Function
-          Name          "T_2"
-          Show          on
-          Position      [300, 145]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Frame         [-35, -10; 35, 10]
-          Parameter {
-            Variable      "f(u)"
-            Value         "((sqrt(3)*u[4]*u[1]) / V_dc) * (-cos(u[2]) * sin((("
-"u[3]-1)/3)*pi) + sin(u[2]) * cos(((u[3]-1)/3)*pi))\n"
-            Show          off
-          }
-        }
-        Component {
-          Type          Function
-          Name          "T_0"
-          Show          on
-          Position      [420, 235]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Frame         [-35, -10; 35, 10]
-          Parameter {
-            Variable      "f(u)"
-            Value         "u[3]-u[1]-u[2]"
-            Show          off
-          }
-        }
-        Component {
-          Type          SignalMux
-          Name          "Mux1"
-          Show          off
-          Position      [365, 235]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Parameter {
-            Variable      "Width"
-            Value         "3"
-            Show          off
-          }
-        }
-        Component {
-          Type          Constant
-          Name          "Constant"
-          Show          on
-          Position      [60, 15]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Frame         [-10, -10; 10, 10]
-          Parameter {
-            Variable      "Value"
-            Value         "240"
-            Show          off
-          }
-          Parameter {
-            Variable      "DataType"
-            Value         "10"
-            Show          off
-          }
-        }
-        Component {
-          Type          Function
-          Name          "mult"
-          Show          on
-          Position      [295, 420]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Frame         [-35, -10; 35, 10]
-          Parameter {
-            Variable      "f(u)"
-            Value         "(sqrt(3)*u[1]*u[2]) / V_dc"
-            Show          off
-          }
-        }
-        Component {
-          Type          SignalMux
-          Name          "Mux2"
-          Show          off
-          Position      [220, 420]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Parameter {
-            Variable      "Width"
-            Value         "2"
-            Show          off
-          }
-        }
-        Component {
-          Type          Scope
-          Name          "Scope"
-          Show          on
-          Position      [365, 370]
-          Direction     left
-          Flipped       off
-          LabelPosition east
-          Location      [0, 27; 1920, 1051]
-          State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAb"
-"wBvAG0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAA"
-"AA/////wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAeAAAA"
-"AdfwBAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABSAP///wAAB4AAAANs"
-"AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AA"
-"AAAAAAAAA=="
-          SavedViews    "AAAAAgAAAAA="
-          HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":89,\"Labels\":"
-"[],\"VisualIdxs\":[]}"
-          PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-          Axes          "1"
-          TimeRange     "0.0"
-          ScrollingMode "1"
-          SingleTimeAxis "1"
-          Open          "0"
-          Ts            "-1"
-          SampleLimit   "0"
-          XAxisLabel    "Time / s"
-          ShowLegend    "1"
-          Axis {
-            Name          ""
-            AutoScale     1
-            MinValue      0
-            MaxValue      1
-            Signals       {}
-            SignalTypes   [ ]
-            Untangle      0
-            KeepBaseline  off
-            BaselineValue 0
-          }
-          Fourier {
-            SingleXAxis       on
-            AxisLabel         "Frequency / Hz"
-            Scaling           0
-            PhaseDisplay      0
-            ShowFourierLegend off
-            Axis {
-              Name          ""
-              AutoScale     1
-              MinValue      0
-              MaxValue      1
-              Signals       {}
-              Untangle      0
-              KeepBaseline  off
-              BaselineValue 0
-            }
-          }
-        }
-        Component {
-          Type          Output
-          Name          "T1_1"
-          Show          on
-          Position      [550, 540]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Parameter {
-            Variable      "Index"
-            Value         "7"
-            Show          on
-          }
-          Parameter {
-            Variable      "Width"
-            Value         "-1"
-            Show          off
-          }
-        }
-        Component {
-          Type          Output
-          Name          "T2_1"
-          Show          on
-          Position      [550, 580]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Parameter {
-            Variable      "Index"
-            Value         "8"
-            Show          on
-          }
-          Parameter {
-            Variable      "Width"
-            Value         "-1"
-            Show          off
-          }
-        }
-        Component {
-          Type          Output
-          Name          "T0_1"
-          Show          on
-          Position      [550, 615]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Parameter {
-            Variable      "Index"
-            Value         "9"
-            Show          on
-          }
-          Parameter {
-            Variable      "Width"
-            Value         "-1"
-            Show          off
-          }
-        }
-        Component {
-          Type          Goto
-          Name          "Goto"
-          Show          off
-          Position      [420, 80]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Parameter {
-            Variable      "Tag"
-            Value         "T1"
-            Show          off
-          }
-          Parameter {
-            Variable      "Visibility"
-            Value         "2"
-            Show          off
-          }
-          Parameter {
-            Variable      "NoMatchingCounterpartAction"
-            Value         "2"
-            Show          off
-          }
-        }
-        Component {
-          Type          Goto
-          Name          "Goto1"
-          Show          off
-          Position      [420, 125]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Parameter {
-            Variable      "Tag"
-            Value         "T2"
-            Show          off
-          }
-          Parameter {
-            Variable      "Visibility"
-            Value         "2"
-            Show          off
-          }
-          Parameter {
-            Variable      "NoMatchingCounterpartAction"
-            Value         "2"
-            Show          off
-          }
-        }
-        Component {
-          Type          Goto
-          Name          "Goto2"
-          Show          off
-          Position      [495, 195]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Parameter {
-            Variable      "Tag"
-            Value         "T0"
-            Show          off
-          }
-          Parameter {
-            Variable      "Visibility"
-            Value         "2"
-            Show          off
-          }
-          Parameter {
-            Variable      "NoMatchingCounterpartAction"
-            Value         "2"
-            Show          off
-          }
-        }
-        Component {
-          Type          From
-          Name          "From"
-          Show          off
-          Position      [570, 270]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Parameter {
-            Variable      "Tag"
-            Value         "T1"
-            Show          off
-          }
-          Parameter {
-            Variable      "Visibility"
-            Value         "2"
-            Show          off
-          }
-          Parameter {
-            Variable      "NoMatchingCounterpartAction"
-            Value         "1"
-            Show          off
-          }
-        }
-        Component {
-          Type          From
-          Name          "From1"
-          Show          off
-          Position      [570, 310]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Parameter {
-            Variable      "Tag"
-            Value         "T2"
-            Show          off
-          }
-          Parameter {
-            Variable      "Visibility"
-            Value         "2"
-            Show          off
-          }
-          Parameter {
-            Variable      "NoMatchingCounterpartAction"
-            Value         "1"
-            Show          off
-          }
-        }
-        Component {
-          Type          From
-          Name          "From2"
-          Show          off
-          Position      [570, 345]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Parameter {
-            Variable      "Tag"
-            Value         "T0"
-            Show          off
-          }
-          Parameter {
-            Variable      "Visibility"
-            Value         "2"
-            Show          off
-          }
-          Parameter {
-            Variable      "NoMatchingCounterpartAction"
-            Value         "1"
-            Show          off
-          }
-        }
-        Component {
-          Type          Goto
-          Name          "Goto3"
-          Show          off
-          Position      [200, 145]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Parameter {
-            Variable      "Tag"
-            Value         "angle"
-            Show          off
-          }
-          Parameter {
-            Variable      "Visibility"
-            Value         "2"
-            Show          off
-          }
-          Parameter {
-            Variable      "NoMatchingCounterpartAction"
-            Value         "2"
-            Show          off
-          }
-        }
-        Component {
-          Type          Goto
-          Name          "Goto4"
-          Show          off
-          Position      [200, 175]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Parameter {
-            Variable      "Tag"
-            Value         "sector"
-            Show          off
-          }
-          Parameter {
-            Variable      "Visibility"
-            Value         "2"
-            Show          off
-          }
-          Parameter {
-            Variable      "NoMatchingCounterpartAction"
-            Value         "2"
-            Show          off
-          }
-        }
-        Component {
-          Type          Goto
-          Name          "Goto5"
-          Show          off
-          Position      [385, 420]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Parameter {
-            Variable      "Tag"
-            Value         "mult"
-            Show          off
-          }
-          Parameter {
-            Variable      "Visibility"
-            Value         "2"
-            Show          off
-          }
-          Parameter {
-            Variable      "NoMatchingCounterpartAction"
-            Value         "2"
-            Show          off
-          }
-        }
-        Component {
-          Type          Function
-          Name          "T_3"
-          Show          on
-          Position      [425, 540]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Frame         [-35, -10; 35, 10]
-          Parameter {
-            Variable      "f(u)"
-            Value         "u[1] * sin((u[3]/3)*pi - u[2])\n"
-" "
-            Show          off
-          }
-        }
-        Component {
-          Type          From
-          Name          "From3"
-          Show          off
-          Position      [310, 540]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Parameter {
-            Variable      "Tag"
-            Value         "angle"
-            Show          off
-          }
-          Parameter {
-            Variable      "Visibility"
-            Value         "2"
-            Show          off
-          }
-          Parameter {
-            Variable      "NoMatchingCounterpartAction"
-            Value         "1"
-            Show          off
-          }
-        }
-        Component {
-          Type          From
-          Name          "From4"
-          Show          off
-          Position      [310, 550]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Parameter {
-            Variable      "Tag"
-            Value         "sector"
-            Show          off
-          }
-          Parameter {
-            Variable      "Visibility"
-            Value         "2"
-            Show          off
-          }
-          Parameter {
-            Variable      "NoMatchingCounterpartAction"
-            Value         "1"
-            Show          off
-          }
-        }
-        Component {
-          Type          From
-          Name          "From5"
-          Show          off
-          Position      [310, 530]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Parameter {
-            Variable      "Tag"
-            Value         "mult"
-            Show          off
-          }
-          Parameter {
-            Variable      "Visibility"
-            Value         "2"
-            Show          off
-          }
-          Parameter {
-            Variable      "NoMatchingCounterpartAction"
-            Value         "1"
-            Show          off
-          }
-        }
-        Component {
-          Type          SignalMux
-          Name          "Mux3"
-          Show          off
-          Position      [350, 540]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Parameter {
-            Variable      "Width"
-            Value         "3"
-            Show          off
-          }
-        }
-        Component {
-          Type          Function
-          Name          "T_4"
-          Show          on
-          Position      [425, 580]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Frame         [-35, -10; 35, 10]
-          Parameter {
-            Variable      "f(u)"
-            Value         "u[1]*sin(u[2]-((u[3]-1)/(3))*pi)"
-            Show          off
-          }
-        }
-        Component {
-          Type          From
-          Name          "From6"
-          Show          off
-          Position      [460, 615]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Parameter {
-            Variable      "Tag"
-            Value         "T0"
-            Show          off
-          }
-          Parameter {
-            Variable      "Visibility"
-            Value         "2"
-            Show          off
-          }
-          Parameter {
-            Variable      "NoMatchingCounterpartAction"
-            Value         "1"
-            Show          off
-          }
-        }
-        Component {
-          Type          Constant
-          Name          "Constant1"
-          Show          on
-          Position      [60, 235]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Frame         [-10, -10; 10, 10]
-          Parameter {
-            Variable      "Value"
-            Value         "0.02"
-            Show          off
-          }
-          Parameter {
-            Variable      "DataType"
-            Value         "10"
-            Show          off
-          }
-        }
-        Component {
-          Type          Goto
-          Name          "Goto6"
-          Show          off
-          Position      [195, 25]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Parameter {
-            Variable      "Tag"
-            Value         "mag"
-            Show          off
-          }
-          Parameter {
-            Variable      "Visibility"
-            Value         "2"
-            Show          off
-          }
-          Parameter {
-            Variable      "NoMatchingCounterpartAction"
-            Value         "2"
-            Show          off
-          }
-        }
-        Component {
-          Type          Goto
-          Name          "Goto7"
-          Show          off
-          Position      [190, 265]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Parameter {
-            Variable      "Tag"
-            Value         "Tz"
-            Show          off
-          }
-          Parameter {
-            Variable      "Visibility"
-            Value         "2"
-            Show          off
-          }
-          Parameter {
-            Variable      "NoMatchingCounterpartAction"
-            Value         "2"
-            Show          off
-          }
-        }
-        Component {
-          Type          From
-          Name          "From7"
-          Show          off
-          Position      [180, 425]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Parameter {
-            Variable      "Tag"
-            Value         "mag"
-            Show          off
-          }
-          Parameter {
-            Variable      "Visibility"
-            Value         "2"
-            Show          off
-          }
-          Parameter {
-            Variable      "NoMatchingCounterpartAction"
-            Value         "1"
-            Show          off
-          }
-        }
-        Component {
-          Type          From
-          Name          "From8"
-          Show          off
-          Position      [180, 415]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Parameter {
-            Variable      "Tag"
-            Value         "Tz"
-            Show          off
-          }
-          Parameter {
-            Variable      "Visibility"
-            Value         "2"
-            Show          off
-          }
-          Parameter {
-            Variable      "NoMatchingCounterpartAction"
-            Value         "1"
-            Show          off
-          }
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "Mux"
-          SrcTerminal   1
-          Points        [240, 95]
-          Branch {
-            DstComponent  "T_1"
-            DstTerminal   1
-          }
-          Branch {
-            Points        [240, 145]
-            DstComponent  "T_2"
-            DstTerminal   1
-          }
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "Mux1"
-          SrcTerminal   1
-          DstComponent  "T_0"
-          DstTerminal   1
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "T_1"
-          SrcTerminal   2
-          Points        [350, 95]
-          Branch {
-            Points        [390, 95; 390, 80]
-            DstComponent  "Goto"
-            DstTerminal   1
-          }
-          Branch {
-            DstComponent  "Mux1"
-            DstTerminal   2
-          }
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "T_2"
-          SrcTerminal   2
-          Points        [345, 145]
-          Branch {
-            Points        [390, 145; 390, 125]
-            DstComponent  "Goto1"
-            DstTerminal   1
-          }
-          Branch {
-            Points        [345, 235]
-            DstComponent  "Mux1"
-            DstTerminal   3
-          }
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "Mux2"
-          SrcTerminal   1
-          DstComponent  "mult"
-          DstTerminal   1
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "T_0"
-          SrcTerminal   2
-          Points        [475, 235]
-          DstComponent  "Goto2"
-          DstTerminal   1
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "From"
-          SrcTerminal   1
-          DstComponent  "T1"
-          DstTerminal   1
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "From1"
-          SrcTerminal   1
-          DstComponent  "T2"
-          DstTerminal   1
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "From2"
-          SrcTerminal   1
-          DstComponent  "T0"
-          DstTerminal   1
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "mult"
-          SrcTerminal   2
-          Points        [365, 420]
-          Branch {
-            DstComponent  "Scope"
-            DstTerminal   1
-          }
-          Branch {
-            DstComponent  "Goto5"
-            DstTerminal   1
-          }
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "From5"
-          SrcTerminal   1
-          DstComponent  "Mux3"
-          DstTerminal   2
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "From3"
-          SrcTerminal   1
-          DstComponent  "Mux3"
-          DstTerminal   3
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "From4"
-          SrcTerminal   1
-          DstComponent  "Mux3"
-          DstTerminal   4
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "T_3"
-          SrcTerminal   2
-          DstComponent  "T1_1"
-          DstTerminal   1
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "T_4"
-          SrcTerminal   2
-          DstComponent  "T2_1"
-          DstTerminal   1
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "Mux3"
-          SrcTerminal   1
-          Points        [370, 540]
-          Branch {
-            DstComponent  "T_3"
-            DstTerminal   1
-          }
-          Branch {
-            Points        [370, 580]
-            DstComponent  "T_4"
-            DstTerminal   1
-          }
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "From6"
-          SrcTerminal   1
-          DstComponent  "T0_1"
-          DstTerminal   1
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "angle"
-          SrcTerminal   1
-          Points        [150, 120; 150, 90; 180, 90]
-          Branch {
-            DstComponent  "Mux"
-            DstTerminal   3
-          }
-          Branch {
-            DstComponent  "Goto3"
-            DstTerminal   1
-          }
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "sector"
-          SrcTerminal   1
-          Points        [155, 155; 155, 100; 175, 100]
-          Branch {
-            DstComponent  "Mux"
-            DstTerminal   4
-          }
-          Branch {
-            Points        [175, 175]
-            DstComponent  "Goto4"
-            DstTerminal   1
-          }
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "Tz"
-          SrcTerminal   1
-          Points        [125, 290]
-          Branch {
-            Points        [155, 290]
-            Branch {
-              Points        [240, 290; 240, 245]
-              DstComponent  "Mux1"
-              DstTerminal   4
-            }
-            Branch {
-              Points        [155, 265]
-              DstComponent  "Goto7"
-              DstTerminal   1
-            }
-          }
-          Branch {
-            Points        [125, 245; 160, 245; 160, 110]
-            DstComponent  "Mux"
-            DstTerminal   5
-          }
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "mag"
-          SrcTerminal   1
-          Points        [165, 80]
-          Branch {
-            DstComponent  "Mux"
-            DstTerminal   2
-          }
-          Branch {
-            Points        [165, 25]
-            DstComponent  "Goto6"
-            DstTerminal   1
-          }
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "From8"
-          SrcTerminal   1
-          DstComponent  "Mux2"
-          DstTerminal   2
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "From7"
-          SrcTerminal   1
-          DstComponent  "Mux2"
-          DstTerminal   3
-        }
-        Annotation {
-          Name          "<html><body>\n<p>u[1] * sin((u[3]/3)*pi - u[2])</p>\n"
-"<p> </p></body></html>"
-          Position      [415, 495]
-        } 
-        Annotation {
-          Name          "<html><body>\n<p>u[1]*(sin((u[3]/3)*pi)-u[2])</p></bo"
-"dy></html>"
-          Position      [375, 455]
-        } 
-      }
-    }
-    Component {
-      Type          From
-      Name          "From5"
-      Show          off
-      Position      [100, 520]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      Parameter {
-        Variable      "Tag"
-        Value         "angle"
-        Show          off
-      }
-      Parameter {
-        Variable      "Visibility"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "1"
-        Show          off
-      }
-    }
-    Component {
-      Type          From
-      Name          "From6"
-      Show          off
-      Position      [100, 530]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      Parameter {
-        Variable      "Tag"
-        Value         "mag"
-        Show          off
-      }
-      Parameter {
-        Variable      "Visibility"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "1"
-        Show          off
-      }
-    }
-    Component {
-      Type          From
-      Name          "From7"
-      Show          off
-      Position      [100, 540]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      Parameter {
-        Variable      "Tag"
-        Value         "sector"
-        Show          off
-      }
-      Parameter {
-        Variable      "Visibility"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "1"
-        Show          off
-      }
-    }
-    Component {
-      Type          Subsystem
       Name          "Subsystem1"
       Show          on
       Position      [405, 530]
@@ -4323,89 +3085,10 @@ Plecs {
       }
     }
     Component {
-      Type          Scope
-      Name          "Scope3"
-      Show          on
-      Position      [270, 395]
-      Direction     up
-      Flipped       off
-      LabelPosition south
-      Location      [0, 27; 1920, 1051]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAAF4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPlAAAA"
-"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
-"AAAAA=="
-      SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":186,\"Labels\":[],"
-"\"VisualIdxs\":[]}"
-      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
-"AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
-      Axes          "2"
-      TimeRange     "0.0"
-      ScrollingMode "1"
-      SingleTimeAxis "1"
-      Open          "0"
-      Ts            "-1"
-      SampleLimit   "0"
-      XAxisLabel    "Time / s"
-      ShowLegend    "1"
-      Axis {
-        Name          ""
-        AutoScale     1
-        MinValue      0
-        MaxValue      1
-        Signals       {}
-        SignalTypes   [ ]
-        Untangle      0
-        KeepBaseline  off
-        BaselineValue 0
-      }
-      Axis {
-        Name          ""
-        AutoScale     1
-        MinValue      0
-        MaxValue      1
-        Signals       {}
-        SignalTypes   [ ]
-        Untangle      0
-        KeepBaseline  off
-        BaselineValue 0
-      }
-      Fourier {
-        SingleXAxis       on
-        AxisLabel         "Frequency / Hz"
-        Scaling           0
-        PhaseDisplay      0
-        ShowFourierLegend off
-        Axis {
-          Name          ""
-          AutoScale     1
-          MinValue      0
-          MaxValue      1
-          Signals       {}
-          Untangle      0
-          KeepBaseline  off
-          BaselineValue 0
-        }
-        Axis {
-          Name          ""
-          AutoScale     1
-          MinValue      0
-          MaxValue      1
-          Signals       {}
-          Untangle      0
-          KeepBaseline  off
-          BaselineValue 0
-        }
-      }
-    }
-    Component {
       Type          Subsystem
       Name          "T1 T2 T0"
       Show          on
-      Position      [315, 605]
+      Position      [125, 470]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -4439,12 +3122,12 @@ Plecs {
       }
       Terminal {
         Type          Output
-        Position      [29, -5]
+        Position      [29, 0]
         Direction     right
       }
       Terminal {
         Type          Output
-        Position      [29, 5]
+        Position      [29, 15]
         Direction     right
       }
       Schematic {
@@ -5314,7 +3997,7 @@ Plecs {
       Type          From
       Name          "From12"
       Show          off
-      Position      [260, 595]
+      Position      [70, 460]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5338,7 +4021,7 @@ Plecs {
       Type          From
       Name          "From13"
       Show          off
-      Position      [260, 605]
+      Position      [70, 470]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5362,7 +4045,7 @@ Plecs {
       Type          From
       Name          "From14"
       Show          off
-      Position      [260, 615]
+      Position      [70, 480]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5386,7 +4069,7 @@ Plecs {
       Type          Goto
       Name          "Goto5"
       Show          off
-      Position      [375, 590]
+      Position      [185, 460]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5410,7 +4093,7 @@ Plecs {
       Type          Goto
       Name          "Goto6"
       Show          off
-      Position      [375, 600]
+      Position      [185, 470]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5434,7 +4117,7 @@ Plecs {
       Type          Goto
       Name          "Goto7"
       Show          off
-      Position      [375, 610]
+      Position      [185, 480]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5523,27 +4206,6 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "From5"
-      SrcTerminal   1
-      DstComponent  "Subsystem"
-      DstTerminal   3
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "From6"
-      SrcTerminal   1
-      DstComponent  "Subsystem"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "From7"
-      SrcTerminal   1
-      DstComponent  "Subsystem"
-      DstTerminal   4
-    }
-    Connection {
-      Type          Signal
       SrcComponent  "From11"
       SrcTerminal   1
       DstComponent  "Subsystem1"
@@ -5565,36 +4227,6 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "angle-magnitude"
-      SrcTerminal   2
-      Points        [160, 395]
-      Branch {
-        DstComponent  "Goto4"
-        DstTerminal   1
-      }
-      Branch {
-        Points        [200, 395; 200, 400]
-        DstComponent  "Scope3"
-        DstTerminal   2
-      }
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "angle-magnitude"
-      SrcTerminal   1
-      Points        [160, 375]
-      Branch {
-        DstComponent  "Goto"
-        DstTerminal   1
-      }
-      Branch {
-        Points        [160, 390]
-        DstComponent  "Scope3"
-        DstTerminal   1
-      }
-    }
-    Connection {
-      Type          Signal
       SrcComponent  "Sector-Selection"
       SrcTerminal   2
       Points        [485, 385]
@@ -5607,24 +4239,6 @@ Plecs {
         DstComponent  "Scope2"
         DstTerminal   1
       }
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Subsystem"
-      SrcTerminal   5
-      Points        [225, 530]
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Subsystem"
-      SrcTerminal   2
-      Points        [225, 520]
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Subsystem"
-      SrcTerminal   6
-      Points        [225, 540]
     }
     Connection {
       Type          Signal
@@ -5645,7 +4259,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From12"
       SrcTerminal   1
-      Points        [275, 595]
+      Points        [85, 460]
       DstComponent  "T1 T2 T0"
       DstTerminal   3
     }
@@ -5660,7 +4274,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From14"
       SrcTerminal   1
-      Points        [275, 615]
+      Points        [85, 480]
       DstComponent  "T1 T2 T0"
       DstTerminal   4
     }
@@ -5668,6 +4282,7 @@ Plecs {
       Type          Signal
       SrcComponent  "T1 T2 T0"
       SrcTerminal   2
+      Points        [160, 455; 160, 460]
       DstComponent  "Goto5"
       DstTerminal   1
     }
@@ -5682,9 +4297,24 @@ Plecs {
       Type          Signal
       SrcComponent  "T1 T2 T0"
       SrcTerminal   6
+      Points        [160, 485; 160, 480]
       DstComponent  "Goto7"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "angle-magnitude"
+      SrcTerminal   2
+      DstComponent  "Goto4"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "angle-magnitude"
+      SrcTerminal   1
+      DstComponent  "Goto"
       DstTerminal   1
     }
   }
 }
-DemoSignature "doEFWj2a9N5qlTgewqHrdw6ZZ5CTD1QreukpQXf5sLk="
+DemoSignature "35M3bpJRQe/x+y9FsB6m16+14Ie7DG83dMUJhXb2JY8="
