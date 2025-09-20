@@ -53,9 +53,9 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [0, 23; 1920, 989]
-    ZoomFactor    1.96257
-    SliderPosition [0, -1]
+    Location      [1, 31; 959, 988]
+    ZoomFactor    1.30957
+    SliderPosition [0, 0]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -389,19 +389,18 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 27; 1920, 1042]
+      Location      [0, 27; 1920, 1051]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAAIYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPcAAAA"
+"G0AQQByAGUAYQAAAAAA/////wAAAF4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAeAAAAAmfw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABSAP///wAAB4AAAANIAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":186,\"Labels\":[],"
-"\"VisualIdxs\":[]}"
+      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":186,\"Labels\":["
+"],\"VisualIdxs\":[]}"
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
-"AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-"=="
+"AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
       Axes          "2"
       TimeRange     "0.0"
       ScrollingMode "1"
@@ -1811,9 +1810,9 @@ Plecs {
         Direction     right
       }
       Schematic {
-        Location      [961, 31; 1919, 988]
-        ZoomFactor    1.49863
-        SliderPosition [0, 0]
+        Location      [1, 31; 959, 988]
+        ZoomFactor    1.96257
+        SliderPosition [27, 0]
         ShowBrowser   off
         BrowserWidth  100
         Component {
@@ -1961,8 +1960,8 @@ Plecs {
           Frame         [-35, -10; 35, 10]
           Parameter {
             Variable      "f(u)"
-            Value         "((sqrt(3)*u[4]*abs(u[1]))/(V_dc)) * (sin(u[3]*pi)*c"
-"os(u[2]) - cos((u[3]/3)*pi)*sin(u[2]))\n"
+            Value         "((sqrt(3)*u[4]*u[1]) / V_dc) * (sin((u[3]/3)*pi)*co"
+"s(u[2]) - cos((u[3]/3)*pi)*sin(u[2]))\n"
             Show          off
           }
         }
@@ -1991,8 +1990,8 @@ Plecs {
           Frame         [-35, -10; 35, 10]
           Parameter {
             Variable      "f(u)"
-            Value         "((sqrt(3) * u[4] * u[1]) / V_dc) * (-cos(u[2]) * si"
-"n(((u[3]-1)/3)*pi) + sin(u[2]) * cos(((u[3]-1)/3)*pi))\n"
+            Value         "((sqrt(3)*u[4]*u[1]) / V_dc) * (-cos(u[2]) * sin((("
+"u[3]-1)/3)*pi) + sin(u[2]) * cos(((u[3]-1)/3)*pi))\n"
             Show          off
           }
         }
@@ -2037,6 +2036,26 @@ Plecs {
           Parameter {
             Variable      "Value"
             Value         "240"
+            Show          off
+          }
+          Parameter {
+            Variable      "DataType"
+            Value         "10"
+            Show          off
+          }
+        }
+        Component {
+          Type          Constant
+          Name          "Constant1"
+          Show          on
+          Position      [135, 245]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Frame         [-10, -10; 10, 10]
+          Parameter {
+            Variable      "Value"
+            Value         "0.02"
             Show          off
           }
           Parameter {
@@ -2116,21 +2135,6 @@ Plecs {
         }
         Connection {
           Type          Signal
-          SrcComponent  "Tz"
-          SrcTerminal   1
-          Points        [160, 290; 160, 245]
-          Branch {
-            Points        [160, 110]
-            DstComponent  "Mux"
-            DstTerminal   5
-          }
-          Branch {
-            DstComponent  "Mux1"
-            DstTerminal   4
-          }
-        }
-        Connection {
-          Type          Signal
           SrcComponent  "T_0"
           SrcTerminal   2
           Points        [485, 235; 485, 210]
@@ -2145,6 +2149,21 @@ Plecs {
           DstComponent  "Mux"
           DstTerminal   2
         }
+        Connection {
+          Type          Signal
+          SrcComponent  "Constant1"
+          SrcTerminal   1
+          Points        [160, 245]
+          Branch {
+            Points        [160, 110]
+            DstComponent  "Mux"
+            DstTerminal   5
+          }
+          Branch {
+            DstComponent  "Mux1"
+            DstTerminal   4
+          }
+        }
       }
     }
     Component {
@@ -2155,11 +2174,11 @@ Plecs {
       Direction     left
       Flipped       off
       LabelPosition east
-      Location      [0, 27; 1920, 1033]
+      Location      [0, 27; 1920, 1060]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAIYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPTAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPuAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -3144,20 +3163,84 @@ Plecs {
             Show          off
           }
         }
-        Connection {
-          Type          Signal
-          SrcComponent  "Dynamic Signal Selector"
-          SrcTerminal   3
-          DstComponent  "Out1"
-          DstTerminal   1
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "sector"
-          SrcTerminal   1
-          Points        [295, 50]
-          DstComponent  "Dynamic Signal Selector"
-          DstTerminal   2
+        Component {
+          Type          Scope
+          Name          "Scope"
+          Show          on
+          Position      [390, 20]
+          Direction     up
+          Flipped       off
+          LabelPosition south
+          Location      [0, 23; 1920, 1011]
+          State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAb"
+"wBvAG0AQQByAGUAYQAAAAAA/////wAAAF4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAA"
+"AA/////wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAA"
+"AAPwBAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPB"
+"AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AA"
+"AAAAAAAAA=="
+          SavedViews    "AAAAAgAAAAA="
+          HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":188,\"Labels\""
+":[],\"VisualIdxs\":[]}"
+          PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+"QAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+          Axes          "2"
+          TimeRange     "0.0"
+          ScrollingMode "1"
+          SingleTimeAxis "1"
+          Open          "0"
+          Ts            "-1"
+          SampleLimit   "0"
+          XAxisLabel    "Time / s"
+          ShowLegend    "1"
+          Axis {
+            Name          ""
+            AutoScale     1
+            MinValue      0
+            MaxValue      1
+            Signals       {}
+            SignalTypes   [ ]
+            Untangle      0
+            KeepBaseline  off
+            BaselineValue 0
+          }
+          Axis {
+            Name          ""
+            AutoScale     1
+            MinValue      0
+            MaxValue      1
+            Signals       {}
+            SignalTypes   [ ]
+            Untangle      0
+            KeepBaseline  off
+            BaselineValue 0
+          }
+          Fourier {
+            SingleXAxis       on
+            AxisLabel         "Frequency / Hz"
+            Scaling           0
+            PhaseDisplay      0
+            ShowFourierLegend off
+            Axis {
+              Name          ""
+              AutoScale     1
+              MinValue      0
+              MaxValue      1
+              Signals       {}
+              Untangle      0
+              KeepBaseline  off
+              BaselineValue 0
+            }
+            Axis {
+              Name          ""
+              AutoScale     1
+              MinValue      0
+              MaxValue      1
+              Signals       {}
+              Untangle      0
+              KeepBaseline  off
+              BaselineValue 0
+            }
+          }
         }
         Connection {
           Type          Signal
@@ -3336,6 +3419,36 @@ Plecs {
           DstComponent  "Mux3"
           DstTerminal   7
         }
+        Connection {
+          Type          Signal
+          SrcComponent  "sector"
+          SrcTerminal   1
+          Points        [295, 50]
+          Branch {
+            DstComponent  "Dynamic Signal Selector"
+            DstTerminal   2
+          }
+          Branch {
+            Points        [295, 15]
+            DstComponent  "Scope"
+            DstTerminal   1
+          }
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Dynamic Signal Selector"
+          SrcTerminal   3
+          Points        [325, 90]
+          Branch {
+            DstComponent  "Out1"
+            DstTerminal   1
+          }
+          Branch {
+            Points        [325, 25]
+            DstComponent  "Scope"
+            DstTerminal   2
+          }
+        }
       }
     }
     Component {
@@ -3442,11 +3555,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 27; 1920, 1042]
+      Location      [0, 27; 1920, 1060]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPcAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPuAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -3775,4 +3888,4 @@ Plecs {
     }
   }
 }
-DemoSignature "b0+yPE3SaPnXWv/6xv69cO1hk6QmzCvUph4XDf1H4Ok="
+DemoSignature "qFUSbN6KahstnPhKGzYM8pKT0J4kPg2tez+1e10SqBQ="
