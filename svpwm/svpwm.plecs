@@ -28,7 +28,7 @@ Plecs {
   AlgebraicLoopWithStateMachineMsg "3"
   AssertionAction "1"
   FixedPointDatatypeOverride "1"
-  InitializationCommands ""
+  InitializationCommands "f_carrier = 5e3;\nV_dc = 700;"
   InitialState  "1"
   SystemState   ""
   TaskingMode   "1"
@@ -53,9 +53,9 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [0, 23; 1920, 989]
-    ZoomFactor    1.96257
-    SliderPosition [0, 42]
+    Location      [961, 31; 1919, 988]
+    ZoomFactor    1.71498
+    SliderPosition [0, 0]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -248,25 +248,6 @@ Plecs {
       }
     }
     Component {
-      Type          Trigonometry
-      Name          "Trigonometric\nFunction"
-      Show          off
-      Position      [155, 350]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      Parameter {
-        Variable      "Operator"
-        Value         "7"
-        Show          off
-      }
-      Parameter {
-        Variable      "Unit"
-        Value         "2"
-        Show          off
-      }
-    }
-    Component {
       Type          SignalDemux
       Name          "Demux"
       Show          off
@@ -284,7 +265,7 @@ Plecs {
       Type          Goto
       Name          "Goto"
       Show          off
-      Position      [210, 350]
+      Position      [180, 375]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -356,7 +337,7 @@ Plecs {
       Type          From
       Name          "From"
       Show          off
-      Position      [105, 370]
+      Position      [70, 375]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -380,7 +361,7 @@ Plecs {
       Type          From
       Name          "From1"
       Show          off
-      Position      [105, 335]
+      Position      [70, 395]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1540,54 +1521,633 @@ Plecs {
       }
     }
     Component {
-      Type          Function
-      Name          "Fcn"
+      Type          Subsystem
+      Name          "angle-magnitude"
       Show          on
-      Position      [165, 425]
+      Position      [125, 385]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Frame         [-25, -20; 25, 20]
+      SampleTime    "-1"
+      CodeGenDiscretizationMethod "2"
+      CodeGenTarget "Generic"
+      MaskDisplayLang "2"
+      MaskIconFrame on
+      MaskIconOpaque off
+      MaskIconRotates on
+      Terminal {
+        Type          Output
+        Position      [29, -10]
+        Direction     right
+      }
+      Terminal {
+        Type          Output
+        Position      [29, 10]
+        Direction     right
+      }
+      Terminal {
+        Type          Input
+        Position      [-25, -10]
+        Direction     left
+      }
+      Terminal {
+        Type          Input
+        Position      [-25, 10]
+        Direction     left
+      }
+      Schematic {
+        Location      [0, 23; 1920, 989]
+        ZoomFactor    2.57013
+        SliderPosition [0, 0]
+        ShowBrowser   off
+        BrowserWidth  100
+        Component {
+          Type          Trigonometry
+          Name          "Trigonometric\nFunction"
+          Show          off
+          Position      [135, 75]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Operator"
+            Value         "7"
+            Show          off
+          }
+          Parameter {
+            Variable      "Unit"
+            Value         "2"
+            Show          off
+          }
+        }
+        Component {
+          Type          Function
+          Name          "Fcn"
+          Show          on
+          Position      [135, 150]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Frame         [-20, -10; 20, 10]
+          Parameter {
+            Variable      "f(u)"
+            Value         "sqrt(u[1]^2 + u[2]^2)"
+            Show          off
+          }
+        }
+        Component {
+          Type          SignalMux
+          Name          "Mux"
+          Show          off
+          Position      [90, 150]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Width"
+            Value         "2"
+            Show          off
+          }
+        }
+        Component {
+          Type          Output
+          Name          "angle"
+          Show          on
+          Position      [190, 75]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Index"
+            Value         "1"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Output
+          Name          "mag"
+          Show          on
+          Position      [190, 150]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Index"
+            Value         "2"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Input
+          Name          "alpha"
+          Show          on
+          Position      [30, 95]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Index"
+            Value         "3"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Input
+          Name          "beta"
+          Show          on
+          Position      [30, 60]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Index"
+            Value         "4"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Mux"
+          SrcTerminal   1
+          DstComponent  "Fcn"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Trigonometric\nFunction"
+          SrcTerminal   2
+          DstComponent  "angle"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Fcn"
+          SrcTerminal   2
+          Points        [160, 150]
+          DstComponent  "mag"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "alpha"
+          SrcTerminal   1
+          Points        [50, 95; 55, 95; 55, 95]
+          Branch {
+            Points        [70, 95; 70, 80]
+            DstComponent  "Trigonometric\nFunction"
+            DstTerminal   3
+          }
+          Branch {
+            Points        [55, 145]
+            DstComponent  "Mux"
+            DstTerminal   2
+          }
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "beta"
+          SrcTerminal   1
+          Points        [50, 60; 70, 60; 70, 70; 75, 70; 75, 70]
+          Branch {
+            DstComponent  "Trigonometric\nFunction"
+            DstTerminal   1
+          }
+          Branch {
+            DstComponent  "Mux"
+            DstTerminal   3
+          }
+        }
+      }
+    }
+    Component {
+      Type          Goto
+      Name          "Goto4"
+      Show          off
+      Position      [180, 395]
       Direction     right
       Flipped       off
       LabelPosition south
-      Frame         [-20, -10; 20, 10]
       Parameter {
-        Variable      "f(u)"
-        Value         "sqrt(u[1]^2 + u[2]^2)"
+        Variable      "Tag"
+        Value         "mag"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "2"
         Show          off
       }
     }
     Component {
-      Type          SignalMux
-      Name          "Mux"
-      Show          off
-      Position      [120, 425]
-      Direction     right
+      Type          Subsystem
+      Name          "Subsystem"
+      Show          on
+      Position      [290, 475]
+      Direction     up
       Flipped       off
       LabelPosition south
-      Parameter {
-        Variable      "Width"
-        Value         "2"
-        Show          off
+      Frame         [-25, -15; 25, 15]
+      SampleTime    "-1"
+      CodeGenDiscretizationMethod "2"
+      CodeGenTarget "Generic"
+      MaskDisplayLang "2"
+      MaskIconFrame on
+      MaskIconOpaque off
+      MaskIconRotates on
+      Terminal {
+        Type          Input
+        Position      [-25, 0]
+        Direction     left
+      }
+      Terminal {
+        Type          Output
+        Position      [29, -10]
+        Direction     right
+      }
+      Terminal {
+        Type          Input
+        Position      [-25, -10]
+        Direction     left
+      }
+      Terminal {
+        Type          Input
+        Position      [-25, 10]
+        Direction     left
+      }
+      Terminal {
+        Type          Output
+        Position      [29, 0]
+        Direction     right
+      }
+      Terminal {
+        Type          Output
+        Position      [29, 10]
+        Direction     right
+      }
+      Schematic {
+        Location      [961, 31; 1919, 988]
+        ZoomFactor    1.49863
+        SliderPosition [0, 0]
+        ShowBrowser   off
+        BrowserWidth  100
+        Component {
+          Type          Input
+          Name          "mag"
+          Show          on
+          Position      [60, 80]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Index"
+            Value         "1"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Output
+          Name          "T1"
+          Show          on
+          Position      [535, 135]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Index"
+            Value         "2"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Input
+          Name          "angle"
+          Show          on
+          Position      [60, 120]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Index"
+            Value         "3"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Input
+          Name          "sector"
+          Show          on
+          Position      [60, 155]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Index"
+            Value         "4"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Output
+          Name          "T2"
+          Show          on
+          Position      [535, 175]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Index"
+            Value         "5"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Output
+          Name          "T0"
+          Show          on
+          Position      [535, 210]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Index"
+            Value         "6"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Constant
+          Name          "Tz"
+          Show          on
+          Position      [70, 290]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Frame         [-50, -10; 50, 10]
+          Parameter {
+            Variable      "Value"
+            Value         "1/f_carrier"
+            Show          off
+          }
+          Parameter {
+            Variable      "DataType"
+            Value         "10"
+            Show          off
+          }
+        }
+        Component {
+          Type          Function
+          Name          "T_1"
+          Show          on
+          Position      [300, 95]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Frame         [-35, -10; 35, 10]
+          Parameter {
+            Variable      "f(u)"
+            Value         "((sqrt(3)*u[4]*abs(u[1]))/(V_dc)) * (sin(u[3]*pi)*c"
+"os(u[2]) - cos((u[3]/3)*pi)*sin(u[2]))\n"
+            Show          off
+          }
+        }
+        Component {
+          Type          SignalMux
+          Name          "Mux"
+          Show          off
+          Position      [210, 95]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Width"
+            Value         "4"
+            Show          off
+          }
+        }
+        Component {
+          Type          Function
+          Name          "T_2"
+          Show          on
+          Position      [300, 145]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Frame         [-35, -10; 35, 10]
+          Parameter {
+            Variable      "f(u)"
+            Value         "((sqrt(3) * u[4] * u[1]) / V_dc) * (-cos(u[2]) * si"
+"n(((u[3]-1)/3)*pi) + sin(u[2]) * cos(((u[3]-1)/3)*pi))\n"
+            Show          off
+          }
+        }
+        Component {
+          Type          Function
+          Name          "T_0"
+          Show          on
+          Position      [420, 235]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Frame         [-35, -10; 35, 10]
+          Parameter {
+            Variable      "f(u)"
+            Value         "u[3]-u[1]-u[2]"
+            Show          off
+          }
+        }
+        Component {
+          Type          SignalMux
+          Name          "Mux1"
+          Show          off
+          Position      [365, 235]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Width"
+            Value         "3"
+            Show          off
+          }
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "mag"
+          SrcTerminal   1
+          DstComponent  "Mux"
+          DstTerminal   2
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "angle"
+          SrcTerminal   1
+          Points        [150, 120; 150, 90]
+          DstComponent  "Mux"
+          DstTerminal   3
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "sector"
+          SrcTerminal   1
+          Points        [155, 155; 155, 100]
+          DstComponent  "Mux"
+          DstTerminal   4
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Mux"
+          SrcTerminal   1
+          Points        [240, 95]
+          Branch {
+            DstComponent  "T_1"
+            DstTerminal   1
+          }
+          Branch {
+            Points        [240, 145]
+            DstComponent  "T_2"
+            DstTerminal   1
+          }
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Mux1"
+          SrcTerminal   1
+          DstComponent  "T_0"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "T_1"
+          SrcTerminal   2
+          Points        [350, 95]
+          Branch {
+            Points        [425, 95; 425, 135]
+            DstComponent  "T1"
+            DstTerminal   1
+          }
+          Branch {
+            DstComponent  "Mux1"
+            DstTerminal   2
+          }
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "T_2"
+          SrcTerminal   2
+          Points        [345, 145]
+          Branch {
+            Points        [425, 145; 425, 175]
+            DstComponent  "T2"
+            DstTerminal   1
+          }
+          Branch {
+            Points        [345, 235]
+            DstComponent  "Mux1"
+            DstTerminal   3
+          }
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Tz"
+          SrcTerminal   1
+          Points        [160, 290; 160, 245]
+          Branch {
+            Points        [160, 110]
+            DstComponent  "Mux"
+            DstTerminal   5
+          }
+          Branch {
+            DstComponent  "Mux1"
+            DstTerminal   4
+          }
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "T_0"
+          SrcTerminal   2
+          Points        [485, 235; 485, 210]
+          DstComponent  "T0"
+          DstTerminal   1
+        }
       }
     }
     Component {
       Type          Scope
       Name          "Scope1"
       Show          on
-      Position      [210, 425]
+      Position      [365, 475]
       Direction     up
       Flipped       off
       LabelPosition south
       Location      [0, 23; 1920, 1011]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"G0AQQByAGUAYQAAAAAA/////wAAAIYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
 "BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPBAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":84,\"Labels\":[],"
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":83,\"Labels\":[],"
 "\"VisualIdxs\":[]}"
-      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-      Axes          "1"
+      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
+"AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+"=="
+      Axes          "3"
       TimeRange     "0.0"
       ScrollingMode "1"
       SingleTimeAxis "1"
@@ -1596,6 +2156,28 @@ Plecs {
       SampleLimit   "0"
       XAxisLabel    "Time / s"
       ShowLegend    "1"
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
       Axis {
         Name          ""
         AutoScale     1
@@ -1623,6 +2205,98 @@ Plecs {
           KeepBaseline  off
           BaselineValue 0
         }
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+      }
+    }
+    Component {
+      Type          From
+      Name          "From5"
+      Show          off
+      Position      [225, 465]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "angle"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          From
+      Name          "From6"
+      Show          off
+      Position      [225, 475]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "mag"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          From
+      Name          "From7"
+      Show          off
+      Position      [225, 485]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "sector"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "1"
+        Show          off
       }
     }
     Connection {
@@ -1641,8 +2315,8 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Trigonometric\nFunction"
-      SrcTerminal   2
+      SrcComponent  "angle-magnitude"
+      SrcTerminal   1
       DstComponent  "Goto"
       DstTerminal   1
     }
@@ -1694,49 +2368,67 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Mux"
-      SrcTerminal   1
-      DstComponent  "Fcn"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Signal
       SrcComponent  "From"
       SrcTerminal   1
-      Points        [115, 370]
-      Branch {
-        Points        [120, 370; 120, 355]
-        DstComponent  "Trigonometric\nFunction"
-        DstTerminal   3
-      }
-      Branch {
-        Points        [105, 370]
-        DstComponent  "Mux"
-        DstTerminal   2
-      }
+      DstComponent  "angle-magnitude"
+      DstTerminal   3
     }
     Connection {
       Type          Signal
       SrcComponent  "From1"
       SrcTerminal   1
-      Points        [120, 335; 120, 345; 125, 345]
-      Branch {
-        DstComponent  "Trigonometric\nFunction"
-        DstTerminal   1
-      }
-      Branch {
-        Points        [125, 395; 100, 395; 100, 430]
-        DstComponent  "Mux"
-        DstTerminal   3
-      }
+      DstComponent  "angle-magnitude"
+      DstTerminal   4
     }
     Connection {
       Type          Signal
-      SrcComponent  "Fcn"
+      SrcComponent  "angle-magnitude"
+      SrcTerminal   2
+      DstComponent  "Goto4"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Subsystem"
       SrcTerminal   2
       DstComponent  "Scope1"
       DstTerminal   1
     }
+    Connection {
+      Type          Signal
+      SrcComponent  "Subsystem"
+      SrcTerminal   5
+      DstComponent  "Scope1"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Subsystem"
+      SrcTerminal   6
+      DstComponent  "Scope1"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From5"
+      SrcTerminal   1
+      DstComponent  "Subsystem"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From6"
+      SrcTerminal   1
+      DstComponent  "Subsystem"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From7"
+      SrcTerminal   1
+      DstComponent  "Subsystem"
+      DstTerminal   4
+    }
   }
 }
-DemoSignature "ovEYOICcj5Bamvd28t0HQCh1xql/fbc8rU3EUc/j4H0="
+DemoSignature "XooFxFySswb93hEBjWg2zxNWTNg3zOhJZIFpaoBIxWQ="
