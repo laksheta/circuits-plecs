@@ -1853,7 +1853,7 @@ Plecs {
           Type          Output
           Name          "T1"
           Show          on
-          Position      [535, 135]
+          Position      [635, 270]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -1910,7 +1910,7 @@ Plecs {
           Type          Output
           Name          "T2"
           Show          on
-          Position      [535, 175]
+          Position      [635, 310]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -1929,7 +1929,7 @@ Plecs {
           Type          Output
           Name          "T0"
           Show          on
-          Position      [535, 210]
+          Position      [635, 345]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -2101,7 +2101,7 @@ Plecs {
         }
         Component {
           Type          Function
-          Name          "T_3"
+          Name          "mult"
           Show          on
           Position      [330, 525]
           Direction     right
@@ -2132,10 +2132,10 @@ Plecs {
           Type          Scope
           Name          "Scope"
           Show          on
-          Position      [405, 525]
-          Direction     up
+          Position      [400, 475]
+          Direction     left
           Flipped       off
-          LabelPosition south
+          LabelPosition east
           Location      [0, 27; 1920, 1024]
           State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAb"
 "wBvAG0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAA"
@@ -2209,7 +2209,7 @@ Plecs {
           Type          Output
           Name          "T1_1"
           Show          on
-          Position      [485, 525]
+          Position      [635, 535]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -2228,7 +2228,7 @@ Plecs {
           Type          Output
           Name          "T2_1"
           Show          on
-          Position      [485, 565]
+          Position      [635, 575]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -2247,7 +2247,7 @@ Plecs {
           Type          Output
           Name          "T0_1"
           Show          on
-          Position      [485, 600]
+          Position      [635, 610]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -2262,6 +2262,222 @@ Plecs {
             Show          off
           }
         }
+        Component {
+          Type          Goto
+          Name          "Goto"
+          Show          off
+          Position      [420, 80]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Tag"
+            Value         "T1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Visibility"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "NoMatchingCounterpartAction"
+            Value         "2"
+            Show          off
+          }
+        }
+        Component {
+          Type          Goto
+          Name          "Goto1"
+          Show          off
+          Position      [420, 125]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Tag"
+            Value         "T2"
+            Show          off
+          }
+          Parameter {
+            Variable      "Visibility"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "NoMatchingCounterpartAction"
+            Value         "2"
+            Show          off
+          }
+        }
+        Component {
+          Type          Goto
+          Name          "Goto2"
+          Show          off
+          Position      [495, 195]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Tag"
+            Value         "T0"
+            Show          off
+          }
+          Parameter {
+            Variable      "Visibility"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "NoMatchingCounterpartAction"
+            Value         "2"
+            Show          off
+          }
+        }
+        Component {
+          Type          From
+          Name          "From"
+          Show          off
+          Position      [570, 270]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Tag"
+            Value         "T1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Visibility"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "NoMatchingCounterpartAction"
+            Value         "1"
+            Show          off
+          }
+        }
+        Component {
+          Type          From
+          Name          "From1"
+          Show          off
+          Position      [570, 310]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Tag"
+            Value         "T2"
+            Show          off
+          }
+          Parameter {
+            Variable      "Visibility"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "NoMatchingCounterpartAction"
+            Value         "1"
+            Show          off
+          }
+        }
+        Component {
+          Type          From
+          Name          "From2"
+          Show          off
+          Position      [570, 345]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Tag"
+            Value         "T0"
+            Show          off
+          }
+          Parameter {
+            Variable      "Visibility"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "NoMatchingCounterpartAction"
+            Value         "1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Goto
+          Name          "Goto3"
+          Show          off
+          Position      [200, 145]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Tag"
+            Value         "angle"
+            Show          off
+          }
+          Parameter {
+            Variable      "Visibility"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "NoMatchingCounterpartAction"
+            Value         "2"
+            Show          off
+          }
+        }
+        Component {
+          Type          Goto
+          Name          "Goto4"
+          Show          off
+          Position      [200, 155]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Tag"
+            Value         "sector"
+            Show          off
+          }
+          Parameter {
+            Variable      "Visibility"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "NoMatchingCounterpartAction"
+            Value         "2"
+            Show          off
+          }
+        }
+        Component {
+          Type          Goto
+          Name          "Goto5"
+          Show          off
+          Position      [420, 525]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Tag"
+            Value         "mult"
+            Show          off
+          }
+          Parameter {
+            Variable      "Visibility"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "NoMatchingCounterpartAction"
+            Value         "2"
+            Show          off
+          }
+        }
         Connection {
           Type          Signal
           SrcComponent  "angle"
@@ -2269,14 +2485,6 @@ Plecs {
           Points        [150, 120; 150, 90]
           DstComponent  "Mux"
           DstTerminal   3
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "sector"
-          SrcTerminal   1
-          Points        [155, 155; 155, 100]
-          DstComponent  "Mux"
-          DstTerminal   4
         }
         Connection {
           Type          Signal
@@ -2306,8 +2514,8 @@ Plecs {
           SrcTerminal   2
           Points        [350, 95]
           Branch {
-            Points        [425, 95; 425, 135]
-            DstComponent  "T1"
+            Points        [390, 95; 390, 80]
+            DstComponent  "Goto"
             DstTerminal   1
           }
           Branch {
@@ -2321,8 +2529,8 @@ Plecs {
           SrcTerminal   2
           Points        [345, 145]
           Branch {
-            Points        [425, 145; 425, 175]
-            DstComponent  "T2"
+            Points        [390, 145; 390, 125]
+            DstComponent  "Goto1"
             DstTerminal   1
           }
           Branch {
@@ -2333,27 +2541,11 @@ Plecs {
         }
         Connection {
           Type          Signal
-          SrcComponent  "T_0"
-          SrcTerminal   2
-          Points        [485, 235; 485, 210]
-          DstComponent  "T0"
-          DstTerminal   1
-        }
-        Connection {
-          Type          Signal
           SrcComponent  "Constant"
           SrcTerminal   1
           Points        [170, 55; 170, 80]
           DstComponent  "Mux"
           DstTerminal   2
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "Constant1"
-          SrcTerminal   1
-          Points        [160, 245; 160, 110]
-          DstComponent  "Mux"
-          DstTerminal   5
         }
         Connection {
           Type          Signal
@@ -2367,14 +2559,7 @@ Plecs {
           Type          Signal
           SrcComponent  "Mux2"
           SrcTerminal   1
-          DstComponent  "T_3"
-          DstTerminal   1
-        }
-        Connection {
-          Type          Signal
-          SrcComponent  "T_3"
-          SrcTerminal   2
-          DstComponent  "Scope"
+          DstComponent  "mult"
           DstTerminal   1
         }
         Connection {
@@ -2392,6 +2577,78 @@ Plecs {
           Points        [240, 290; 240, 245]
           DstComponent  "Mux1"
           DstTerminal   4
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "T_0"
+          SrcTerminal   2
+          Points        [475, 235]
+          DstComponent  "Goto2"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "From"
+          SrcTerminal   1
+          DstComponent  "T1"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "From1"
+          SrcTerminal   1
+          DstComponent  "T2"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "From2"
+          SrcTerminal   1
+          DstComponent  "T0"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "sector"
+          SrcTerminal   1
+          Points        [155, 155; 155, 100; 180, 100]
+          Branch {
+            DstComponent  "Mux"
+            DstTerminal   4
+          }
+          Branch {
+            DstComponent  "Goto3"
+            DstTerminal   1
+          }
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Constant1"
+          SrcTerminal   1
+          Points        [160, 245; 160, 110; 175, 110]
+          Branch {
+            DstComponent  "Mux"
+            DstTerminal   5
+          }
+          Branch {
+            Points        [175, 155]
+            DstComponent  "Goto4"
+            DstTerminal   1
+          }
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "mult"
+          SrcTerminal   2
+          Points        [400, 525]
+          Branch {
+            DstComponent  "Scope"
+            DstTerminal   1
+          }
+          Branch {
+            DstComponent  "Goto5"
+            DstTerminal   1
+          }
         }
       }
     }
@@ -4117,4 +4374,4 @@ Plecs {
     }
   }
 }
-DemoSignature "smq8PTsn7omNEewQQYJE5pAXWHA8MnguL/JMtLIifs8="
+DemoSignature "M4q7CRWjPlFP06bviZbka1Up4PIpHJyuIIhzmvr6UC8="
