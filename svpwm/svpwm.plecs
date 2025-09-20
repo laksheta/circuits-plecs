@@ -54,8 +54,8 @@ Plecs {
   ScriptsDialogSplitterPos "0"
   Schematic {
     Location      [0, 23; 1920, 989]
-    ZoomFactor    1.96257
-    SliderPosition [0, 150]
+    ZoomFactor    2.94117
+    SliderPosition [0, 691]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -1873,7 +1873,7 @@ Plecs {
       Type          Subsystem
       Name          "Subsystem1"
       Show          on
-      Position      [405, 530]
+      Position      [450, 525]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1910,9 +1910,19 @@ Plecs {
         Position      [-25, 15]
         Direction     left
       }
+      Terminal {
+        Type          Output
+        Position      [29, -15]
+        Direction     right
+      }
+      Terminal {
+        Type          Output
+        Position      [29, 5]
+        Direction     right
+      }
       Schematic {
         Location      [961, 31; 1919, 988]
-        ZoomFactor    1.96257
+        ZoomFactor    1.49863
         SliderPosition [0, 0]
         ShowBrowser   off
         BrowserWidth  100
@@ -1937,9 +1947,9 @@ Plecs {
         }
         Component {
           Type          Output
-          Name          "Out1"
+          Name          "Sine_1"
           Show          on
-          Position      [360, 90]
+          Position      [485, 120]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -1996,7 +2006,7 @@ Plecs {
           Type          DynamicSignalSelector
           Name          "Dynamic Signal Selector"
           Show          off
-          Position      [295, 90]
+          Position      [420, 120]
           Direction     up
           Flipped       off
           LabelPosition south
@@ -2515,7 +2525,7 @@ Plecs {
           Type          SignalMux
           Name          "Mux3"
           Show          off
-          Position      [260, 90]
+          Position      [385, 120]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -2529,7 +2539,7 @@ Plecs {
           Type          From
           Name          "From4"
           Show          off
-          Position      [210, 65]
+          Position      [335, 95]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -2553,7 +2563,7 @@ Plecs {
           Type          From
           Name          "From9"
           Show          off
-          Position      [210, 85]
+          Position      [335, 115]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -2577,7 +2587,7 @@ Plecs {
           Type          From
           Name          "From10"
           Show          off
-          Position      [210, 95]
+          Position      [335, 125]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -2601,7 +2611,7 @@ Plecs {
           Type          From
           Name          "From11"
           Show          off
-          Position      [210, 115]
+          Position      [335, 145]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -2622,82 +2632,395 @@ Plecs {
           }
         }
         Component {
-          Type          Scope
-          Name          "Scope"
+          Type          Goto
+          Name          "Goto7"
+          Show          off
+          Position      [110, 50]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Tag"
+            Value         "sector"
+            Show          off
+          }
+          Parameter {
+            Variable      "Visibility"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "NoMatchingCounterpartAction"
+            Value         "2"
+            Show          off
+          }
+        }
+        Component {
+          Type          From
+          Name          "From12"
+          Show          off
+          Position      [365, 65]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Tag"
+            Value         "sector"
+            Show          off
+          }
+          Parameter {
+            Variable      "Visibility"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "NoMatchingCounterpartAction"
+            Value         "1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Output
+          Name          "Sine_2"
           Show          on
-          Position      [390, 20]
+          Position      [485, 225]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Index"
+            Value         "6"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          DynamicSignalSelector
+          Name          "Dynamic Signal Selector1"
+          Show          off
+          Position      [420, 225]
           Direction     up
           Flipped       off
           LabelPosition south
-          Location      [0, 27; 1920, 1024]
-          State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAb"
-"wBvAG0AQQByAGUAYQAAAAAA/////wAAAF4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAA"
-"AA/////wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAA"
-"AAPwBAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPK"
-"AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AA"
-"AAAAAAAAA=="
-          SavedViews    "AAAAAgAAAAA="
-          HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":188,\"Labels\""
-":[],\"VisualIdxs\":[]}"
-          PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-"QAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
-          Axes          "2"
-          TimeRange     "0.0"
-          ScrollingMode "1"
-          SingleTimeAxis "1"
-          Open          "0"
-          Ts            "-1"
-          SampleLimit   "0"
-          XAxisLabel    "Time / s"
-          ShowLegend    "1"
-          Axis {
-            Name          ""
-            AutoScale     1
-            MinValue      0
-            MaxValue      1
-            Signals       {}
-            SignalTypes   [ ]
-            Untangle      0
-            KeepBaseline  off
-            BaselineValue 0
+          Parameter {
+            Variable      "DefaultIndex"
+            Value         "6"
+            Show          off
           }
-          Axis {
-            Name          ""
-            AutoScale     1
-            MinValue      0
-            MaxValue      1
-            Signals       {}
-            SignalTypes   [ ]
-            Untangle      0
-            KeepBaseline  off
-            BaselineValue 0
+          Parameter {
+            Variable      "Indexing"
+            Value         "1"
+            Show          off
           }
-          Fourier {
-            SingleXAxis       on
-            AxisLabel         "Frequency / Hz"
-            Scaling           0
-            PhaseDisplay      0
-            ShowFourierLegend off
-            Axis {
-              Name          ""
-              AutoScale     1
-              MinValue      0
-              MaxValue      1
-              Signals       {}
-              Untangle      0
-              KeepBaseline  off
-              BaselineValue 0
-            }
-            Axis {
-              Name          ""
-              AutoScale     1
-              MinValue      0
-              MaxValue      1
-              Signals       {}
-              Untangle      0
-              KeepBaseline  off
-              BaselineValue 0
-            }
+        }
+        Component {
+          Type          SignalMux
+          Name          "Mux4"
+          Show          off
+          Position      [385, 225]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Width"
+            Value         "6"
+            Show          off
+          }
+        }
+        Component {
+          Type          From
+          Name          "From17"
+          Show          off
+          Position      [365, 170]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Tag"
+            Value         "sector"
+            Show          off
+          }
+          Parameter {
+            Variable      "Visibility"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "NoMatchingCounterpartAction"
+            Value         "1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Output
+          Name          "Sine_3"
+          Show          on
+          Position      [485, 335]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Index"
+            Value         "7"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          DynamicSignalSelector
+          Name          "Dynamic Signal Selector2"
+          Show          off
+          Position      [420, 335]
+          Direction     up
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "DefaultIndex"
+            Value         "6"
+            Show          off
+          }
+          Parameter {
+            Variable      "Indexing"
+            Value         "1"
+            Show          off
+          }
+        }
+        Component {
+          Type          SignalMux
+          Name          "Mux5"
+          Show          off
+          Position      [385, 335]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Width"
+            Value         "6"
+            Show          off
+          }
+        }
+        Component {
+          Type          From
+          Name          "From22"
+          Show          off
+          Position      [365, 280]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Tag"
+            Value         "sector"
+            Show          off
+          }
+          Parameter {
+            Variable      "Visibility"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "NoMatchingCounterpartAction"
+            Value         "1"
+            Show          off
+          }
+        }
+        Component {
+          Type          From
+          Name          "From13"
+          Show          off
+          Position      [335, 200]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Tag"
+            Value         "T0/2"
+            Show          off
+          }
+          Parameter {
+            Variable      "Visibility"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "NoMatchingCounterpartAction"
+            Value         "1"
+            Show          off
+          }
+        }
+        Component {
+          Type          From
+          Name          "From14"
+          Show          off
+          Position      [335, 210]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Tag"
+            Value         "T1+T0/2"
+            Show          off
+          }
+          Parameter {
+            Variable      "Visibility"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "NoMatchingCounterpartAction"
+            Value         "1"
+            Show          off
+          }
+        }
+        Component {
+          Type          From
+          Name          "From15"
+          Show          off
+          Position      [335, 220]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Tag"
+            Value         "T1+T2+T0/2"
+            Show          off
+          }
+          Parameter {
+            Variable      "Visibility"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "NoMatchingCounterpartAction"
+            Value         "1"
+            Show          off
+          }
+        }
+        Component {
+          Type          From
+          Name          "From16"
+          Show          off
+          Position      [335, 240]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Tag"
+            Value         "T2+T0/2"
+            Show          off
+          }
+          Parameter {
+            Variable      "Visibility"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "NoMatchingCounterpartAction"
+            Value         "1"
+            Show          off
+          }
+        }
+        Component {
+          Type          From
+          Name          "From18"
+          Show          off
+          Position      [335, 310]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Tag"
+            Value         "T2+T0/2"
+            Show          off
+          }
+          Parameter {
+            Variable      "Visibility"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "NoMatchingCounterpartAction"
+            Value         "1"
+            Show          off
+          }
+        }
+        Component {
+          Type          From
+          Name          "From19"
+          Show          off
+          Position      [335, 320]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Tag"
+            Value         "T0/2"
+            Show          off
+          }
+          Parameter {
+            Variable      "Visibility"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "NoMatchingCounterpartAction"
+            Value         "1"
+            Show          off
+          }
+        }
+        Component {
+          Type          From
+          Name          "From20"
+          Show          off
+          Position      [335, 340]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Tag"
+            Value         "T1+T0/2"
+            Show          off
+          }
+          Parameter {
+            Variable      "Visibility"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "NoMatchingCounterpartAction"
+            Value         "1"
+            Show          off
+          }
+        }
+        Component {
+          Type          From
+          Name          "From21"
+          Show          off
+          Position      [335, 350]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Tag"
+            Value         "T1+T2+T0/2"
+            Show          off
+          }
+          Parameter {
+            Variable      "Visibility"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "NoMatchingCounterpartAction"
+            Value         "1"
+            Show          off
           }
         }
         Connection {
@@ -2837,13 +3160,13 @@ Plecs {
           Type          Signal
           SrcComponent  "From4"
           SrcTerminal   1
-          Points        [235, 65]
+          Points        [360, 95]
           Branch {
             DstComponent  "Mux3"
             DstTerminal   2
           }
           Branch {
-            Points        [235, 75]
+            Points        [360, 105]
             DstComponent  "Mux3"
             DstTerminal   3
           }
@@ -2859,13 +3182,13 @@ Plecs {
           Type          Signal
           SrcComponent  "From10"
           SrcTerminal   1
-          Points        [235, 95]
+          Points        [360, 125]
           Branch {
             DstComponent  "Mux3"
             DstTerminal   5
           }
           Branch {
-            Points        [235, 105]
+            Points        [360, 135]
             DstComponent  "Mux3"
             DstTerminal   6
           }
@@ -2879,32 +3202,155 @@ Plecs {
         }
         Connection {
           Type          Signal
+          SrcComponent  "Dynamic Signal Selector"
+          SrcTerminal   3
+          DstComponent  "Sine_1"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
           SrcComponent  "sector"
           SrcTerminal   1
-          Points        [295, 50]
+          DstComponent  "Goto7"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "From12"
+          SrcTerminal   1
+          Points        [420, 65]
+          DstComponent  "Dynamic Signal Selector"
+          DstTerminal   2
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Mux4"
+          SrcTerminal   1
+          DstComponent  "Dynamic Signal Selector1"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Dynamic Signal Selector1"
+          SrcTerminal   3
+          DstComponent  "Sine_2"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "From17"
+          SrcTerminal   1
+          Points        [420, 170]
+          DstComponent  "Dynamic Signal Selector1"
+          DstTerminal   2
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Mux5"
+          SrcTerminal   1
+          DstComponent  "Dynamic Signal Selector2"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Dynamic Signal Selector2"
+          SrcTerminal   3
+          DstComponent  "Sine_3"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "From22"
+          SrcTerminal   1
+          Points        [420, 280]
+          DstComponent  "Dynamic Signal Selector2"
+          DstTerminal   2
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "From13"
+          SrcTerminal   1
+          Points        [360, 200]
           Branch {
-            DstComponent  "Dynamic Signal Selector"
+            DstComponent  "Mux4"
             DstTerminal   2
           }
           Branch {
-            Points        [295, 15]
-            DstComponent  "Scope"
-            DstTerminal   1
+            Points        [360, 250]
+            DstComponent  "Mux4"
+            DstTerminal   7
           }
         }
         Connection {
           Type          Signal
-          SrcComponent  "Dynamic Signal Selector"
-          SrcTerminal   3
-          Points        [325, 90]
+          SrcComponent  "From14"
+          SrcTerminal   1
+          DstComponent  "Mux4"
+          DstTerminal   3
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "From15"
+          SrcTerminal   1
+          Points        [370, 220]
           Branch {
-            DstComponent  "Out1"
-            DstTerminal   1
+            DstComponent  "Mux4"
+            DstTerminal   4
           }
           Branch {
-            Points        [325, 25]
-            DstComponent  "Scope"
-            DstTerminal   2
+            DstComponent  "Mux4"
+            DstTerminal   5
+          }
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "From16"
+          SrcTerminal   1
+          DstComponent  "Mux4"
+          DstTerminal   6
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "From18"
+          SrcTerminal   1
+          DstComponent  "Mux5"
+          DstTerminal   2
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "From19"
+          SrcTerminal   1
+          Points        [360, 320]
+          Branch {
+            DstComponent  "Mux5"
+            DstTerminal   3
+          }
+          Branch {
+            Points        [360, 330]
+            DstComponent  "Mux5"
+            DstTerminal   4
+          }
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "From20"
+          SrcTerminal   1
+          DstComponent  "Mux5"
+          DstTerminal   5
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "From21"
+          SrcTerminal   1
+          Points        [360, 350]
+          Branch {
+            DstComponent  "Mux5"
+            DstTerminal   6
+          }
+          Branch {
+            Points        [360, 360]
+            DstComponent  "Mux5"
+            DstTerminal   7
           }
         }
       }
@@ -2913,7 +3359,7 @@ Plecs {
       Type          From
       Name          "From8"
       Show          off
-      Position      [345, 545]
+      Position      [395, 540]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2937,7 +3383,7 @@ Plecs {
       Type          From
       Name          "From9"
       Show          off
-      Position      [345, 535]
+      Position      [395, 530]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2961,7 +3407,7 @@ Plecs {
       Type          From
       Name          "From10"
       Show          off
-      Position      [345, 525]
+      Position      [395, 520]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2985,7 +3431,7 @@ Plecs {
       Type          From
       Name          "From11"
       Show          off
-      Position      [345, 515]
+      Position      [395, 510]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -3009,23 +3455,24 @@ Plecs {
       Type          Scope
       Name          "Scope2"
       Show          on
-      Position      [545, 515]
+      Position      [565, 510]
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 27; 1920, 1033]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAADGPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAAF4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMBAAAAMAAAAxgAAABoAP///wAAAAMAAAeAAAAAt/w"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABSAP///wAABsgAAAMYAAAA"
+      Location      [0, 27; 1920, 1051]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAADKvwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAAK4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMBAAAAMAAAAyoAAABoAP///wAAAAMAAAeAAAAAt/w"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABSAP///wAABsgAAAMqAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":188,\"Labels\":["
+      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":194,\"Labels\":["
 "],\"VisualIdxs\":[]}"
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
-"AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
-      Axes          "2"
+"AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+"AAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      Axes          "4"
       TimeRange     "0.0"
       ScrollingMode "1"
       SingleTimeAxis "1"
@@ -3056,12 +3503,54 @@ Plecs {
         KeepBaseline  off
         BaselineValue 0
       }
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
       Fourier {
         SingleXAxis       on
         AxisLabel         "Frequency / Hz"
         Scaling           0
         PhaseDisplay      0
         ShowFourierLegend off
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
         Axis {
           Name          ""
           AutoScale     1
@@ -4235,7 +4724,7 @@ Plecs {
         DstTerminal   1
       }
       Branch {
-        Points        [485, 510]
+        Points        [485, 495]
         DstComponent  "Scope2"
         DstTerminal   1
       }
@@ -4251,7 +4740,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Subsystem1"
       SrcTerminal   2
-      Points        [445, 525; 445, 520]
+      Points        [510, 520; 510, 505]
       DstComponent  "Scope2"
       DstTerminal   2
     }
@@ -4315,6 +4804,22 @@ Plecs {
       DstComponent  "Goto"
       DstTerminal   1
     }
+    Connection {
+      Type          Signal
+      SrcComponent  "Subsystem1"
+      SrcTerminal   6
+      Points        [510, 510; 510, 515]
+      DstComponent  "Scope2"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Subsystem1"
+      SrcTerminal   7
+      Points        [515, 530; 515, 525]
+      DstComponent  "Scope2"
+      DstTerminal   4
+    }
   }
 }
-DemoSignature "35M3bpJRQe/x+y9FsB6m16+14Ie7DG83dMUJhXb2JY8="
+DemoSignature "JhHaQjHrGCGJm90hb3c5DZZ1z/taGGXarfF0Pfp7xeI="
