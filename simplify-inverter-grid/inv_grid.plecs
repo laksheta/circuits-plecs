@@ -29,10 +29,14 @@ Plecs {
   AssertionAction "1"
   FixedPointDatatypeOverride "1"
   InitializationCommands "plecs('clc')\n\ntau = 1e-3;\n\nV_g = 220*sqrt(2)\nfr"
-"eq = 50;\n\nL = 1e-3\nR = L/tau\n\nI_real = 10\nI_angle = 90\n\nI_x = I_real*"
-"cos(I_angle)\nI_y = I_real*sin(I_angle)\n\nV_R = I_real * R\nV_L_y = I * 2 * "
-"pi * freq * L\n\nV_inv = sqrt(V_L_y^2 + (V_R+V_g)^2)\n\nangle = atan(V_L_y/(V"
-"_R+V_g))\n"
+"eq = 50;\n\nL = 1e-3\nR = L/tau\n\nI_amp = 10\nI_angle_deg = 90\nI_angle_rad "
+"= I_angle_deg * pi / 180\n\nI_x = I_amp*cos(I_angle_rad)\nI_y = I_amp*sin(I_a"
+"ngle_rad)\n\nV_R_amp = I_real * R\nV_R_x = V_R_amp * cos(I_angle_rad)\nV_R_y "
+"= V_R_amp * sin(I_angle_rad)\n\nV_g_x = V_g\n\nx_L = 2 * pi * freq * L2\n\nV_"
+"L_amp = I * x_L\nV_L_angle = I_angle_rad + 0.5*pi\nV_L_x = V_L_amp * cos(V_L_"
+"angle)\nV_L_y = V_L_amp * sin(V_L_angle)\n\nV_inv_x = V_R_x + V_g_x + V_L_x\n"
+"V_inv_y = V_R_y + V_L_y\nV_inv = sqrt(V_inv_x^2 + V_inv_y^2)\n\nangle = atan("
+"V_L_y/(V_R+V_g))\n"
   InitialState  "1"
   SystemState   ""
   TaskingMode   "1"
@@ -712,4 +716,4 @@ Plecs {
     }
   }
 }
-DemoSignature "46g7zPQfZxGiYxWaIuo2/MZBc/hw5mpTnVBOIZ2JqVQ="
+DemoSignature "rvIR+2Z5ylZdsl7nZaAjbmqbddLiWfY5vkDJ5W7UkNc="
