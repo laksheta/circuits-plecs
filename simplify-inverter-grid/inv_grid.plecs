@@ -28,8 +28,10 @@ Plecs {
   AlgebraicLoopWithStateMachineMsg "3"
   AssertionAction "1"
   FixedPointDatatypeOverride "1"
-  InitializationCommands "tau = 1e-3\n\namp = 220*sqrt(2)\nfreq = 50\n\nangle_"
-"deg = 90\nangle_rad = angle_deg * pi/180\n\nL = 1e-3\nR = L/tau\n"
+  InitializationCommands "plecs('clc')\n\ntau = 1e-3\n\nV_g = 220*sqrt(2)\nfre"
+"q = 50\n\nL = 1e-3\nR = L/tau\n\nI = 10\n\nV_R = I * R\nV_L_y = I * 2 * pi * "
+"freq * L\n\nV_inv = sqrt(V_L_y^2 + (V_R+V_g)^2)\n\nangle = atan(V_L_y/(V_R+V_"
+"g))\n"
   InitialState  "1"
   SystemState   ""
   TaskingMode   "1"
@@ -54,7 +56,7 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [0, 27; 1920, 993]
+    Location      [0, 23; 1920, 989]
     ZoomFactor    2.57013
     SliderPosition [0, 0]
     ShowBrowser   off
@@ -69,7 +71,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "V"
-        Value         "amp"
+        Value         "V_inv"
         Show          off
       }
       Parameter {
@@ -79,7 +81,7 @@ Plecs {
       }
       Parameter {
         Variable      "phi"
-        Value         "angle_rad"
+        Value         "angle"
         Show          off
       }
       Parameter {
@@ -107,7 +109,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "V"
-        Value         "amp"
+        Value         "V_g"
         Show          off
       }
       Parameter {
@@ -266,7 +268,7 @@ Plecs {
       Type          SignalSelector
       Name          "Selector"
       Show          off
-      Position      [490, 60]
+      Position      [525, 65]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -285,19 +287,19 @@ Plecs {
       Type          Scope
       Name          "Scope"
       Show          on
-      Position      [550, 60]
+      Position      [585, 65]
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 27; 1920, 1060]
+      Location      [0, 23; 1920, 1011]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAeAAAAAiPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABSAP///wAAB4AAAANiAAAA"
+"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAeAAAAAYvw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABSAP///wAAB4AAAANbAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":223,\"Labels\":["
+      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":229,\"Labels\":["
 "],\"VisualIdxs\":[]}"
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
       Axes          "1"
@@ -449,6 +451,68 @@ Plecs {
       Parameter {
         Variable      "NoMatchingCounterpartAction"
         Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          From
+      Name          "From"
+      Show          off
+      Position      [450, 60]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "V_inv"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          SignalMux
+      Name          "Mux"
+      Show          off
+      Position      [480, 65]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Width"
+        Value         "[3 3]"
+        Show          off
+      }
+    }
+    Component {
+      Type          From
+      Name          "From1"
+      Show          off
+      Position      [450, 70]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "I_grid"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "1"
         Show          off
       }
     }
@@ -624,6 +688,27 @@ Plecs {
       DstComponent  "Goto4"
       DstTerminal   1
     }
+    Connection {
+      Type          Signal
+      SrcComponent  "Mux"
+      SrcTerminal   1
+      DstComponent  "Selector"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From"
+      SrcTerminal   1
+      DstComponent  "Mux"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From1"
+      SrcTerminal   1
+      DstComponent  "Mux"
+      DstTerminal   3
+    }
   }
 }
-DemoSignature "/6uLX2Wq+IvSQok1THh0Z07gqpf73yMys9EJO6vmff8="
+DemoSignature "NgIo429BOjisLeCJ0RBp9GGwU9hXehHFwPwV5frEAiM="
