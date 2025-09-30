@@ -28,8 +28,8 @@ Plecs {
   AlgebraicLoopWithStateMachineMsg "3"
   AssertionAction "1"
   FixedPointDatatypeOverride "1"
-  InitializationCommands "\n\namp = 220*sqrt(2)\nfreq = 50\n\nrad = pi\nR = 10"
-"\nL = 1e-3"
+  InitializationCommands "tau = 1e-3\n\namp = 220*sqrt(2)\nfreq = 50\n\nangle_"
+"deg = 90\nangle_rad = angle_deg * pi/180\n\nL = 1e-3\nR = L/tau\n"
   InitialState  "1"
   SystemState   ""
   TaskingMode   "1"
@@ -54,8 +54,8 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [0, 23; 1920, 989]
-    ZoomFactor    2.2459
+    Location      [0, 27; 1920, 993]
+    ZoomFactor    2.57013
     SliderPosition [0, 0]
     ShowBrowser   off
     BrowserWidth  100
@@ -66,7 +66,7 @@ Plecs {
       Position      [165, 120]
       Direction     up
       Flipped       off
-      LabelPosition north
+      LabelPosition south
       Parameter {
         Variable      "V"
         Value         "amp"
@@ -79,7 +79,7 @@ Plecs {
       }
       Parameter {
         Variable      "phi"
-        Value         "rad"
+        Value         "angle_rad"
         Show          off
       }
       Parameter {
@@ -101,10 +101,10 @@ Plecs {
       Type          ThreePhaseVoltageSource
       Name          "Grid"
       Show          on
-      Position      [395, 120]
+      Position      [400, 120]
       Direction     down
       Flipped       on
-      LabelPosition north
+      LabelPosition south
       Parameter {
         Variable      "V"
         Value         "amp"
@@ -130,7 +130,7 @@ Plecs {
       Type          Ground
       Name          "Ground1"
       Show          off
-      Position      [425, 155]
+      Position      [430, 140]
       Direction     down
       Flipped       on
       LabelPosition west
@@ -175,96 +175,6 @@ Plecs {
         Variable      "R"
         Value         "R"
         Show          off
-      }
-    }
-    Component {
-      Type          SignalSelector
-      Name          "Selector"
-      Show          off
-      Position      [370, 50]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      Parameter {
-        Variable      "InputWidth"
-        Value         "6"
-        Show          off
-      }
-      Parameter {
-        Variable      "OutputIndices"
-        Value         "[1 4]"
-        Show          off
-      }
-    }
-    Component {
-      Type          SignalMux
-      Name          "Mux"
-      Show          off
-      Position      [335, 85]
-      Direction     up
-      Flipped       off
-      LabelPosition east
-      Parameter {
-        Variable      "Width"
-        Value         "[3 3]"
-        Show          off
-      }
-    }
-    Component {
-      Type          Scope
-      Name          "Scope"
-      Show          on
-      Position      [430, 50]
-      Direction     up
-      Flipped       off
-      LabelPosition south
-      Location      [0, 27; 1920, 1051]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAeAAAAAiPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABSAP///wAAB4AAAANZAAAA"
-"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
-"AAAAA=="
-      SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":223,\"Labels\":["
-"],\"VisualIdxs\":[]}"
-      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-      Axes          "1"
-      TimeRange     "0.0"
-      ScrollingMode "1"
-      SingleTimeAxis "1"
-      Open          "0"
-      Ts            "-1"
-      SampleLimit   "0"
-      XAxisLabel    "Time / s"
-      ShowLegend    "1"
-      Axis {
-        Name          ""
-        AutoScale     1
-        MinValue      0
-        MaxValue      1
-        Signals       {}
-        SignalTypes   [ ]
-        Untangle      0
-        KeepBaseline  off
-        BaselineValue 0
-      }
-      Fourier {
-        SingleXAxis       on
-        AxisLabel         "Frequency / Hz"
-        Scaling           0
-        PhaseDisplay      0
-        ShowFourierLegend off
-        Axis {
-          Name          ""
-          AutoScale     1
-          MinValue      0
-          MaxValue      1
-          Signals       {}
-          Untangle      0
-          KeepBaseline  off
-          BaselineValue 0
-        }
       }
     }
     Component {
@@ -338,99 +248,208 @@ Plecs {
         Show          off
       }
     }
-    Connection {
-      Type          Wire
-      SrcComponent  "Ground"
-      SrcTerminal   1
-      Points        [140, 120]
-      DstComponent  "Inv"
-      DstTerminal   4
-    }
-    Connection {
-      Type          Wire
-      SrcComponent  "R1"
-      SrcTerminal   2
-      DstComponent  "Inv"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Wire
-      SrcComponent  "R2"
-      SrcTerminal   2
-      DstComponent  "Inv"
-      DstTerminal   2
-    }
-    Connection {
-      Type          Wire
-      SrcComponent  "R3"
-      SrcTerminal   2
-      DstComponent  "Inv"
-      DstTerminal   3
-    }
-    Connection {
-      Type          Wire
-      SrcComponent  "3ph Meter"
-      SrcTerminal   4
-      DstComponent  "Grid"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Wire
-      SrcComponent  "3ph Meter"
-      SrcTerminal   5
-      DstComponent  "Grid"
-      DstTerminal   2
-    }
-    Connection {
-      Type          Wire
-      SrcComponent  "3ph Meter"
-      SrcTerminal   6
-      DstComponent  "Grid"
-      DstTerminal   3
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "3ph Meter"
-      SrcTerminal   7
-      DstComponent  "Mux"
-      DstTerminal   2
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "3ph Meter"
-      SrcTerminal   8
-      DstComponent  "Mux"
-      DstTerminal   3
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Mux"
-      SrcTerminal   1
-      Points        [335, 50]
-      DstComponent  "Selector"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Selector"
-      SrcTerminal   2
-      DstComponent  "Scope"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Wire
-      SrcComponent  "Ground1"
-      SrcTerminal   1
-      Points        [425, 145]
-      Branch {
-        Points        [425, 120]
-        DstComponent  "Grid"
-        DstTerminal   4
+    Component {
+      Type          ThreePhaseMeter
+      Name          "3ph Meter1"
+      Show          off
+      Position      [215, 120]
+      Direction     up
+      Flipped       off
+      LabelPosition southSoutheast
+      Parameter {
+        Variable      "voltage"
+        Value         "1"
+        Show          off
       }
-      Branch {
-        Points        [335, 145]
-        DstComponent  "3ph Meter"
-        DstTerminal   9
+    }
+    Component {
+      Type          SignalSelector
+      Name          "Selector"
+      Show          off
+      Position      [490, 60]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "InputWidth"
+        Value         "6"
+        Show          off
+      }
+      Parameter {
+        Variable      "OutputIndices"
+        Value         "[1 4]"
+        Show          off
+      }
+    }
+    Component {
+      Type          Scope
+      Name          "Scope"
+      Show          on
+      Position      [550, 60]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Location      [0, 27; 1920, 1060]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAeAAAAAiPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABSAP///wAAB4AAAANiAAAA"
+"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
+"AAAAA=="
+      SavedViews    "AAAAAgAAAAA="
+      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":223,\"Labels\":["
+"],\"VisualIdxs\":[]}"
+      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      Axes          "1"
+      TimeRange     "0.0"
+      ScrollingMode "1"
+      SingleTimeAxis "1"
+      Open          "0"
+      Ts            "-1"
+      SampleLimit   "0"
+      XAxisLabel    "Time / s"
+      ShowLegend    "1"
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Fourier {
+        SingleXAxis       on
+        AxisLabel         "Frequency / Hz"
+        Scaling           0
+        PhaseDisplay      0
+        ShowFourierLegend off
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+      }
+    }
+    Component {
+      Type          Goto
+      Name          "Goto2"
+      Show          off
+      Position      [190, 60]
+      Direction     left
+      Flipped       off
+      LabelPosition north
+      Parameter {
+        Variable      "Tag"
+        Value         "I_inv"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          Goto
+      Name          "Goto3"
+      Show          off
+      Position      [190, 80]
+      Direction     left
+      Flipped       off
+      LabelPosition north
+      Parameter {
+        Variable      "Tag"
+        Value         "V_inv"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          Ground
+      Name          "Ground2"
+      Show          off
+      Position      [215, 150]
+      Direction     up
+      Flipped       off
+      LabelPosition east
+    }
+    Component {
+      Type          Ground
+      Name          "Ground3"
+      Show          off
+      Position      [335, 150]
+      Direction     down
+      Flipped       on
+      LabelPosition west
+    }
+    Component {
+      Type          Goto
+      Name          "Goto4"
+      Show          off
+      Position      [360, 80]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "I_grid"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          Goto
+      Name          "Goto5"
+      Show          off
+      Position      [360, 60]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "V_grid"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "2"
+        Show          off
       }
     }
     Connection {
@@ -475,6 +494,136 @@ Plecs {
       DstComponent  "3ph Meter"
       DstTerminal   3
     }
+    Connection {
+      Type          Wire
+      SrcComponent  "R1"
+      SrcTerminal   2
+      DstComponent  "3ph Meter1"
+      DstTerminal   4
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "3ph Meter1"
+      SrcTerminal   1
+      DstComponent  "Inv"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "R2"
+      SrcTerminal   2
+      DstComponent  "3ph Meter1"
+      DstTerminal   5
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "3ph Meter1"
+      SrcTerminal   2
+      DstComponent  "Inv"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "R3"
+      SrcTerminal   2
+      DstComponent  "3ph Meter1"
+      DstTerminal   6
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "3ph Meter1"
+      SrcTerminal   3
+      DstComponent  "Inv"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "3ph Meter"
+      SrcTerminal   4
+      DstComponent  "Grid"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "3ph Meter"
+      SrcTerminal   5
+      DstComponent  "Grid"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "3ph Meter"
+      SrcTerminal   6
+      DstComponent  "Grid"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Selector"
+      SrcTerminal   2
+      DstComponent  "Scope"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "3ph Meter1"
+      SrcTerminal   7
+      DstComponent  "Goto3"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "3ph Meter1"
+      SrcTerminal   8
+      Points        [220, 60]
+      DstComponent  "Goto2"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "Ground"
+      SrcTerminal   1
+      Points        [140, 120]
+      DstComponent  "Inv"
+      DstTerminal   4
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "Ground2"
+      SrcTerminal   1
+      DstComponent  "3ph Meter1"
+      DstTerminal   9
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "Ground1"
+      SrcTerminal   1
+      Points        [430, 120]
+      DstComponent  "Grid"
+      DstTerminal   4
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "Ground3"
+      SrcTerminal   1
+      DstComponent  "3ph Meter"
+      DstTerminal   9
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "3ph Meter"
+      SrcTerminal   7
+      Points        [330, 60]
+      DstComponent  "Goto5"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "3ph Meter"
+      SrcTerminal   8
+      DstComponent  "Goto4"
+      DstTerminal   1
+    }
   }
 }
-DemoSignature "J0B2YybJASh7y1WatmETE5EpCiyx7P5auN+bdbiyuYs="
+DemoSignature "/6uLX2Wq+IvSQok1THh0Z07gqpf73yMys9EJO6vmff8="
