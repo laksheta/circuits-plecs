@@ -28,10 +28,11 @@ Plecs {
   AlgebraicLoopWithStateMachineMsg "3"
   AssertionAction "1"
   FixedPointDatatypeOverride "1"
-  InitializationCommands "plecs('clc')\n\ntau = 1e-3\n\nV_g = 220*sqrt(2)\nfre"
-"q = 50\n\nL = 1e-3\nR = L/tau\n\nI = 10\n\nV_R = I * R\nV_L_y = I * 2 * pi * "
-"freq * L\n\nV_inv = sqrt(V_L_y^2 + (V_R+V_g)^2)\n\nangle = atan(V_L_y/(V_R+V_"
-"g))\n"
+  InitializationCommands "plecs('clc')\n\ntau = 1e-3;\n\nV_g = 220*sqrt(2)\nfr"
+"eq = 50;\n\nL = 1e-3\nR = L/tau\n\nI_real = 10\nI_angle = 90\n\nI_x = I_real*"
+"cos(I_angle)\nI_y = I_real*sin(I_angle)\n\nV_R = I_real * R\nV_L_y = I * 2 * "
+"pi * freq * L\n\nV_inv = sqrt(V_L_y^2 + (V_R+V_g)^2)\n\nangle = atan(V_L_y/(V"
+"_R+V_g))\n"
   InitialState  "1"
   SystemState   ""
   TaskingMode   "1"
@@ -711,4 +712,4 @@ Plecs {
     }
   }
 }
-DemoSignature "NgIo429BOjisLeCJ0RBp9GGwU9hXehHFwPwV5frEAiM="
+DemoSignature "46g7zPQfZxGiYxWaIuo2/MZBc/hw5mpTnVBOIZ2JqVQ="
