@@ -1,5 +1,5 @@
 Plecs {
-  Name          "model"
+  Name          "avg"
   Version       "4.9"
   CircuitModel  "ContStateSpace"
   StartTime     "0.0"
@@ -28,7 +28,7 @@ Plecs {
   AlgebraicLoopWithStateMachineMsg "3"
   AssertionAction "1"
   FixedPointDatatypeOverride "1"
-  InitializationCommands "model"
+  InitializationCommands "avg\n"
   InitialState  "1"
   SystemState   ""
   TaskingMode   "1"
@@ -53,9 +53,9 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [0, 23; 1920, 989]
+    Location      [1, 31; 959, 988]
     ZoomFactor    1
-    SliderPosition [0, 0]
+    SliderPosition [339, 18]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -794,7 +794,7 @@ Plecs {
     }
     Component {
       Type          TransferFunction
-      Name          "Closed Loop - Current Control1"
+      Name          "Inner Loop - Current Control"
       Show          on
       Position      [625, 850]
       Direction     right
@@ -920,7 +920,7 @@ Plecs {
     }
     Component {
       Type          TransferFunction
-      Name          "Closed Loop - Speed Control1"
+      Name          "Outer Loop - Speed Control"
       Show          on
       Position      [370, 850]
       Direction     right
@@ -1349,7 +1349,7 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Closed Loop - Current Control1"
+      SrcComponent  "Inner Loop - Current Control"
       SrcTerminal   2
       DstComponent  "Sum6"
       DstTerminal   2
@@ -1358,7 +1358,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Sum7"
       SrcTerminal   1
-      DstComponent  "Closed Loop - Current Control1"
+      DstComponent  "Inner Loop - Current Control"
       DstTerminal   1
     }
     Connection {
@@ -1399,7 +1399,7 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Closed Loop - Speed Control1"
+      SrcComponent  "Outer Loop - Speed Control"
       SrcTerminal   2
       DstComponent  "Sum7"
       DstTerminal   2
@@ -1408,7 +1408,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Sum8"
       SrcTerminal   1
-      DstComponent  "Closed Loop - Speed Control1"
+      DstComponent  "Outer Loop - Speed Control"
       DstTerminal   1
     }
     Connection {
@@ -1499,4 +1499,4 @@ Plecs {
     } 
   }
 }
-DemoSignature "oLTE7LFjRQN0PT67wbfNE8822CWUmIvTz71vPSXYpsM="
+DemoSignature "5IhnwXsQ4gIN0ThqiMwb5uoW8PPn9X2vWZu/sGRe/3g="
