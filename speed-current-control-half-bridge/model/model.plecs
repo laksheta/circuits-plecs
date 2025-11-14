@@ -28,13 +28,7 @@ Plecs {
   AlgebraicLoopWithStateMachineMsg "3"
   AssertionAction "1"
   FixedPointDatatypeOverride "1"
-  InitializationCommands "Ra \t\t= 0.43 %Terminal Resistance\nLa\t\t\t= 0.9e-3"
-" %Terminal Inductance\n\n%i_f calculation\ni_f \t\t= 1\nRf\t\t\t= 1\nLf\t\t\t"
-"= 0.1\nvf \t\t= Rf*i_f\n\n%kt\t\t= Laf * i_f\n%Laf\n\n\nJ\t\t\t= 1.54e-5 %Rot"
-"or Inertia and unit conversion\nF\t\t\t= 9.549e-6 %Damping Factor and unit co"
-"nversion\nia_rated = 8.20 %Rated Current\nTe_max \t= 4.096\t%Peak Torque || M"
-"ax Electromagnetic Torque\nw_m_rated= 282.74 %Rated Speed\n\n%K\t\t\t= 0.08 %"
-"Back EMF (V/rad/sec) || Laf * if"
+  InitializationCommands "model"
   InitialState  "1"
   SystemState   ""
   TaskingMode   "1"
@@ -76,37 +70,37 @@ Plecs {
       Frame         [-25, -18; 25, 45]
       Parameter {
         Variable      "Ra"
-        Value         "0.5"
+        Value         "Ra"
         Show          off
       }
       Parameter {
         Variable      "La"
-        Value         "0.01"
+        Value         "La"
         Show          off
       }
       Parameter {
         Variable      "Rf"
-        Value         "200"
+        Value         "Rf"
         Show          off
       }
       Parameter {
         Variable      "Lf"
-        Value         "100"
+        Value         "Lf"
         Show          off
       }
       Parameter {
         Variable      "Laf"
-        Value         "2"
+        Value         "Laf"
         Show          off
       }
       Parameter {
         Variable      "J"
-        Value         "2"
+        Value         "J"
         Show          off
       }
       Parameter {
         Variable      "F"
-        Value         "0"
+        Value         "F"
         Show          off
       }
       Parameter {
@@ -157,4 +151,4 @@ Plecs {
     }
   }
 }
-DemoSignature "RiWyA55iOxLQ9zKVFG6F9ZloTyH0ofDGoYewBLZpA/s="
+DemoSignature "sJAul1q4MA+xy+NcY/NQQoJLOQIPZjdQCiaEbdYBMNo="
