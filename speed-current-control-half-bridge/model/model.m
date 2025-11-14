@@ -31,7 +31,7 @@ Ki_c    = w_bw_c * Ra
 
 
 %% Speed Control
-f_bw_s  = 10*f_bw_c
+f_bw_s  = 0.1*f_bw_c
 w_bw_s  = 2*pi*f_bw_s
 
 Kp_s    = (w_bw_s * J)/(Laf*i_f)
