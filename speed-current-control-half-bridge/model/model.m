@@ -1,3 +1,5 @@
+%% Model Parameters
+
 Ra 		    = 0.43 %Terminal Resistance
 La			= 0.9e-3 %Terminal Inductance
 
@@ -16,3 +18,15 @@ Laf         = 0.0187 %Torque Sensitivityu
 ia_rated    = 8.20 %Rated Current
 Te_max 	    = 4.096	%Peak Torque || Max Electromagnetic Torque
 w_m_rated   = 282.74 %Rated Speed
+
+
+%% Control Parameters %%
+
+%% Current Control
+f_bw    = 1e3
+w_bw    = 2*pi*f_bw
+
+Kp_c    = w_bw * La
+Ki_c    = Kp_c * Ra
+
+
