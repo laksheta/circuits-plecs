@@ -53,8 +53,8 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [0, 23; 1920, 989]
-    ZoomFactor    1.49863
+    Location      [1, 31; 959, 988]
+    ZoomFactor    1.30957
     SliderPosition [0, 0]
     ShowBrowser   off
     BrowserWidth  100
@@ -207,11 +207,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 27; 1920, 1060]
+      Location      [0, 27; 1920, 1067]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAeAAAAAiPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABSAP///wAAB4AAAANiAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABSAP///wAAB4AAAANpAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -353,7 +353,7 @@ Plecs {
       Type          Constant
       Name          "Ea"
       Show          on
-      Position      [300, 455]
+      Position      [305, 430]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -397,7 +397,7 @@ Plecs {
       Type          From
       Name          "From"
       Show          off
-      Position      [405, 430]
+      Position      [555, 375]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -414,69 +414,6 @@ Plecs {
       Parameter {
         Variable      "NoMatchingCounterpartAction"
         Value         "1"
-        Show          off
-      }
-    }
-    Component {
-      Type          Sum
-      Name          "Sum"
-      Show          off
-      Position      [520, 430]
-      Direction     up
-      Flipped       off
-      LabelPosition south
-      Parameter {
-        Variable      "IconShape"
-        Value         "2"
-        Show          off
-      }
-      Parameter {
-        Variable      "Inputs"
-        Value         "|++"
-        Show          off
-      }
-      Parameter {
-        Variable      "DataType"
-        Value         "11"
-        Show          off
-      }
-      Parameter {
-        Variable      "DataTypeOverflowMode"
-        Value         "1"
-        Show          off
-      }
-    }
-    Component {
-      Type          Gain
-      Name          "Gain"
-      Show          off
-      Position      [450, 430]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      Parameter {
-        Variable      "K"
-        Value         "Ra"
-        Show          off
-      }
-      Parameter {
-        Variable      "Multiplication"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "OutputDataType"
-        Value         "11"
-        Show          off
-      }
-      Parameter {
-        Variable      "DataTypeOverflowMode"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "GainDataType"
-        Value         "11"
         Show          off
       }
     }
@@ -539,44 +476,24 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Gain"
-      SrcTerminal   2
-      DstComponent  "Sum"
-      DstTerminal   2
-    }
-    Connection {
-      Type          Signal
       SrcComponent  "Ea"
       SrcTerminal   1
-      Points        [345, 455]
-      Branch {
-        DstComponent  "Sum2"
-        DstTerminal   3
-      }
-      Branch {
-        DstComponent  "Sum"
-        DstTerminal   3
-      }
+      Points        [345, 430]
+      DstComponent  "Sum2"
+      DstTerminal   3
     }
     Connection {
       Type          Signal
       SrcComponent  "From"
       SrcTerminal   1
-      DstComponent  "Gain"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Sum"
-      SrcTerminal   1
-      Points        [550, 430; 550, 345]
+      Points        [565, 375]
       DstComponent  "Mux1"
       DstTerminal   3
     }
     RectangleAnnotation {
-      Position     [340, 380]
+      Position     [340, 370]
       Width        620
-      Height       210
+      Height       190
       CornerRadius 3
       Thickness    2
       PenColor     4278190080
@@ -591,4 +508,4 @@ Plecs {
     } 
   }
 }
-DemoSignature "MII5MwP0YFT2McqPKj6dsFAXV91OAJhB/YmQ/h3m24w="
+DemoSignature "QYJY4CpOwGCnIkEFntta2qtbiVaF5ua0kixQ8KSS8yQ="
