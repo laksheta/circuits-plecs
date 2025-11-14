@@ -53,103 +53,11 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [1, 31; 959, 988]
+    Location      [0, 23; 1920, 989]
     ZoomFactor    1
-    SliderPosition [339, 18]
+    SliderPosition [89, 18]
     ShowBrowser   off
     BrowserWidth  100
-    Component {
-      Type          Reference
-      SrcComponent  "Components/Electrical/Machines/DC Machine"
-      Name          "DC Machine"
-      Show          on
-      Position      [305, 120]
-      Direction     up
-      Flipped       off
-      LabelPosition south
-      CommentOut    DisabledOpenCircuit
-      Frame         [-25, -18; 25, 45]
-      Parameter {
-        Variable      "Ra"
-        Value         "Ra"
-        Show          off
-      }
-      Parameter {
-        Variable      "La"
-        Value         "La"
-        Show          off
-      }
-      Parameter {
-        Variable      "Rf"
-        Value         "Rf"
-        Show          off
-      }
-      Parameter {
-        Variable      "Lf"
-        Value         "Lf"
-        Show          off
-      }
-      Parameter {
-        Variable      "Laf"
-        Value         "Laf"
-        Show          off
-      }
-      Parameter {
-        Variable      "J"
-        Value         "J"
-        Show          off
-      }
-      Parameter {
-        Variable      "F"
-        Value         "F"
-        Show          off
-      }
-      Parameter {
-        Variable      "wm0"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "thm0"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "ia0"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "if0"
-        Value         "0"
-        Show          off
-      }
-      Terminal {
-        Type          Port
-        Position      [-30, 0]
-        Direction     left
-      }
-      Terminal {
-        Type          Port
-        Position      [30, 0]
-        Direction     right
-      }
-      Terminal {
-        Type          Port
-        Position      [-30, 30]
-        Direction     left
-      }
-      Terminal {
-        Type          Port
-        Position      [30, 30]
-        Direction     right
-      }
-      Terminal {
-        Type          Rotational
-        Position      [30, 40]
-        Direction     right
-      }
-    }
     Component {
       Type          Sum
       Name          "Sum1"
@@ -1499,4 +1407,4 @@ Plecs {
     } 
   }
 }
-DemoSignature "5IhnwXsQ4gIN0ThqiMwb5uoW8PPn9X2vWZu/sGRe/3g="
+DemoSignature "1SP/Jic0wThmbJTa/80D88VEjBCW/fFUF5R/9v/vNpA="
