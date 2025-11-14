@@ -3,4 +3,4 @@
 Vin     = 30
 fsw     = 10e3
 
-ts      = 1/fsw * 5
+ts      = 10%1/fsw * 0.5
