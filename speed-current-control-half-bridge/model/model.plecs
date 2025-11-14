@@ -627,7 +627,7 @@ Plecs {
       Frame         [-10, -10; 10, 10]
       Parameter {
         Variable      "Value"
-        Value         "5.7"
+        Value         "0"
         Show          off
       }
       Parameter {
@@ -864,4 +864,4 @@ Plecs {
     } 
   }
 }
-DemoSignature "UPHV/fB8SdqbygPg/6ZMd1xSa+X47g3EO8Heu544yp8="
+DemoSignature "tg3MQ+CgRm36qpC2OInsVt98Xr2c+xzDK/D/tEJ+0YM="
