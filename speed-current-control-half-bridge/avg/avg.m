@@ -1,4 +1,4 @@
-%% Model Parameters
+%% Model Parameters %%
 
 Ra 		    = 0.43 %Terminal Resistance
 La			= 0.9e-3 %Terminal Inductance
