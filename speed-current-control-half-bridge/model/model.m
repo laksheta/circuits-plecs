@@ -23,10 +23,16 @@ w_m_rated   = 282.74 %Rated Speed
 %% Control Parameters %%
 
 %% Current Control
-f_bw    = 1e3
-w_bw    = 2*pi*f_bw
+f_bw_c    = 1e3
+w_bw_c    = 2*pi*f_bw_c
 
-Kp_c    = w_bw * La
-Ki_c    = Kp_c * Ra
+Kp_c    = w_bw_c * La
+Ki_c    = w_bw_c * Ra
 
 
+%% Speed Control
+f_bw_s  = 10*f_bw_c
+w_bw_s  = 2*pi*f_bw_s
+
+Kp_s    = (w_bw_s * J)/(Laf*i_f)
+Ki_s    = (w_bw_s * F)/(Laf*i_f)
