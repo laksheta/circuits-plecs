@@ -8,6 +8,22 @@ ts      = 10%1/fsw * 0.5
 Ra 		    = 0.43 %Terminal Resistance
 La			= 0.9e-3 %Terminal Inductance
 
+%i_f calculation
+i_f 		= 1
+Rf			= 1
+Lf			= 0.1
+vf 		    = Rf*i_f
+
+
+
+J			= 1.54e-5 %Rotor Inertia and unit conversion
+F			= 9.549e-6 %Damping Factor and unit conversion
+Laf         = 0.0187 %Torque Sensitivityu
+
+ia_rated    = 8.20 %Rated Current
+Te_max 	    = 4.096	%Peak Torque || Max Electromagnetic Torque
+w_m_rated   = 282.74 %Rated Speed
+
 %% Control Parameters %%
 
 %% Current Control
@@ -16,3 +32,10 @@ w_bw_c    = 2*pi*f_bw_c
 
 Kp_c    = w_bw_c * La
 Ki_c    = w_bw_c * Ra
+
+%% Speed Control
+f_bw_s  = 0.1*f_bw_c
+w_bw_s  = 2*pi*f_bw_s
+
+Kp_s    = (w_bw_s * J)/(Laf*i_f)
+Ki_s    = (w_bw_s * F)/(Laf*i_f)
