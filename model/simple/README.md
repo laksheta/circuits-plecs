@@ -1,7 +1,7 @@
 # Simulation
 
 <details>
-<summary>Click to expand Simulation images</summary>
+<summary>Click to expand</summary>
 
 ![](attachments/Pasted%20image%2020251112224417.png)
 
@@ -12,7 +12,7 @@
 ## Waveforms Breakdown
 
 <details>
-<summary>Click to expand Waveforms</summary>
+<summary>Click to expand</summary>
 
 ![](attachments/Pasted%20image%2020251112224519.png)
 
@@ -28,7 +28,7 @@
 # Results
 
 <details>
-<summary>Click to expand Results</summary>
+<summary>Click to expand</summary>
 
 ![](attachments/Pasted%20image%2020251112225207.png)
 
