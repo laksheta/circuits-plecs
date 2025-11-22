@@ -25,6 +25,19 @@
 
 </details>
 
+## Inductor Calculation
+<details>
+<summary>Click to expand</summary>
+![](attachments/Pasted%20image%2020251122095421.png)
+![](attachments/Pasted%20image%2020251122095558.png)
+![](attachments/Pasted%20image%2020251122095616.png)
+![](attachments/Pasted%20image%2020251122095632.png)
+![](attachments/Pasted%20image%2020251122095656.png)
+![](attachments/Pasted%20image%2020251122095725.png)
+![](attachments/Pasted%20image%2020251122095735.png)
+![](attachments/Pasted%20image%2020251122095746.png)
+![](attachments/Pasted%20image%2020251122095754.png)
+</details>
 # Results
 
 <details>
