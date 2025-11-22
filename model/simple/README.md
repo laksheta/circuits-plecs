@@ -28,6 +28,7 @@
 ## Inductor Calculation
 <details>
 <summary>Click to expand</summary>
+
 ![](attachments/Pasted%20image%2020251122095421.png)
 
 ![](attachments/Pasted%20image%2020251122095558.png)
