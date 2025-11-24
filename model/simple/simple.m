@@ -6,4 +6,4 @@ V2 	= 780
 L		= 1e-3
 
 deg	= 30
-phi	= (deg/360)*(1/fsw)
+phi	= (deg/360)*(1/fsw);
