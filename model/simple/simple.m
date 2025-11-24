@@ -1,9 +1,11 @@
-fsw	= 10e3
+fsw	    = 10e3
 
 V1		= 780
-V2 	= 780
+V2 	    = 780
 
-L		= 1e-3
+P       = 10e3
+D       = 0.5       %! Normalized phase shift ratio
+L		= (V1*V2)*D*(1-D)/(2*fsw*P)
 
-deg	= 30;
-phi	= (deg/360)*(1/fsw);
+deg	    = 30;
+phi	    = (deg/360)*(1/fsw);
