@@ -5,6 +5,9 @@
 
 ![](attachments/Pasted%20image%2020251112224417.png)
 
+
+![](attachments/Pasted%20image%2020251126194500.png)
+
 </details>
 
 # Calculation
@@ -52,8 +55,6 @@
 <details>
   <summary>Click to expand</summary>
 
-![](attachments/Pasted%20image%2020251126194500.png)
-
 - Equivalent source current
 
 $$ I_{dc} = \frac{P_{avg}}{V_{dc}} $$
@@ -84,5 +85,7 @@ $$ V_{out} = \frac{1}{C} \int I~dt $$
 ![](attachments/Pasted%20image%2020251112225422.png)
 
 ![](attachments/Pasted%20image%2020251112225458.png)
+
+![](attachments/Pasted%20image%2020251126195048.png)
 
 </details>
