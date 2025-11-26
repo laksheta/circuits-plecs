@@ -10,7 +10,7 @@ P       = 10e3
 D       = 0.5       %! Normalized phase shift ratio
 L		= (V1*V2)*D*(1-D)/(2*fsw*P)
 
-d       = 0.5
+d       = 0.25
 deg	    = d*(90/0.5)
 phi	    = (deg/360)*(1/fsw)
 
