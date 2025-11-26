@@ -48,6 +48,14 @@
 ![](attachments/Pasted%20image%2020251122095754.png)
 </details>
 
+## Virtual DC Plant
+<details>
+  <summary>Click to expand</summary>
+$$ I_{dc} = \frac{P_{avg}}{V_{dc}} $$
+$$ I_{load} = \frac{V_{dc}}{R_{load}} $$
+$$ V_{out} = \frac{1}{C} \int I~dt $$
+</details>
+
 # Results
 
 <details>
