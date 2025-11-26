@@ -1,9 +1,12 @@
 plecs('clc')
 fsw	    = 10e3
 
+ts      = 1%100*1/fsw
 V1		= 780
 V2 	    = 780
+C       = 1e-6
 
+R_load  = 100
 P       = 10e3
 D       = 0.5       %! Normalized phase shift ratio
 L		= (V1*V2)*D*(1-D)/(2*fsw*P)
