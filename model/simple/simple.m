@@ -14,5 +14,5 @@ d       = 0.5
 deg	    = d*(90/0.5)
 phi	    = (deg/360)*(1/fsw)
 
-I       = V1*D*(1-D)/(2*fsw*L)
+I       = V1*D*(1-D)/(2*fsw*L)  %! Current calculation
 R_load  = V1/I
