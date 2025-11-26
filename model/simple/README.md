@@ -51,9 +51,19 @@
 ## Virtual DC Plant
 <details>
   <summary>Click to expand</summary>
+  
+- Equivalent source current
+
 $$ I_{dc} = \frac{P_{avg}}{V_{dc}} $$
+
+- Load current
+
 $$ I_{load} = \frac{V_{dc}}{R_{load}} $$
+
+- Output voltage
+
 $$ V_{out} = \frac{1}{C} \int I~dt $$
+
 </details>
 
 # Results
