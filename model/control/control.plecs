@@ -1443,7 +1443,7 @@ Plecs {
       Frame         [-15, -15; 15, 15]
       Parameter {
         Variable      "T_d"
-        Value         "5e-3"
+        Value         "phi"
         Show          off
       }
       Parameter {
@@ -1484,7 +1484,7 @@ Plecs {
       }
       Parameter {
         Variable      "T_d"
-        Value         "2e-3"
+        Value         "phi"
         Show          off
       }
       Parameter {
@@ -1512,19 +1512,148 @@ Plecs {
       Type          Scope
       Name          "Scope4"
       Show          on
-      Position      [735, 505]
+      Position      [835, 495]
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [640, 276; 990, 512]
+      Location      [0, 27; 1920, 1033]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAAF4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"G0AQQByAGUAYQAAAAAA/////wAAAIYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAAV4AAADRAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPTAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":146,\"Labels\":[],"
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":139,\"Labels\":[],"
+"\"VisualIdxs\":[]}"
+      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
+"AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+"=="
+      Axes          "3"
+      TimeRange     "0.0"
+      ScrollingMode "1"
+      SingleTimeAxis "1"
+      Open          "0"
+      Ts            "-1"
+      SampleLimit   "0"
+      XAxisLabel    "Time / s"
+      ShowLegend    "1"
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      1
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Fourier {
+        SingleXAxis       on
+        AxisLabel         "Frequency / Hz"
+        Scaling           0
+        PhaseDisplay      0
+        ShowFourierLegend off
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+      }
+    }
+    Component {
+      Type          SignalMux
+      Name          "Mux1"
+      Show          off
+      Position      [680, 540]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Width"
+        Value         "3"
+        Show          off
+      }
+    }
+    Component {
+      Type          SignalMux
+      Name          "Mux2"
+      Show          off
+      Position      [755, 540]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Width"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          Scope
+      Name          "Scope5"
+      Show          off
+      Position      [835, 585]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Location      [0, 23; 1920, 1011]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAAF4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPBAAAA"
+"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
+"AAAAA=="
+      SavedViews    "AAAAAgAAAAA="
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":154,\"Labels\":[],"
 "\"VisualIdxs\":[]}"
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
 "AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
@@ -1532,7 +1661,7 @@ Plecs {
       TimeRange     "0.0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "1"
+      Open          "0"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    "Time / s"
@@ -1589,15 +1718,63 @@ Plecs {
     }
     Component {
       Type          SignalMux
-      Name          "Mux1"
+      Name          "Mux3"
       Show          off
-      Position      [680, 540]
+      Position      [790, 585]
       Direction     right
       Flipped       off
       LabelPosition south
       Parameter {
         Variable      "Width"
-        Value         "3"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          From
+      Name          "From13"
+      Show          off
+      Position      [765, 580]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "V1"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          From
+      Name          "From14"
+      Show          off
+      Position      [765, 590]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "V2'"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "1"
         Show          off
       }
     }
@@ -1899,13 +2076,6 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Pulse Delay"
-      SrcTerminal   1
-      DstComponent  "Mux1"
-      DstTerminal   3
-    }
-    Connection {
-      Type          Signal
       SrcComponent  "Turn-on Delay"
       SrcTerminal   2
       Points        [650, 595; 650, 550]
@@ -1916,7 +2086,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Mux1"
       SrcTerminal   1
-      Points        [700, 540; 700, 510]
+      Points        [700, 540; 700, 495]
       DstComponent  "Scope4"
       DstTerminal   2
     }
@@ -1928,9 +2098,16 @@ Plecs {
       Branch {
         Points        [510, 490]
         Branch {
-          Points        [510, 450; 680, 450; 680, 500]
-          DstComponent  "Scope4"
-          DstTerminal   1
+          Points        [510, 450; 680, 450; 680, 485; 735, 485]
+          Branch {
+            DstComponent  "Scope4"
+            DstTerminal   1
+          }
+          Branch {
+            Points        [735, 535]
+            DstComponent  "Mux2"
+            DstTerminal   2
+          }
         }
         Branch {
           DstComponent  "Transport Delay"
@@ -1950,6 +2127,58 @@ Plecs {
         }
       }
     }
+    Connection {
+      Type          Signal
+      SrcComponent  "Pulse Delay"
+      SrcTerminal   1
+      Points        [655, 540]
+      Branch {
+        DstComponent  "Mux1"
+        DstTerminal   3
+      }
+      Branch {
+        Points        [655, 520; 720, 520; 720, 545]
+        DstComponent  "Mux2"
+        DstTerminal   3
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Mux3"
+      SrcTerminal   1
+      Points        [805, 585]
+      DstComponent  "Scope5"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From13"
+      SrcTerminal   1
+      DstComponent  "Mux3"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From14"
+      SrcTerminal   1
+      DstComponent  "Mux3"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Mux2"
+      SrcTerminal   1
+      Points        [765, 505; 800, 505]
+      Branch {
+        DstComponent  "Scope4"
+        DstTerminal   3
+      }
+      Branch {
+        Points        [800, 590]
+        DstComponent  "Scope5"
+        DstTerminal   2
+      }
+    }
   }
 }
-DemoSignature "xNeEC+jc/+JBmtol2rWTEyfWRHdb32q23RjJPRySb+g="
+DemoSignature "cMrlt91GFDjxdYyoobZoQjbH1f5Kf6BECcT5Xe0ERtE="
