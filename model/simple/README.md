@@ -51,7 +51,9 @@
 ## Virtual DC Plant
 <details>
   <summary>Click to expand</summary>
-  
+
+![](attachments/Pasted%20image%2020251126194500.png)
+
 - Equivalent source current
 
 $$ I_{dc} = \frac{P_{avg}}{V_{dc}} $$
