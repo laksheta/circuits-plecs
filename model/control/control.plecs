@@ -220,16 +220,16 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 27; 1920, 1051]
+      Location      [0, 27; 1920, 1067]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAeAAAAAiPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABSAP///wAAB4AAAANZAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABSAP///wAAB4AAAANpAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":148,\"Labels\":["
-"\"Delta\"],\"VisualIdxs\":[3]}"
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":148,\"Labels\":[\""
+"Delta\"],\"VisualIdxs\":[3]}"
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
       Axes          "1"
       TimeRange     "0.0"
@@ -291,11 +291,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 27; 1920, 1024]
+      Location      [0, 27; 1920, 1042]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAeAAAAAdfw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABSAP///wAAB4AAAANRAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABSAP///wAAB4AAAANjAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -980,11 +980,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 27; 1920, 1042]
+      Location      [0, 27; 1920, 1067]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAK4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAeAAAAAlfw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABSAP///wAAB4AAAANDAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABSAP///wAAB4AAAANcAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -1194,7 +1194,7 @@ Plecs {
       Type          Math
       Name          "Math"
       Show          off
-      Position      [585, 525]
+      Position      [430, 530]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1208,7 +1208,7 @@ Plecs {
       Type          TriangleGenerator
       Name          "Triangular Wave1"
       Show          off
-      Position      [415, 550]
+      Position      [260, 555]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1242,7 +1242,7 @@ Plecs {
       Type          Sum
       Name          "Sum1"
       Show          off
-      Position      [475, 520]
+      Position      [320, 525]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1271,7 +1271,7 @@ Plecs {
       Type          Constant
       Name          "Constant3"
       Show          off
-      Position      [360, 520]
+      Position      [205, 525]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1291,7 +1291,7 @@ Plecs {
       Type          Constant
       Name          "Constant4"
       Show          off
-      Position      [535, 560]
+      Position      [380, 565]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1311,7 +1311,7 @@ Plecs {
       Type          Comparator
       Name          "V1_Comparator"
       Show          on
-      Position      [740, 465]
+      Position      [585, 470]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1320,7 +1320,7 @@ Plecs {
       Type          Comparator
       Name          "V2'_Comparator"
       Show          on
-      Position      [740, 520]
+      Position      [585, 525]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1329,7 +1329,7 @@ Plecs {
       Type          Constant
       Name          "Constant5"
       Show          off
-      Position      [570, 460]
+      Position      [415, 465]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1349,7 +1349,7 @@ Plecs {
       Type          Scope
       Name          "Scope7"
       Show          off
-      Position      [825, 490]
+      Position      [785, 495]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1361,8 +1361,8 @@ Plecs {
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":133,\"Labels\":["
-"\"Delta\"],\"VisualIdxs\":[3]}"
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":133,\"Labels\":[\""
+"Delta\"],\"VisualIdxs\":[3]}"
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
 "AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
       Axes          "2"
@@ -1428,7 +1428,7 @@ Plecs {
       Type          Goto
       Name          "Goto9"
       Show          off
-      Position      [475, 580]
+      Position      [320, 585]
       Direction     down
       Flipped       off
       LabelPosition west
@@ -1452,7 +1452,7 @@ Plecs {
       Type          From
       Name          "From13"
       Show          off
-      Position      [675, 470]
+      Position      [520, 475]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1476,7 +1476,7 @@ Plecs {
       Type          Goto
       Name          "Goto"
       Show          off
-      Position      [770, 440]
+      Position      [730, 445]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -1500,7 +1500,7 @@ Plecs {
       Type          Goto
       Name          "Goto1"
       Show          off
-      Position      [790, 440]
+      Position      [750, 445]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -1572,7 +1572,7 @@ Plecs {
       Type          Scope
       Name          "Scope4"
       Show          on
-      Position      [710, 590]
+      Position      [555, 595]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1645,6 +1645,104 @@ Plecs {
           KeepBaseline  off
           BaselineValue 0
         }
+      }
+    }
+    Component {
+      Type          Product
+      Name          "Product4"
+      Show          off
+      Position      [660, 470]
+      Direction     up
+      Flipped       on
+      LabelPosition north
+      Parameter {
+        Variable      "IconShape"
+        Value         "2"
+        Show          off
+      }
+      Parameter {
+        Variable      "Inputs"
+        Value         "|**"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "11"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataTypeOverflowMode"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          Product
+      Name          "Product5"
+      Show          off
+      Position      [660, 525]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "IconShape"
+        Value         "2"
+        Show          off
+      }
+      Parameter {
+        Variable      "Inputs"
+        Value         "|**"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "11"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataTypeOverflowMode"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          Constant
+      Name          "Constant2"
+      Show          off
+      Position      [660, 435]
+      Direction     down
+      Flipped       off
+      LabelPosition west
+      Frame         [-10, -10; 10, 10]
+      Parameter {
+        Variable      "Value"
+        Value         "V1"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
+      }
+    }
+    Component {
+      Type          Constant
+      Name          "Constant6"
+      Show          off
+      Position      [660, 560]
+      Direction     up
+      Flipped       off
+      LabelPosition east
+      Frame         [-10, -10; 10, 10]
+      Parameter {
+        Variable      "Value"
+        Value         "V2"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
       }
     }
     Connection {
@@ -1902,7 +2000,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Constant4"
       SrcTerminal   1
-      Points        [555, 560]
+      Points        [400, 565]
       DstComponent  "Math"
       DstTerminal   3
     }
@@ -1910,13 +2008,13 @@ Plecs {
       Type          Signal
       SrcComponent  "Constant5"
       SrcTerminal   1
-      Points        [690, 460]
+      Points        [535, 465]
       Branch {
         DstComponent  "V1_Comparator"
         DstTerminal   1
       }
       Branch {
-        Points        [690, 515]
+        Points        [535, 520]
         DstComponent  "V2'_Comparator"
         DstTerminal   1
       }
@@ -1925,7 +2023,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Triangular Wave1"
       SrcTerminal   1
-      Points        [475, 550]
+      Points        [320, 555]
       Branch {
         DstComponent  "Sum1"
         DstTerminal   3
@@ -1941,35 +2039,6 @@ Plecs {
       SrcTerminal   1
       DstComponent  "V1_Comparator"
       DstTerminal   2
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "V1_Comparator"
-      SrcTerminal   3
-      Points        [770, 465]
-      Branch {
-        Points        [780, 465; 780, 485]
-        DstComponent  "Scope7"
-        DstTerminal   1
-      }
-      Branch {
-        DstComponent  "Goto"
-        DstTerminal   1
-      }
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "V2'_Comparator"
-      SrcTerminal   3
-      Points        [780, 520; 780, 495; 790, 495]
-      Branch {
-        DstComponent  "Scope7"
-        DstTerminal   2
-      }
-      Branch {
-        DstComponent  "Goto1"
-        DstTerminal   1
-      }
     }
     Connection {
       Type          Signal
@@ -1989,13 +2058,13 @@ Plecs {
       Type          Signal
       SrcComponent  "Math"
       SrcTerminal   1
-      Points        [650, 525]
+      Points        [495, 530]
       Branch {
         DstComponent  "V2'_Comparator"
         DstTerminal   2
       }
       Branch {
-        Points        [650, 595]
+        Points        [495, 600]
         DstComponent  "Scope4"
         DstTerminal   2
       }
@@ -2004,17 +2073,74 @@ Plecs {
       Type          Signal
       SrcComponent  "Sum1"
       SrcTerminal   1
-      Points        [505, 520]
+      Points        [350, 525]
       Branch {
         DstComponent  "Math"
         DstTerminal   2
       }
       Branch {
-        Points        [505, 585]
+        Points        [350, 590]
         DstComponent  "Scope4"
         DstTerminal   1
       }
     }
+    Connection {
+      Type          Signal
+      SrcComponent  "V1_Comparator"
+      SrcTerminal   3
+      DstComponent  "Product4"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "V2'_Comparator"
+      SrcTerminal   3
+      DstComponent  "Product5"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Product5"
+      SrcTerminal   1
+      Points        [725, 525; 725, 500; 750, 500]
+      Branch {
+        DstComponent  "Scope7"
+        DstTerminal   2
+      }
+      Branch {
+        DstComponent  "Goto1"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Product4"
+      SrcTerminal   1
+      Points        [730, 470]
+      Branch {
+        Points        [740, 470; 740, 490]
+        DstComponent  "Scope7"
+        DstTerminal   1
+      }
+      Branch {
+        DstComponent  "Goto"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Constant2"
+      SrcTerminal   1
+      DstComponent  "Product4"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Constant6"
+      SrcTerminal   1
+      DstComponent  "Product5"
+      DstTerminal   3
+    }
   }
 }
-DemoSignature "+dtC2yIg3fUhGLxkp+N7c0xruZZzVAMcaAnXwy8jNvA="
+DemoSignature "d65FQPsteDM7zsrTXeDB+XD4SJYHq5VXd00DonZp/kY="
