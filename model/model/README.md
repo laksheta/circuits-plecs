@@ -1,31 +1,24 @@
 # Simulation
 
+
+# Model 
 <details>
 <summary>Click to expand</summary>
 
-![](attachments/Pasted%20image%2020251112224417.png)
+## Plant Transfer Function
 
+$$G_{VD} = \frac{G_{dc}}{\tau s + 1}$$
 
-![](attachments/Pasted%20image%2020251126194500.png)
+with
 
-</details>
+$$G_{dc} = \frac{R_{load}}{2V_0} \cdot \frac{V_i V'_2(1-2D)}{2 f_{sw} L}$$
 
-# Calculation
-<details>
-<summary>Click to expand</summary>
+$$\tau = \frac{C R_{load}}{2}$$
 
-## PI Controller
-$$K_p = \frac{\tau \omega_c}{6Dc}, \quad K_i = \frac{K_p}{\tau}$$
+## Controller Transfer Function
 
- With:
+$$G_c = K_p + \frac{K_i}{s}$$
 
-$$G_{DL} = \frac{R_{load}}{2V_0} \cdot \frac{V_i V_s(1-aD)}{a f_{sw} L}$$
-
-$$\tau = \frac{C R_{load}}{a}$$
-
-$$\omega_c = 2\pi f_{bw}$$
-
-## Detailed Calculations
-[Detailed Calcultions PDF](attachments/DAB_202512041019_03846_removed.pdf)
+$$G_c = \frac{K_p s + K_i}{s}$$
 
 </details>
