@@ -21,4 +21,10 @@ $$G_c = K_p + \frac{K_i}{s}$$
 
 $$G_c = \frac{K_p s + K_i}{s}$$
 
+with
+
+$$K_p = \frac{\tau \omega_c}{G_{dc}}, \quad K_i = \frac{K_p}{\tau}$$
+
+$$\omega_c = 2\pi f_{bw}$$
+
 </details>

@@ -1,7 +1,7 @@
 plecs('clc')
 fsw	    = 10e3
 
-ts      = 10*1/fsw
+ts      = 2e-1%10*1/fsw
 V1		= 780
 V2 	    = 780
 V_out   = V1
@@ -23,6 +23,6 @@ R_load  = V1/I
 Kp      = 0.00422
 Ki      = 30.7
 
-Gvd     = (R_load/2*V_out)*((V1*V2*(1-2*d)/(2*fsw*L)))
+Gdc     = (R_load/2*V_out)*((V1*V2*(1-2*d)/(2*fsw*L)))
 tau     = (C*R_load)/2
 
