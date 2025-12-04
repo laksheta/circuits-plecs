@@ -10,7 +10,7 @@ $$K_p = \frac{\tau \omega_c}{G_{dc}}, \quad K_i = \frac{K_p}{\tau}$$
 
 With:
 
-$$G_{dc} = \frac{R_{\text{load}}}{2V_{0}} \cdot \frac{V_{i}V_{2}'(1-2D)}{2f_{\text{sw}}L}$$
+$$G_{dc} = \frac{R_{\text{load}}}{2V_{0}} \cdot \frac{V_{1}V_{2}'(1-2D)}{2f_{\text{sw}}L}$$
 
 $$\tau = \frac{CR_{\text{load}}}{2}$$
 
