@@ -17,3 +17,7 @@ phi	    = (deg/360)*(1/fsw)
 
 I       = V1*D*(1-D)/(2*fsw*L)  %! Current calculation
 R_load  = V1/I
+
+%* PI Controller
+Kp      = 0.00422
+Ki      = 30.7
