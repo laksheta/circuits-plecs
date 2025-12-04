@@ -11,7 +11,7 @@ $$G_{VD} = \frac{G_{dc}}{\tau s + 1}$$
 
 with
 
-$$G_{dc} = \frac{R_{load}}{2V_0} \cdot \frac{V_i V'_2(1-2D)}{2 f_{sw} L}$$
+$$G_{dc} = \frac{R_{load}}{2V_0} \cdot \frac{V_i V_2'(1-2D)}{2f_{sw}L}$$
 
 $$\tau = \frac{C R_{load}}{2}$$
 
