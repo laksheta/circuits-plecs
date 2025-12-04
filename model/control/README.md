@@ -23,4 +23,4 @@ $$\tau = \frac{C R_{load}}{a}$$
 $$\omega_c = 2\pi f_{bw}$$
 
 ## Detailed Calculations
-[📄 View Circuit Equations PDF](attachments/DAB_202512041019_03846_removed.pdf)
+[Detailed Calcultions PDF](attachments/DAB_202512041019_03846_removed.pdf)
