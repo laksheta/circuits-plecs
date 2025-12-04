@@ -5,13 +5,14 @@
 <summary>Click to expand</summary>
 
 ## PI Controller
+
 $$K_p = \frac{\tau \omega_c}{G_{dc}}, \quad K_i = \frac{K_p}{\tau}$$
 
- With:
+With:
 
-$$G_{dc} = \frac{R_{load}}{2V_0} \cdot \frac{V_i V'_2(1-2D)}{2 f_{sw} L}$$
+$$G_{dc} = \frac{R_{\text{load}}}{2V_{0}} \cdot \frac{V_{i}V_{2}'(1-2D)}{2f_{\text{sw}}L}$$
 
-$$\tau = \frac{C R_{load}}{2}$$
+$$\tau = \frac{CR_{\text{load}}}{2}$$
 
 $$\omega_c = 2\pi f_{bw}$$
 
