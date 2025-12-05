@@ -5,7 +5,7 @@ ts      = 100*1/fsw
 V1		= 780
 V2 	    = 780
 V_out   = V1
-C       = 1e-3%1e-6
+C       = 1e-5%1e-6
 
 P       = 10e3
 D       = 0.5       %! Normalized phase shift ratio
