@@ -62,7 +62,7 @@ Plecs {
       Type          TransferFunction
       Name          "Gc"
       Show          on
-      Position      [310, 270]
+      Position      [285, 270]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -169,7 +169,7 @@ Plecs {
       Type          Step
       Name          "Step"
       Show          on
-      Position      [320, 350]
+      Position      [295, 350]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -212,7 +212,7 @@ Plecs {
       Type          Constant
       Name          "Constant"
       Show          off
-      Position      [135, 270]
+      Position      [110, 270]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -232,7 +232,7 @@ Plecs {
       Type          Sum
       Name          "Sum"
       Show          off
-      Position      [230, 270]
+      Position      [205, 270]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -265,16 +265,16 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 27; 1920, 1024]
+      Location      [0, 27; 1920, 1051]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPKAAAA"
+"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAeAAAAAdfw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABSAP///wAAB4AAAANsAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":79,\"Labels\":[],"
-"\"VisualIdxs\":[]}"
+      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":120,\"Labels\":["
+"\"Mean\"],\"VisualIdxs\":[8]}"
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
       Axes          "1"
       TimeRange     "0.0"
@@ -403,21 +403,6 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Gc"
-      SrcTerminal   2
-      Points        [365, 270]
-      Branch {
-        DstComponent  "Manual Switch"
-        DstTerminal   2
-      }
-      Branch {
-        Points        [365, 190]
-        DstComponent  "Scope1"
-        DstTerminal   1
-      }
-    }
-    Connection {
-      Type          Signal
       SrcComponent  "Gvd"
       SrcTerminal   2
       DstComponent  "Sum1"
@@ -433,7 +418,7 @@ Plecs {
         DstTerminal   1
       }
       Branch {
-        Points        [600, 320; 230, 320]
+        Points        [600, 320; 205, 320]
         DstComponent  "Sum"
         DstTerminal   3
       }
@@ -446,6 +431,21 @@ Plecs {
       DstComponent  "Sum1"
       DstTerminal   3
     }
+    Connection {
+      Type          Signal
+      SrcComponent  "Gc"
+      SrcTerminal   2
+      Points        [365, 270]
+      Branch {
+        DstComponent  "Manual Switch"
+        DstTerminal   2
+      }
+      Branch {
+        Points        [365, 190]
+        DstComponent  "Scope1"
+        DstTerminal   1
+      }
+    }
   }
 }
-DemoSignature "tFlAXGHUtNxsRzPLeX8Eau18F5VOoY9sCGwWKMynPjo="
+DemoSignature "VrkoBiI4b1+iLebfuk5FMROjm6p3+/VJpZV5kqK2GMU="
