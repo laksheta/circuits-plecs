@@ -53,8 +53,8 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [961, 31; 1919, 988]
-    ZoomFactor    1.30957
+    Location      [0, 23; 1920, 989]
+    ZoomFactor    1.49862
     SliderPosition [0, 0]
     ShowBrowser   off
     BrowserWidth  100
@@ -62,7 +62,7 @@ Plecs {
       Type          TransferFunction
       Name          "Gc"
       Show          on
-      Position      [215, 360]
+      Position      [310, 270]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -87,7 +87,7 @@ Plecs {
       Type          TransferFunction
       Name          "Gvd"
       Show          on
-      Position      [380, 365]
+      Position      [475, 275]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -112,15 +112,15 @@ Plecs {
       Type          Scope
       Name          "Scope"
       Show          on
-      Position      [510, 365]
+      Position      [660, 275]
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 27; 1920, 1033]
+      Location      [0, 27; 1920, 1067]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAeAAAAAdfw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABSAP///wAAB4AAAANaAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABSAP///wAAB4AAAAN8AAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -131,7 +131,7 @@ Plecs {
       TimeRange     "0.0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "1"
+      Open          "0"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    "Time / s"
@@ -169,7 +169,7 @@ Plecs {
       Type          Step
       Name          "Step"
       Show          on
-      Position      [225, 440]
+      Position      [320, 350]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -198,7 +198,7 @@ Plecs {
       Type          ManualSignalSwitch
       Name          "Manual Switch"
       Show          off
-      Position      [315, 365]
+      Position      [410, 275]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -212,7 +212,7 @@ Plecs {
       Type          Constant
       Name          "Constant"
       Show          off
-      Position      [40, 360]
+      Position      [135, 270]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -232,7 +232,7 @@ Plecs {
       Type          Sum
       Name          "Sum"
       Show          off
-      Position      [135, 360]
+      Position      [230, 270]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -261,7 +261,7 @@ Plecs {
       Type          Scope
       Name          "Scope1"
       Show          on
-      Position      [380, 280]
+      Position      [475, 190]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -314,6 +314,64 @@ Plecs {
         }
       }
     }
+    Component {
+      Type          Sum
+      Name          "Sum1"
+      Show          off
+      Position      [555, 275]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "IconShape"
+        Value         "2"
+        Show          off
+      }
+      Parameter {
+        Variable      "Inputs"
+        Value         "|+-"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "11"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataTypeOverflowMode"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          Step
+      Name          "V_disturbance"
+      Show          on
+      Position      [520, 350]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Time"
+        Value         "0.5e-2"
+        Show          off
+      }
+      Parameter {
+        Variable      "Before"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "After"
+        Value         "-100"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
+      }
+    }
     Connection {
       Type          Signal
       SrcComponent  "Manual Switch"
@@ -325,7 +383,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Step"
       SrcTerminal   1
-      Points        [265, 440; 265, 370]
+      Points        [360, 350; 360, 280]
       DstComponent  "Manual Switch"
       DstTerminal   3
     }
@@ -345,34 +403,49 @@ Plecs {
     }
     Connection {
       Type          Signal
+      SrcComponent  "Gc"
+      SrcTerminal   2
+      Points        [365, 270]
+      Branch {
+        DstComponent  "Manual Switch"
+        DstTerminal   2
+      }
+      Branch {
+        Points        [365, 190]
+        DstComponent  "Scope1"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Signal
       SrcComponent  "Gvd"
       SrcTerminal   2
-      Points        [450, 365]
+      DstComponent  "Sum1"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Sum1"
+      SrcTerminal   1
+      Points        [600, 275]
       Branch {
         DstComponent  "Scope"
         DstTerminal   1
       }
       Branch {
-        Points        [450, 410; 135, 410]
+        Points        [600, 320; 230, 320]
         DstComponent  "Sum"
         DstTerminal   3
       }
     }
     Connection {
       Type          Signal
-      SrcComponent  "Gc"
-      SrcTerminal   2
-      Points        [270, 360]
-      Branch {
-        DstComponent  "Manual Switch"
-        DstTerminal   2
-      }
-      Branch {
-        Points        [270, 280]
-        DstComponent  "Scope1"
-        DstTerminal   1
-      }
+      SrcComponent  "V_disturbance"
+      SrcTerminal   1
+      Points        [555, 350]
+      DstComponent  "Sum1"
+      DstTerminal   3
     }
   }
 }
-DemoSignature "HtiWNRRpGkE9ZmVBAtbY/9F4LPlKoOSCnL690bhPYK0="
+DemoSignature "tFlAXGHUtNxsRzPLeX8Eau18F5VOoY9sCGwWKMynPjo="

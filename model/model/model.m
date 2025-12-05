@@ -1,7 +1,7 @@
 plecs('clc')
 fsw	    = 10e3
 
-ts      = 1%10*1/fsw
+ts      = 100*1/fsw
 V1		= 780
 V2 	    = 780
 V_out   = V1
