@@ -26,3 +26,4 @@ $$K_p = \frac{\tau \omega_c}{G_{dc}}, \quad K_i = \frac{K_p}{\tau}$$
 $$\omega_c = 2\pi f_{bw}$$
 
 # Result
+![](attachments/Pasted%20image%2020251205152539.png)
