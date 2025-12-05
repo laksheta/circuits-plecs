@@ -54,7 +54,7 @@ Plecs {
   ScriptsDialogSplitterPos "0"
   Schematic {
     Location      [0, 23; 1920, 989]
-    ZoomFactor    0.999995
+    ZoomFactor    1.14436
     SliderPosition [0, 0]
     ShowBrowser   off
     BrowserWidth  100
@@ -1876,12 +1876,12 @@ Plecs {
       }
       Parameter {
         Variable      "up_limit"
-        Value         "10"
+        Value         "0.25"
         Show          off
       }
       Parameter {
         Variable      "low_limit"
-        Value         "-10"
+        Value         "-0.25"
         Show          off
       }
       Parameter {
@@ -1995,7 +1995,7 @@ Plecs {
       Frame         [-30, -10; 30, 10]
       Parameter {
         Variable      "Value"
-        Value         "V1"
+        Value         "V_out"
         Show          off
       }
       Parameter {
@@ -2036,11 +2036,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 27; 1920, 1042]
+      Location      [0, 27; 1920, 1067]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPcAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAP1AAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -2533,15 +2533,15 @@ Plecs {
       SrcTerminal   2
       Points        [515, 575]
       Branch {
-        DstComponent  "Manual Switch"
-        DstTerminal   2
-      }
-      Branch {
         Points        [515, 520]
         DstComponent  "Scope5"
         DstTerminal   1
       }
+      Branch {
+        DstComponent  "Manual Switch"
+        DstTerminal   2
+      }
     }
   }
 }
-DemoSignature "AyyaMn2vNFHJ3YwMgQtA8BS73/pJDnedrj7eCcgUqbU="
+DemoSignature "qcBOaicFT+DWrP19WU6SQi6GcTiEx8zZ/JBmUU8oPBw="
