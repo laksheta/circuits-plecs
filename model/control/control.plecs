@@ -1814,7 +1814,7 @@ Plecs {
       SrcComponent  "Components/Control/Continuous/Continuous PID\\nController"
       Name          "Continuous PID\nController"
       Show          off
-      Position      [390, 575]
+      Position      [480, 575]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1959,7 +1959,7 @@ Plecs {
       Type          Sum
       Name          "Sum2"
       Show          off
-      Position      [255, 575]
+      Position      [345, 575]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1988,7 +1988,7 @@ Plecs {
       Type          Constant
       Name          "Constant6"
       Show          off
-      Position      [155, 575]
+      Position      [245, 575]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2008,7 +2008,7 @@ Plecs {
       Type          From
       Name          "From16"
       Show          off
-      Position      [235, 625]
+      Position      [325, 625]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2031,8 +2031,8 @@ Plecs {
     Component {
       Type          Scope
       Name          "Scope5"
-      Show          on
-      Position      [635, 520]
+      Show          off
+      Position      [630, 520]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -2523,7 +2523,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From16"
       SrcTerminal   1
-      Points        [255, 625]
+      Points        [345, 625]
       DstComponent  "Sum2"
       DstTerminal   3
     }
@@ -2531,9 +2531,8 @@ Plecs {
       Type          Signal
       SrcComponent  "Continuous PID\nController"
       SrcTerminal   2
-      Points        [515, 575]
+      Points        [600, 575]
       Branch {
-        Points        [515, 520]
         DstComponent  "Scope5"
         DstTerminal   1
       }
@@ -2544,4 +2543,4 @@ Plecs {
     }
   }
 }
-DemoSignature "qcBOaicFT+DWrP19WU6SQi6GcTiEx8zZ/JBmUU8oPBw="
+DemoSignature "XYU1knRwkBIzvfqFBA0hfrahD80r+qtDTPfwxEdbW8s="
