@@ -1,4 +1,5 @@
 # Simulation
+![](attachments/Pasted%20image%2020260108134236.png)
 
 # Calculation
 <details>
