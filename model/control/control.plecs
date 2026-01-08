@@ -1880,7 +1880,7 @@ Plecs {
       Type          Sum
       Name          "Sum2"
       Show          off
-      Position      [345, 575]
+      Position      [375, 575]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1909,7 +1909,7 @@ Plecs {
       Type          Constant
       Name          "Constant6"
       Show          off
-      Position      [175, 570]
+      Position      [205, 570]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1929,7 +1929,7 @@ Plecs {
       Type          From
       Name          "From16"
       Show          off
-      Position      [325, 625]
+      Position      [355, 625]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1947,63 +1947,6 @@ Plecs {
         Variable      "NoMatchingCounterpartAction"
         Value         "1"
         Show          off
-      }
-    }
-    Component {
-      Type          Scope
-      Name          "Scope5"
-      Show          off
-      Position      [630, 520]
-      Direction     up
-      Flipped       off
-      LabelPosition south
-      Location      [0, 27; 1920, 1067]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAP1AAAA"
-"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
-"AAAAA=="
-      SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":202,\"Labels\":[],"
-"\"VisualIdxs\":[]}"
-      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-      Axes          "1"
-      TimeRange     "0.0"
-      ScrollingMode "1"
-      SingleTimeAxis "1"
-      Open          "0"
-      Ts            "-1"
-      SampleLimit   "0"
-      XAxisLabel    "Time / s"
-      ShowLegend    "1"
-      Axis {
-        Name          ""
-        AutoScale     1
-        MinValue      0
-        MaxValue      1
-        Signals       {}
-        SignalTypes   [ ]
-        Untangle      0
-        KeepBaseline  off
-        BaselineValue 0
-      }
-      Fourier {
-        SingleXAxis       on
-        AxisLabel         "Frequency / Hz"
-        Scaling           0
-        PhaseDisplay      0
-        ShowFourierLegend off
-        Axis {
-          Name          ""
-          AutoScale     1
-          MinValue      0
-          MaxValue      1
-          Signals       {}
-          Untangle      0
-          KeepBaseline  off
-          BaselineValue 0
-        }
       }
     }
     Component {
@@ -2111,7 +2054,7 @@ Plecs {
       SrcComponent  "Components/Control/Sources/Ramp"
       Name          "Ramp"
       Show          on
-      Position      [190, 615]
+      Position      [220, 615]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -2146,7 +2089,7 @@ Plecs {
       Type          ManualSignalSwitch
       Name          "Manual Switch2"
       Show          off
-      Position      [290, 575]
+      Position      [320, 575]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2522,23 +2465,9 @@ Plecs {
       Type          Signal
       SrcComponent  "From16"
       SrcTerminal   1
-      Points        [345, 625]
+      Points        [375, 625]
       DstComponent  "Sum2"
       DstTerminal   3
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Continuous PID\nController"
-      SrcTerminal   2
-      Points        [600, 575]
-      Branch {
-        DstComponent  "Scope5"
-        DstTerminal   1
-      }
-      Branch {
-        DstComponent  "Manual Switch"
-        DstTerminal   2
-      }
     }
     Connection {
       Type          Signal
@@ -2631,10 +2560,17 @@ Plecs {
       Type          Signal
       SrcComponent  "Ramp"
       SrcTerminal   1
-      Points        [235, 615; 235, 580]
+      Points        [265, 615; 265, 580]
       DstComponent  "Manual Switch2"
       DstTerminal   3
     }
+    Connection {
+      Type          Signal
+      SrcComponent  "Continuous PID\nController"
+      SrcTerminal   2
+      DstComponent  "Manual Switch"
+      DstTerminal   2
+    }
   }
 }
-DemoSignature "f5tzi9nB02z4X0oVlwPe6EJ3/q6s8fedVIiEN7h4ubc="
+DemoSignature "c2WDfeORINQUcrIkqEPQrYRxLYD5R+AehkAeXQG8LFk="
