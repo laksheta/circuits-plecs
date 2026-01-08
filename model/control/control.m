@@ -19,6 +19,7 @@ phi	    = (deg/360)*(1/fsw)
 
 I       = V1*D*(1-D)/(2*fsw*L)  %! Current calculation
 R_load  = V1/I
+% R_load  = (V_out^2) / P_set
 
 %* PI Controller
 
@@ -30,3 +31,11 @@ omega_c = 2*pi*f_bw
 
 Kp      = (tau*omega_c)/Gdc
 Ki      = Kp/tau
+
+%* Open Loop Verification
+
+d_test = 0.20 
+D_theory = d_test * 2
+
+I_predicted = (V1 * D_theory * (1 - D_theory)) / (2 * fsw * L)
+V_predicted = I_predicted * R_load
