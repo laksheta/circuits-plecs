@@ -1909,7 +1909,7 @@ Plecs {
       Type          Constant
       Name          "Constant6"
       Show          off
-      Position      [245, 575]
+      Position      [175, 570]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2045,7 +2045,7 @@ Plecs {
       LabelPosition east
       Parameter {
         Variable      "SwitchState"
-        Value         "1"
+        Value         "2"
         Show          off
       }
     }
@@ -2057,11 +2057,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 23; 1920, 1011]
+      Location      [0, 27; 1920, 1060]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPBAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPuAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -2072,7 +2072,7 @@ Plecs {
       TimeRange     "0.0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "1"
+      Open          "0"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    "Time / s"
@@ -2104,6 +2104,56 @@ Plecs {
           KeepBaseline  off
           BaselineValue 0
         }
+      }
+    }
+    Component {
+      Type          Reference
+      SrcComponent  "Components/Control/Sources/Ramp"
+      Name          "Ramp"
+      Show          on
+      Position      [190, 615]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Frame         [-15, -15; 15, 15]
+      Parameter {
+        Variable      "slope"
+        Value         "780/1e-2"
+        Show          off
+      }
+      Parameter {
+        Variable      "start"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "X0"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "XFinal"
+        Value         "780"
+        Show          off
+      }
+      Terminal {
+        Type          Output
+        Position      [19, 0]
+        Direction     right
+      }
+    }
+    Component {
+      Type          ManualSignalSwitch
+      Name          "Manual Switch2"
+      Show          off
+      Position      [290, 575]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "SwitchState"
+        Value         "2"
+        Show          off
       }
     }
     Connection {
@@ -2492,13 +2542,6 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Constant6"
-      SrcTerminal   1
-      DstComponent  "Sum2"
-      DstTerminal   2
-    }
-    Connection {
-      Type          Signal
       SrcComponent  "Manual Switch"
       SrcTerminal   1
       DstComponent  "Sum1"
@@ -2570,6 +2613,28 @@ Plecs {
         DstTerminal   1
       }
     }
+    Connection {
+      Type          Signal
+      SrcComponent  "Manual Switch2"
+      SrcTerminal   1
+      DstComponent  "Sum2"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Constant6"
+      SrcTerminal   1
+      DstComponent  "Manual Switch2"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Ramp"
+      SrcTerminal   1
+      Points        [235, 615; 235, 580]
+      DstComponent  "Manual Switch2"
+      DstTerminal   3
+    }
   }
 }
-DemoSignature "pJpUXJGzi7fYC56wH45sR1pnz8/M3vuZ79A67QAS/VI="
+DemoSignature "f5tzi9nB02z4X0oVlwPe6EJ3/q6s8fedVIiEN7h4ubc="
