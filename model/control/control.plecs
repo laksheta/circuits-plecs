@@ -54,7 +54,7 @@ Plecs {
   ScriptsDialogSplitterPos "0"
   Schematic {
     Location      [0, 27; 1920, 993]
-    ZoomFactor    1.30957
+    ZoomFactor    1.14436
     SliderPosition [0, 0]
     ShowBrowser   off
     BrowserWidth  100
@@ -62,7 +62,7 @@ Plecs {
       Type          VoltageSource
       Name          "V1"
       Show          on
-      Position      [495, 340]
+      Position      [165, 325]
       Direction     down
       Flipped       on
       LabelPosition east
@@ -81,7 +81,7 @@ Plecs {
       Type          Inductor
       Name          "L"
       Show          on
-      Position      [570, 310]
+      Position      [240, 295]
       Direction     left
       Flipped       off
       LabelPosition north
@@ -100,7 +100,7 @@ Plecs {
       Type          VoltageSource
       Name          "V2'"
       Show          on
-      Position      [675, 340]
+      Position      [345, 325]
       Direction     up
       Flipped       off
       LabelPosition west
@@ -119,7 +119,7 @@ Plecs {
       Type          Ammeter
       Name          "Am1"
       Show          off
-      Position      [645, 310]
+      Position      [315, 295]
       Direction     left
       Flipped       off
       LabelPosition south
@@ -128,7 +128,7 @@ Plecs {
       Type          Voltmeter
       Name          "Vm1"
       Show          off
-      Position      [570, 275]
+      Position      [240, 260]
       Direction     left
       Flipped       off
       LabelPosition south
@@ -137,7 +137,7 @@ Plecs {
       Type          Scope
       Name          "Scope"
       Show          off
-      Position      [775, 110]
+      Position      [445, 95]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -216,7 +216,7 @@ Plecs {
       Type          Scope
       Name          "Scope1"
       Show          off
-      Position      [495, 110]
+      Position      [165, 95]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -273,7 +273,7 @@ Plecs {
       Type          SignalMux
       Name          "Mux"
       Show          off
-      Position      [450, 110]
+      Position      [120, 95]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -287,7 +287,7 @@ Plecs {
       Type          Scope
       Name          "Scope2"
       Show          off
-      Position      [680, 110]
+      Position      [350, 95]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -344,7 +344,7 @@ Plecs {
       Type          Product
       Name          "Product1"
       Show          off
-      Position      [615, 110]
+      Position      [285, 95]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -373,7 +373,7 @@ Plecs {
       Type          Goto
       Name          "Goto2"
       Show          off
-      Position      [645, 275]
+      Position      [315, 260]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -397,7 +397,7 @@ Plecs {
       Type          Goto
       Name          "Goto3"
       Show          off
-      Position      [570, 245]
+      Position      [240, 230]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -421,7 +421,7 @@ Plecs {
       Type          From
       Name          "From"
       Show          off
-      Position      [425, 105]
+      Position      [95, 90]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -445,7 +445,7 @@ Plecs {
       Type          From
       Name          "From1"
       Show          off
-      Position      [425, 115]
+      Position      [95, 100]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -469,7 +469,7 @@ Plecs {
       Type          From
       Name          "From2"
       Show          off
-      Position      [585, 135]
+      Position      [255, 120]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -493,7 +493,7 @@ Plecs {
       Type          From
       Name          "From3"
       Show          off
-      Position      [585, 110]
+      Position      [255, 95]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -517,7 +517,7 @@ Plecs {
       Type          From
       Name          "From4"
       Show          off
-      Position      [725, 105]
+      Position      [395, 90]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -541,7 +541,7 @@ Plecs {
       Type          From
       Name          "From5"
       Show          off
-      Position      [725, 115]
+      Position      [395, 100]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -565,7 +565,7 @@ Plecs {
       Type          PeriodicAverage
       Name          "Periodic Average"
       Show          on
-      Position      [1125, 215]
+      Position      [795, 200]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -579,7 +579,7 @@ Plecs {
       Type          Constant
       Name          "Constant"
       Show          off
-      Position      [935, 340]
+      Position      [605, 325]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -599,7 +599,7 @@ Plecs {
       Type          Product
       Name          "Product2"
       Show          off
-      Position      [1015, 310]
+      Position      [685, 295]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -628,7 +628,7 @@ Plecs {
       Type          From
       Name          "From6"
       Show          off
-      Position      [935, 310]
+      Position      [605, 295]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -652,7 +652,7 @@ Plecs {
       Type          Sum
       Name          "Sum"
       Show          off
-      Position      [1130, 310]
+      Position      [800, 295]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -681,7 +681,7 @@ Plecs {
       Type          Product
       Name          "Product3"
       Show          off
-      Position      [1095, 340]
+      Position      [765, 325]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -710,7 +710,7 @@ Plecs {
       Type          Constant
       Name          "Constant1"
       Show          off
-      Position      [1025, 420]
+      Position      [695, 405]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -730,7 +730,7 @@ Plecs {
       Type          Integrator
       Name          "Integrator"
       Show          on
-      Position      [1300, 310]
+      Position      [970, 295]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -774,7 +774,7 @@ Plecs {
       Type          Gain
       Name          "Gain"
       Show          on
-      Position      [1230, 310]
+      Position      [900, 295]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -808,7 +808,7 @@ Plecs {
       Type          Goto
       Name          "Goto4"
       Show          off
-      Position      [635, 135]
+      Position      [305, 120]
       Direction     down
       Flipped       off
       LabelPosition west
@@ -832,7 +832,7 @@ Plecs {
       Type          From
       Name          "From7"
       Show          off
-      Position      [1060, 215]
+      Position      [730, 200]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -856,7 +856,7 @@ Plecs {
       Type          Goto
       Name          "Goto5"
       Show          off
-      Position      [1200, 215]
+      Position      [870, 200]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -880,7 +880,7 @@ Plecs {
       Type          Goto
       Name          "Goto6"
       Show          off
-      Position      [1360, 310]
+      Position      [1030, 295]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -904,7 +904,7 @@ Plecs {
       Type          From
       Name          "From8"
       Show          off
-      Position      [1060, 340]
+      Position      [730, 325]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -928,7 +928,7 @@ Plecs {
       Type          Goto
       Name          "Goto7"
       Show          off
-      Position      [1060, 285]
+      Position      [730, 270]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -952,7 +952,7 @@ Plecs {
       Type          Goto
       Name          "Goto8"
       Show          off
-      Position      [1165, 340]
+      Position      [835, 325]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -976,7 +976,7 @@ Plecs {
       Type          Scope
       Name          "Scope3"
       Show          off
-      Position      [1125, 125]
+      Position      [795, 110]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1098,7 +1098,7 @@ Plecs {
       Type          From
       Name          "From9"
       Show          off
-      Position      [1080, 110]
+      Position      [750, 95]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1122,7 +1122,7 @@ Plecs {
       Type          From
       Name          "From10"
       Show          off
-      Position      [1080, 120]
+      Position      [750, 105]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1146,7 +1146,7 @@ Plecs {
       Type          From
       Name          "From11"
       Show          off
-      Position      [1080, 130]
+      Position      [750, 115]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1170,7 +1170,7 @@ Plecs {
       Type          From
       Name          "From12"
       Show          off
-      Position      [1080, 140]
+      Position      [750, 125]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1194,7 +1194,7 @@ Plecs {
       Type          Math
       Name          "Math"
       Show          off
-      Position      [905, 585]
+      Position      [815, 530]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1208,7 +1208,7 @@ Plecs {
       Type          TriangleGenerator
       Name          "Triangular Wave1"
       Show          off
-      Position      [735, 610]
+      Position      [645, 555]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1242,7 +1242,7 @@ Plecs {
       Type          Sum
       Name          "Sum1"
       Show          off
-      Position      [795, 580]
+      Position      [705, 525]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1271,7 +1271,7 @@ Plecs {
       Type          Constant
       Name          "Constant4"
       Show          off
-      Position      [855, 620]
+      Position      [765, 565]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1291,7 +1291,7 @@ Plecs {
       Type          Comparator
       Name          "V1_Comparator"
       Show          on
-      Position      [1060, 525]
+      Position      [970, 470]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1300,7 +1300,7 @@ Plecs {
       Type          Comparator
       Name          "V2'_Comparator"
       Show          on
-      Position      [1060, 580]
+      Position      [970, 525]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1309,7 +1309,7 @@ Plecs {
       Type          Constant
       Name          "Constant5"
       Show          off
-      Position      [890, 520]
+      Position      [800, 465]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1329,7 +1329,7 @@ Plecs {
       Type          Scope
       Name          "Scope7"
       Show          off
-      Position      [1295, 550]
+      Position      [1205, 495]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1408,7 +1408,7 @@ Plecs {
       Type          Goto
       Name          "Goto9"
       Show          off
-      Position      [795, 640]
+      Position      [705, 585]
       Direction     down
       Flipped       off
       LabelPosition west
@@ -1432,7 +1432,7 @@ Plecs {
       Type          From
       Name          "From13"
       Show          off
-      Position      [995, 530]
+      Position      [905, 475]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1456,7 +1456,7 @@ Plecs {
       Type          Goto
       Name          "Goto"
       Show          off
-      Position      [1240, 500]
+      Position      [1150, 445]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -1480,7 +1480,7 @@ Plecs {
       Type          Goto
       Name          "Goto1"
       Show          off
-      Position      [1260, 500]
+      Position      [1170, 445]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -1504,7 +1504,7 @@ Plecs {
       Type          From
       Name          "From14"
       Show          off
-      Position      [455, 340]
+      Position      [125, 325]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1528,7 +1528,7 @@ Plecs {
       Type          From
       Name          "From15"
       Show          off
-      Position      [715, 340]
+      Position      [385, 325]
       Direction     left
       Flipped       off
       LabelPosition north
@@ -1552,7 +1552,7 @@ Plecs {
       Type          Product
       Name          "Product4"
       Show          off
-      Position      [1135, 525]
+      Position      [1045, 470]
       Direction     up
       Flipped       on
       LabelPosition north
@@ -1581,7 +1581,7 @@ Plecs {
       Type          Product
       Name          "Product5"
       Show          off
-      Position      [1135, 580]
+      Position      [1045, 525]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1610,7 +1610,7 @@ Plecs {
       Type          Constant
       Name          "Constant2"
       Show          off
-      Position      [1090, 485]
+      Position      [1000, 430]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1630,7 +1630,7 @@ Plecs {
       Type          Constant
       Name          "Constant7"
       Show          off
-      Position      [1090, 630]
+      Position      [1000, 575]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1650,7 +1650,7 @@ Plecs {
       Type          Offset
       Name          "Offset"
       Show          off
-      Position      [1190, 525]
+      Position      [1100, 470]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1675,7 +1675,7 @@ Plecs {
       Type          Offset
       Name          "Offset1"
       Show          off
-      Position      [1190, 580]
+      Position      [1100, 525]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1700,7 +1700,7 @@ Plecs {
       Type          ManualSignalSwitch
       Name          "Manual Switch"
       Show          off
-      Position      [665, 580]
+      Position      [575, 525]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1714,7 +1714,7 @@ Plecs {
       Type          Constant
       Name          "Constant3"
       Show          off
-      Position      [565, 620]
+      Position      [475, 565]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1735,7 +1735,7 @@ Plecs {
       SrcComponent  "Components/Control/Continuous/Continuous PID\\nController"
       Name          "Continuous PID\nController"
       Show          off
-      Position      [480, 575]
+      Position      [390, 520]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1880,7 +1880,7 @@ Plecs {
       Type          Sum
       Name          "Sum2"
       Show          off
-      Position      [375, 575]
+      Position      [285, 520]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1909,7 +1909,7 @@ Plecs {
       Type          Constant
       Name          "Constant6"
       Show          off
-      Position      [205, 570]
+      Position      [115, 515]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1929,7 +1929,7 @@ Plecs {
       Type          From
       Name          "From16"
       Show          off
-      Position      [355, 625]
+      Position      [265, 570]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1953,7 +1953,7 @@ Plecs {
       Type          Step
       Name          "R_load"
       Show          on
-      Position      [1165, 420]
+      Position      [835, 405]
       Direction     left
       Flipped       off
       LabelPosition north
@@ -1982,7 +1982,7 @@ Plecs {
       Type          ManualSignalSwitch
       Name          "Manual Switch1"
       Show          off
-      Position      [1095, 385]
+      Position      [765, 370]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -1996,7 +1996,7 @@ Plecs {
       Type          Scope
       Name          "Scope4"
       Show          on
-      Position      [1190, 180]
+      Position      [860, 165]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -2054,7 +2054,7 @@ Plecs {
       SrcComponent  "Components/Control/Sources/Ramp"
       Name          "Ramp"
       Show          on
-      Position      [220, 615]
+      Position      [130, 560]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -2089,7 +2089,7 @@ Plecs {
       Type          ManualSignalSwitch
       Name          "Manual Switch2"
       Show          off
-      Position      [320, 575]
+      Position      [230, 520]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2103,7 +2103,7 @@ Plecs {
       Type          Wire
       SrcComponent  "V2'"
       SrcTerminal   1
-      Points        [675, 310]
+      Points        [345, 295]
       DstComponent  "Am1"
       DstTerminal   2
     }
@@ -2111,14 +2111,14 @@ Plecs {
       Type          Wire
       SrcComponent  "L"
       SrcTerminal   1
-      Points        [540, 310]
+      Points        [210, 295]
       Branch {
-        Points        [495, 310]
+        Points        [165, 295]
         DstComponent  "V1"
         DstTerminal   1
       }
       Branch {
-        Points        [540, 275]
+        Points        [210, 260]
         DstComponent  "Vm1"
         DstTerminal   1
       }
@@ -2127,13 +2127,13 @@ Plecs {
       Type          Wire
       SrcComponent  "L"
       SrcTerminal   2
-      Points        [600, 310]
+      Points        [270, 295]
       Branch {
         DstComponent  "Am1"
         DstTerminal   1
       }
       Branch {
-        Points        [600, 275]
+        Points        [270, 260]
         DstComponent  "Vm1"
         DstTerminal   2
       }
@@ -2177,7 +2177,7 @@ Plecs {
       Type          Wire
       SrcComponent  "V2'"
       SrcTerminal   2
-      Points        [675, 375; 495, 375]
+      Points        [345, 360; 165, 360]
       DstComponent  "V1"
       DstTerminal   2
     }
@@ -2227,7 +2227,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Constant"
       SrcTerminal   1
-      Points        [1015, 340]
+      Points        [685, 325]
       DstComponent  "Product2"
       DstTerminal   3
     }
@@ -2235,7 +2235,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Product1"
       SrcTerminal   1
-      Points        [635, 110]
+      Points        [305, 95]
       Branch {
         DstComponent  "Scope2"
         DstTerminal   1
@@ -2277,7 +2277,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Product2"
       SrcTerminal   1
-      Points        [1060, 310]
+      Points        [730, 295]
       Branch {
         DstComponent  "Sum"
         DstTerminal   2
@@ -2291,7 +2291,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Product3"
       SrcTerminal   1
-      Points        [1130, 340]
+      Points        [800, 325]
       Branch {
         DstComponent  "Sum"
         DstTerminal   3
@@ -2333,7 +2333,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Constant4"
       SrcTerminal   1
-      Points        [875, 620]
+      Points        [785, 565]
       DstComponent  "Math"
       DstTerminal   3
     }
@@ -2341,13 +2341,13 @@ Plecs {
       Type          Signal
       SrcComponent  "Constant5"
       SrcTerminal   1
-      Points        [1010, 520]
+      Points        [920, 465]
       Branch {
         DstComponent  "V1_Comparator"
         DstTerminal   1
       }
       Branch {
-        Points        [1010, 575]
+        Points        [920, 520]
         DstComponent  "V2'_Comparator"
         DstTerminal   1
       }
@@ -2391,7 +2391,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Constant2"
       SrcTerminal   1
-      Points        [1135, 485]
+      Points        [1045, 430]
       DstComponent  "Product4"
       DstTerminal   3
     }
@@ -2399,7 +2399,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Constant7"
       SrcTerminal   1
-      Points        [1135, 630]
+      Points        [1045, 575]
       DstComponent  "Product5"
       DstTerminal   3
     }
@@ -2414,9 +2414,9 @@ Plecs {
       Type          Signal
       SrcComponent  "Offset"
       SrcTerminal   2
-      Points        [1240, 525]
+      Points        [1150, 470]
       Branch {
-        Points        [1250, 525; 1250, 545]
+        Points        [1160, 470; 1160, 490]
         DstComponent  "Scope7"
         DstTerminal   1
       }
@@ -2436,7 +2436,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Offset1"
       SrcTerminal   2
-      Points        [1250, 580; 1250, 555; 1260, 555]
+      Points        [1160, 525; 1160, 500; 1170, 500]
       Branch {
         DstComponent  "Scope7"
         DstTerminal   2
@@ -2450,7 +2450,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Constant3"
       SrcTerminal   1
-      Points        [620, 620; 620, 585]
+      Points        [530, 565; 530, 530]
       DstComponent  "Manual Switch"
       DstTerminal   3
     }
@@ -2465,7 +2465,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From16"
       SrcTerminal   1
-      Points        [375, 625]
+      Points        [285, 570]
       DstComponent  "Sum2"
       DstTerminal   3
     }
@@ -2480,7 +2480,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Triangular Wave1"
       SrcTerminal   1
-      Points        [795, 610]
+      Points        [705, 555]
       Branch {
         DstComponent  "Sum1"
         DstTerminal   3
@@ -2501,7 +2501,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Constant1"
       SrcTerminal   1
-      Points        [1090, 420]
+      Points        [760, 405]
       DstComponent  "Manual Switch1"
       DstTerminal   2
     }
@@ -2509,7 +2509,7 @@ Plecs {
       Type          Signal
       SrcComponent  "R_load"
       SrcTerminal   1
-      Points        [1100, 420]
+      Points        [770, 405]
       DstComponent  "Manual Switch1"
       DstTerminal   3
     }
@@ -2531,13 +2531,13 @@ Plecs {
       Type          Signal
       SrcComponent  "From12"
       SrcTerminal   1
-      Points        [1095, 140]
+      Points        [765, 125]
       Branch {
         DstComponent  "Scope3"
         DstTerminal   4
       }
       Branch {
-        Points        [1095, 180]
+        Points        [765, 165]
         DstComponent  "Scope4"
         DstTerminal   1
       }
@@ -2560,7 +2560,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Ramp"
       SrcTerminal   1
-      Points        [265, 615; 265, 580]
+      Points        [175, 560; 175, 525]
       DstComponent  "Manual Switch2"
       DstTerminal   3
     }
@@ -2573,4 +2573,4 @@ Plecs {
     }
   }
 }
-DemoSignature "c2WDfeORINQUcrIkqEPQrYRxLYD5R+AehkAeXQG8LFk="
+DemoSignature "TMPWDL0lnRaKHZi4DvWCj+IPecV1/R2Uk3kSIK+zwDA="
