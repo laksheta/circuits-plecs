@@ -54,7 +54,7 @@ Plecs {
   ScriptsDialogSplitterPos "0"
   Schematic {
     Location      [0, 27; 1920, 993]
-    ZoomFactor    1.30957
+    ZoomFactor    1.14436
     SliderPosition [0, 0]
     ShowBrowser   off
     BrowserWidth  100
@@ -141,16 +141,16 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 23; 1920, 1059]
+      Location      [0, 27; 1920, 1067]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAF4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAeAAAAAc/w"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABSAP///wAAB4AAAAN6AAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABSAP///wAAB4AAAAN+AAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":183,\"Labels\":["
-"\"Delta\",\"Slope\",\"Mean\"],\"VisualIdxs\":[3,4,8]}"
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":183,\"Labels\":[\""
+"Delta\",\"Slope\",\"Mean\"],\"VisualIdxs\":[3,4,8]}"
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
 "AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
       Axes          "2"
@@ -997,7 +997,7 @@ Plecs {
       TimeRange     "0.0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "0"
+      Open          "1"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    "Time / s"
@@ -1556,11 +1556,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 27; 1920, 1042]
+      Location      [0, 27; 1920, 1051]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAF4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPcAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPlAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -1785,7 +1785,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "SwitchState"
-        Value         "1"
+        Value         "2"
         Show          off
       }
     }
@@ -1800,7 +1800,7 @@ Plecs {
       Frame         [-30, -10; 30, 10]
       Parameter {
         Variable      "Value"
-        Value         "d"
+        Value         "d_test"
         Show          off
       }
       Parameter {
@@ -2083,6 +2083,35 @@ Plecs {
           KeepBaseline  off
           BaselineValue 0
         }
+      }
+    }
+    Component {
+      Type          Step
+      Name          "Step"
+      Show          on
+      Position      [245, 525]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Time"
+        Value         "0.5"
+        Show          off
+      }
+      Parameter {
+        Variable      "Before"
+        Value         "V_out"
+        Show          off
+      }
+      Parameter {
+        Variable      "After"
+        Value         "0.9*V_out"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
       }
     }
     Connection {
@@ -2514,13 +2543,6 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Constant6"
-      SrcTerminal   1
-      DstComponent  "Sum2"
-      DstTerminal   2
-    }
-    Connection {
-      Type          Signal
       SrcComponent  "From16"
       SrcTerminal   1
       Points        [345, 625]
@@ -2541,6 +2563,13 @@ Plecs {
         DstTerminal   2
       }
     }
+    Connection {
+      Type          Signal
+      SrcComponent  "Constant6"
+      SrcTerminal   1
+      DstComponent  "Sum2"
+      DstTerminal   2
+    }
   }
 }
-DemoSignature "5zUgxBDlm5WABe0h8J4E7e3cUDhhf/063ZztxEsQCp4="
+DemoSignature "vHD4rYM9Tem7g1ZNoT3cE2wFuzTWnWUL9rySr6O9zDo="
