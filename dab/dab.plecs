@@ -784,7 +784,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "SwitchState"
-        Value         "2"
+        Value         "1"
         Show          off
       }
     }
@@ -1073,7 +1073,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "SwitchState"
-        Value         "2"
+        Value         "1"
         Show          off
       }
     }
@@ -1285,11 +1285,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 27; 1920, 1042]
+      Location      [0, 23; 1920, 1011]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPcAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPBAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -1379,6 +1379,77 @@ Plecs {
       Parameter {
         Variable      "NoMatchingCounterpartAction"
         Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          Scope
+      Name          "Scope2"
+      Show          on
+      Position      [990, 630]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Location      [0, 27; 1920, 1024]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPKAAAA"
+"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
+"AAAAA=="
+      SavedViews    "AAAAAgAAAAA="
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":93,\"Labels\":[],"
+"\"VisualIdxs\":[]}"
+      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      Axes          "1"
+      TimeRange     "0.0"
+      ScrollingMode "1"
+      SingleTimeAxis "1"
+      Open          "0"
+      Ts            "-1"
+      SampleLimit   "0"
+      XAxisLabel    "Time / s"
+      ShowLegend    "1"
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Fourier {
+        SingleXAxis       on
+        AxisLabel         "Frequency / Hz"
+        Scaling           0
+        PhaseDisplay      0
+        ShowFourierLegend off
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+      }
+    }
+    Component {
+      Type          ZeroOrderHold
+      Name          "Zero-Order\nHold"
+      Show          off
+      Position      [585, 565]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Ts"
+        Value         "1e-4"
         Show          off
       }
     }
@@ -1675,13 +1746,6 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Math"
-      SrcTerminal   1
-      DstComponent  "S_Comparator"
-      DstTerminal   2
-    }
-    Connection {
-      Type          Signal
       SrcComponent  "Manual Switch2"
       SrcTerminal   1
       DstComponent  "Sum2"
@@ -1701,13 +1765,6 @@ Plecs {
       Points        [285, 605; 285, 570]
       DstComponent  "Manual Switch2"
       DstTerminal   3
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Continuous PID\nController"
-      SrcTerminal   2
-      DstComponent  "Manual Switch"
-      DstTerminal   2
     }
     Connection {
       Type          Signal
@@ -1791,6 +1848,34 @@ Plecs {
       DstComponent  "Scope"
       DstTerminal   1
     }
+    Connection {
+      Type          Signal
+      SrcComponent  "Math"
+      SrcTerminal   1
+      Points        [960, 575]
+      Branch {
+        DstComponent  "S_Comparator"
+        DstTerminal   2
+      }
+      Branch {
+        DstComponent  "Scope2"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Continuous PID\nController"
+      SrcTerminal   2
+      DstComponent  "Zero-Order\nHold"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Zero-Order\nHold"
+      SrcTerminal   2
+      DstComponent  "Manual Switch"
+      DstTerminal   2
+    }
   }
 }
-DemoSignature "8roHrBR9oUEUIXmCT0zEzeffUTQs+bLGAFG99yJAHoQ="
+DemoSignature "moct8zXi9MaR0pIyiPVPJ2Y3i0spBfMyyN6OGOb9dto="
