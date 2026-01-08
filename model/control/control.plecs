@@ -54,8 +54,8 @@ Plecs {
   ScriptsDialogSplitterPos "0"
   Schematic {
     Location      [0, 27; 1920, 993]
-    ZoomFactor    1.14436
-    SliderPosition [0, 0]
+    ZoomFactor    1.49862
+    SliderPosition [187, 75]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -710,11 +710,11 @@ Plecs {
       Type          Constant
       Name          "Constant1"
       Show          off
-      Position      [1095, 405]
-      Direction     up
+      Position      [1025, 420]
+      Direction     right
       Flipped       off
-      LabelPosition east
-      Frame         [-10, -25; 10, 25]
+      LabelPosition south
+      Frame         [-25, -10; 25, 10]
       Parameter {
         Variable      "Value"
         Value         "R_load"
@@ -997,7 +997,7 @@ Plecs {
       TimeRange     "0.0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "1"
+      Open          "0"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    "Time / s"
@@ -1549,85 +1549,6 @@ Plecs {
       }
     }
     Component {
-      Type          Scope
-      Name          "Scope4"
-      Show          on
-      Position      [1030, 650]
-      Direction     up
-      Flipped       off
-      LabelPosition south
-      Location      [0, 27; 1920, 1051]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAAF4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPlAAAA"
-"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
-"AAAAA=="
-      SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":94,\"Labels\":[],"
-"\"VisualIdxs\":[]}"
-      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
-"AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
-      Axes          "2"
-      TimeRange     "0.0"
-      ScrollingMode "1"
-      SingleTimeAxis "1"
-      Open          "0"
-      Ts            "-1"
-      SampleLimit   "0"
-      XAxisLabel    "Time / s"
-      ShowLegend    "1"
-      Axis {
-        Name          ""
-        AutoScale     1
-        MinValue      0
-        MaxValue      1
-        Signals       {}
-        SignalTypes   [ ]
-        Untangle      0
-        KeepBaseline  off
-        BaselineValue 0
-      }
-      Axis {
-        Name          ""
-        AutoScale     1
-        MinValue      0
-        MaxValue      1
-        Signals       {}
-        SignalTypes   [ ]
-        Untangle      0
-        KeepBaseline  off
-        BaselineValue 0
-      }
-      Fourier {
-        SingleXAxis       on
-        AxisLabel         "Frequency / Hz"
-        Scaling           0
-        PhaseDisplay      0
-        ShowFourierLegend off
-        Axis {
-          Name          ""
-          AutoScale     1
-          MinValue      0
-          MaxValue      1
-          Signals       {}
-          Untangle      0
-          KeepBaseline  off
-          BaselineValue 0
-        }
-        Axis {
-          Name          ""
-          AutoScale     1
-          MinValue      0
-          MaxValue      1
-          Signals       {}
-          Untangle      0
-          KeepBaseline  off
-          BaselineValue 0
-        }
-      }
-    }
-    Component {
       Type          Product
       Name          "Product4"
       Show          off
@@ -1785,7 +1706,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "SwitchState"
-        Value         "2"
+        Value         "1"
         Show          off
       }
     }
@@ -2087,12 +2008,12 @@ Plecs {
     }
     Component {
       Type          Step
-      Name          "Step"
+      Name          "R_load"
       Show          on
-      Position      [245, 525]
-      Direction     right
+      Position      [1165, 420]
+      Direction     left
       Flipped       off
-      LabelPosition south
+      LabelPosition north
       Parameter {
         Variable      "Time"
         Value         "0.5"
@@ -2100,17 +2021,31 @@ Plecs {
       }
       Parameter {
         Variable      "Before"
-        Value         "V_out"
+        Value         "2*R_load"
         Show          off
       }
       Parameter {
         Variable      "After"
-        Value         "0.9*V_out"
+        Value         "R_load"
         Show          off
       }
       Parameter {
         Variable      "DataType"
         Value         "10"
+        Show          off
+      }
+    }
+    Component {
+      Type          ManualSignalSwitch
+      Name          "Manual Switch1"
+      Show          off
+      Position      [1095, 385]
+      Direction     up
+      Flipped       off
+      LabelPosition east
+      Parameter {
+        Variable      "SwitchState"
+        Value         "2"
         Show          off
       }
     }
@@ -2230,13 +2165,6 @@ Plecs {
       SrcTerminal   1
       DstComponent  "Product2"
       DstTerminal   2
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Constant1"
-      SrcTerminal   1
-      DstComponent  "Product3"
-      DstTerminal   3
     }
     Connection {
       Type          Signal
@@ -2360,13 +2288,6 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Manual Switch"
-      SrcTerminal   1
-      DstComponent  "Sum1"
-      DstTerminal   2
-    }
-    Connection {
-      Type          Signal
       SrcComponent  "Constant4"
       SrcTerminal   1
       Points        [875, 620]
@@ -2390,20 +2311,6 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Triangular Wave1"
-      SrcTerminal   1
-      Points        [795, 610]
-      Branch {
-        DstComponent  "Sum1"
-        DstTerminal   3
-      }
-      Branch {
-        DstComponent  "Goto9"
-        DstTerminal   1
-      }
-    }
-    Connection {
-      Type          Signal
       SrcComponent  "From13"
       SrcTerminal   1
       DstComponent  "V1_Comparator"
@@ -2422,36 +2329,6 @@ Plecs {
       SrcTerminal   1
       DstComponent  "V2'"
       DstTerminal   3
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Math"
-      SrcTerminal   1
-      Points        [970, 585]
-      Branch {
-        DstComponent  "V2'_Comparator"
-        DstTerminal   2
-      }
-      Branch {
-        Points        [970, 655]
-        DstComponent  "Scope4"
-        DstTerminal   2
-      }
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Sum1"
-      SrcTerminal   1
-      Points        [825, 580]
-      Branch {
-        DstComponent  "Math"
-        DstTerminal   2
-      }
-      Branch {
-        Points        [825, 645]
-        DstComponent  "Scope4"
-        DstTerminal   1
-      }
     }
     Connection {
       Type          Signal
@@ -2570,6 +2447,64 @@ Plecs {
       DstComponent  "Sum2"
       DstTerminal   2
     }
+    Connection {
+      Type          Signal
+      SrcComponent  "Manual Switch"
+      SrcTerminal   1
+      DstComponent  "Sum1"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Triangular Wave1"
+      SrcTerminal   1
+      Points        [795, 610]
+      Branch {
+        DstComponent  "Sum1"
+        DstTerminal   3
+      }
+      Branch {
+        DstComponent  "Goto9"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Manual Switch1"
+      SrcTerminal   1
+      DstComponent  "Product3"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Constant1"
+      SrcTerminal   1
+      Points        [1090, 420]
+      DstComponent  "Manual Switch1"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "R_load"
+      SrcTerminal   1
+      Points        [1100, 420]
+      DstComponent  "Manual Switch1"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Sum1"
+      SrcTerminal   1
+      DstComponent  "Math"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Math"
+      SrcTerminal   1
+      DstComponent  "V2'_Comparator"
+      DstTerminal   2
+    }
   }
 }
-DemoSignature "vHD4rYM9Tem7g1ZNoT3cE2wFuzTWnWUL9rySr6O9zDo="
+DemoSignature "aql7mhwSfQ/myS0MJD/7tw9e+ceq/tlOWkQAjn+ZMd8="
