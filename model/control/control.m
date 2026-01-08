@@ -7,8 +7,8 @@ V2 	    = 780
 V_out   = V1
 C       = 1e-5%1e-6
 
-P_set   = 10e3
-P       = P_set*1.2
+P_set   = 5e3
+P       = 10e3%P_set
 D       = 0.5       %! Normalized phase shift ratio
 L		= (V1*V2)*D*(1-D)/(2*fsw*P)
 
@@ -19,7 +19,7 @@ phi	    = (deg/360)*(1/fsw)
 
 I       = V1*D*(1-D)/(2*fsw*L)  %! Current calculation
 R_load_c  = V1/I
-% R_load  = (V_out^2) / P_set
+R_load  = 2*(V_out^2) / P_set
 
 %* PI Controller
 
