@@ -62,7 +62,7 @@ Plecs {
       Type          DCVoltageSource
       Name          "V_in"
       Show          on
-      Position      [345, 325]
+      Position      [260, 325]
       Direction     down
       Flipped       on
       LabelPosition east
@@ -76,7 +76,7 @@ Plecs {
       Type          IgbtWithDiode
       Name          "IGBTD"
       Show          off
-      Position      [480, 270]
+      Position      [395, 270]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -105,7 +105,7 @@ Plecs {
       Type          IgbtWithDiode
       Name          "IGBTD1"
       Show          off
-      Position      [480, 380]
+      Position      [395, 380]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -134,7 +134,7 @@ Plecs {
       Type          IgbtWithDiode
       Name          "IGBTD2"
       Show          off
-      Position      [605, 270]
+      Position      [520, 270]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -163,7 +163,7 @@ Plecs {
       Type          IgbtWithDiode
       Name          "IGBTD3"
       Show          off
-      Position      [605, 380]
+      Position      [520, 380]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -192,7 +192,7 @@ Plecs {
       Type          Inductor
       Name          "L"
       Show          on
-      Position      [660, 310]
+      Position      [615, 310]
       Direction     left
       Flipped       off
       LabelPosition north
@@ -403,7 +403,7 @@ Plecs {
       Type          From
       Name          "From"
       Show          off
-      Position      [435, 270]
+      Position      [350, 270]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -427,7 +427,7 @@ Plecs {
       Type          From
       Name          "From1"
       Show          off
-      Position      [560, 380]
+      Position      [475, 380]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -451,7 +451,7 @@ Plecs {
       Type          From
       Name          "From2"
       Show          off
-      Position      [435, 380]
+      Position      [350, 380]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -475,7 +475,7 @@ Plecs {
       Type          From
       Name          "From3"
       Show          off
-      Position      [560, 270]
+      Position      [475, 270]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1212,72 +1212,6 @@ Plecs {
       }
     }
     Component {
-      Type          Voltmeter
-      Name          "Vm1"
-      Show          on
-      Position      [685, 390]
-      Direction     up
-      Flipped       off
-      LabelPosition west
-    }
-    Component {
-      Type          Scope
-      Name          "Scope1"
-      Show          on
-      Position      [755, 435]
-      Direction     up
-      Flipped       off
-      LabelPosition south
-      Location      [0, 27; 1920, 1024]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPKAAAA"
-"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
-"AAAAA=="
-      SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":183,\"Labels\":[],"
-"\"VisualIdxs\":[]}"
-      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-      Axes          "1"
-      TimeRange     "0.0"
-      ScrollingMode "1"
-      SingleTimeAxis "1"
-      Open          "0"
-      Ts            "-1"
-      SampleLimit   "0"
-      XAxisLabel    "Time / s"
-      ShowLegend    "1"
-      Axis {
-        Name          ""
-        AutoScale     1
-        MinValue      0
-        MaxValue      1
-        Signals       {}
-        SignalTypes   [ ]
-        Untangle      0
-        KeepBaseline  off
-        BaselineValue 0
-      }
-      Fourier {
-        SingleXAxis       on
-        AxisLabel         "Frequency / Hz"
-        Scaling           0
-        PhaseDisplay      0
-        ShowFourierLegend off
-        Axis {
-          Name          ""
-          AutoScale     1
-          MinValue      0
-          MaxValue      1
-          Signals       {}
-          Untangle      0
-          KeepBaseline  off
-          BaselineValue 0
-        }
-      }
-    }
-    Component {
       Type          Scope
       Name          "Scope"
       Show          off
@@ -1285,11 +1219,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 23; 1920, 1011]
+      Location      [0, 27; 1920, 1060]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPBAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPuAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -1453,13 +1387,93 @@ Plecs {
         Show          off
       }
     }
+    Component {
+      Type          Ammeter
+      Name          "Am1"
+      Show          off
+      Position      [680, 310]
+      Direction     left
+      Flipped       off
+      LabelPosition south
+    }
+    Component {
+      Type          PlecsProbe
+      Name          "i_L"
+      Show          on
+      Position      [530, 115]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Probe {
+        Component     "Am1"
+        Path          ""
+        Signals       {"Measured current"}
+      }
+    }
+    Component {
+      Type          Scope
+      Name          "Scope1"
+      Show          on
+      Position      [615, 115]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Location      [0, 23; 1920, 1011]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPBAAAA"
+"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
+"AAAAA=="
+      SavedViews    "AAAAAgAAAAA="
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":182,\"Labels\":[],"
+"\"VisualIdxs\":[]}"
+      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      Axes          "1"
+      TimeRange     "0.0"
+      ScrollingMode "1"
+      SingleTimeAxis "1"
+      Open          "0"
+      Ts            "-1"
+      SampleLimit   "0"
+      XAxisLabel    "Time / s"
+      ShowLegend    "1"
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Fourier {
+        SingleXAxis       on
+        AxisLabel         "Frequency / Hz"
+        Scaling           0
+        PhaseDisplay      0
+        ShowFourierLegend off
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+      }
+    }
     Connection {
       Type          Wire
       SrcComponent  "V_in"
       SrcTerminal   1
-      Points        [345, 235; 480, 235]
+      Points        [260, 235; 395, 235]
       Branch {
-        Points        [605, 235]
+        Points        [520, 235]
         DstComponent  "IGBTD2"
         DstTerminal   1
       }
@@ -1472,9 +1486,9 @@ Plecs {
       Type          Wire
       SrcComponent  "V_in"
       SrcTerminal   2
-      Points        [345, 410; 480, 410]
+      Points        [260, 410; 395, 410]
       Branch {
-        Points        [605, 410]
+        Points        [520, 410]
         DstComponent  "IGBTD3"
         DstTerminal   2
       }
@@ -1487,7 +1501,7 @@ Plecs {
       Type          Wire
       SrcComponent  "IGBTD1"
       SrcTerminal   1
-      Points        [480, 310]
+      Points        [395, 310]
       Branch {
         DstComponent  "IGBTD"
         DstTerminal   2
@@ -1501,22 +1515,14 @@ Plecs {
       Type          Wire
       SrcComponent  "IGBTD3"
       SrcTerminal   1
-      Points        [605, 340]
+      Points        [520, 340]
       Branch {
         DstComponent  "IGBTD2"
         DstTerminal   2
       }
       Branch {
-        Points        [650, 340]
-        Branch {
-          DstComponent  "Tr2"
-          DstTerminal   2
-        }
-        Branch {
-          Points        [650, 410]
-          DstComponent  "Vm1"
-          DstTerminal   2
-        }
+        DstComponent  "Tr2"
+        DstTerminal   2
       }
     }
     Connection {
@@ -1820,28 +1826,6 @@ Plecs {
       DstTerminal   1
     }
     Connection {
-      Type          Wire
-      SrcComponent  "L"
-      SrcTerminal   2
-      Points        [685, 310]
-      Branch {
-        DstComponent  "Tr2"
-        DstTerminal   1
-      }
-      Branch {
-        DstComponent  "Vm1"
-        DstTerminal   1
-      }
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Vm1"
-      SrcTerminal   3
-      Points        [715, 390; 715, 435]
-      DstComponent  "Scope1"
-      DstTerminal   1
-    }
-    Connection {
       Type          Signal
       SrcComponent  "From8"
       SrcTerminal   1
@@ -1876,6 +1860,27 @@ Plecs {
       DstComponent  "Manual Switch"
       DstTerminal   2
     }
+    Connection {
+      Type          Wire
+      SrcComponent  "L"
+      SrcTerminal   2
+      DstComponent  "Am1"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "Am1"
+      SrcTerminal   2
+      DstComponent  "Tr2"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "i_L"
+      SrcTerminal   1
+      DstComponent  "Scope1"
+      DstTerminal   1
+    }
   }
 }
-DemoSignature "moct8zXi9MaR0pIyiPVPJ2Y3i0spBfMyyN6OGOb9dto="
+DemoSignature "dYq1k1Hu4z8A52brkz97sg6MX2/2sObetcci4NfssJo="
