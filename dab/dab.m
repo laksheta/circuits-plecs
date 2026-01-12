@@ -36,7 +36,7 @@ Ki      = Kp/tau
 
 %* Open Loop Verification
 
-d_test = d%0.20 
+d_test = 0.1057%d/2%0.20 
 D_theory = d_test * 2
 
 I_predicted = (V1 * D_theory * (1 - D_theory)) / (2 * fsw * L)
