@@ -15,7 +15,7 @@ L		= (V1*V2)*D*(1-D)/(2*fsw*P_design)
 
 d       = 0.5
 d       = d*0.5
-deg	    = d*(90/0.5)
+deg	    = d*(90/0.25)
 phi	    = (deg/360)*(1/fsw)
 
 I       = V1*D*(1-D)/(2*fsw*L)  %! Current calculation
