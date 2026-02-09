@@ -293,20 +293,6 @@ Plecs {
       LabelPosition east
     }
     Component {
-      Type          Resistor
-      Name          "R4"
-      Show          off
-      Position      [445, 35]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      Parameter {
-        Variable      "R"
-        Value         "R_load"
-        Show          off
-      }
-    }
-    Component {
       Type          Capacitor
       Name          "C1"
       Show          off
@@ -572,11 +558,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 23; 1920, 1011]
+      Location      [0, 27; 1920, 1051]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPBAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPlAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -806,6 +792,20 @@ Plecs {
         Show          off
       }
     }
+    Component {
+      Type          Resistor
+      Name          "R4"
+      Show          off
+      Position      [455, 70]
+      Direction     down
+      Flipped       off
+      LabelPosition west
+      Parameter {
+        Variable      "R"
+        Value         "R_load"
+        Show          off
+      }
+    }
     Connection {
       Type          Wire
       SrcComponent  "Ground"
@@ -880,13 +880,20 @@ Plecs {
     }
     Connection {
       Type          Wire
-      SrcComponent  "R4"
+      SrcComponent  "I"
       SrcTerminal   2
-      Points        [400, 35]
+      Points        [345, 35; 400, 35]
       Branch {
-        Points        [345, 35]
-        DstComponent  "I"
-        DstTerminal   2
+        Points        [455, 35]
+        Branch {
+          DstComponent  "R4"
+          DstTerminal   2
+        }
+        Branch {
+          Points        [520, 35]
+          DstComponent  "Vm1"
+          DstTerminal   1
+        }
       }
       Branch {
         DstComponent  "C1"
@@ -910,19 +917,18 @@ Plecs {
           DstTerminal   2
         }
         Branch {
-          Points        [520, 110]
-          DstComponent  "Vm1"
-          DstTerminal   2
+          Points        [455, 110]
+          Branch {
+            Points        [520, 110]
+            DstComponent  "Vm1"
+            DstTerminal   2
+          }
+          Branch {
+            DstComponent  "R4"
+            DstTerminal   1
+          }
         }
       }
-    }
-    Connection {
-      Type          Wire
-      SrcComponent  "Vm1"
-      SrcTerminal   1
-      Points        [520, 35]
-      DstComponent  "R4"
-      DstTerminal   1
     }
     Connection {
       Type          Wire
