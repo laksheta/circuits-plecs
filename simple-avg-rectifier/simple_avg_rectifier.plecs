@@ -29,9 +29,9 @@ Plecs {
   AssertionAction "1"
   FixedPointDatatypeOverride "1"
   InitializationCommands "plecs('clc')\n\nV_grid \t= 220*sqrt(2)\nF\t\t\t= 50"
-"\n\nR\t= 1e-3\n\nL\t= 1e-3\n\nR_load = 1\nC_out\t = 100e-6\n\nV_dc\t= 780\nm"
-"\t= V_grid/V_dc + 0.01\n\nV_rect = m * V_dc\n\ndelta = 3\n\nphase = [0-delta "
-"-120-delta 120-delta]"
+"\n\nR\t= 1e-3\n\nL\t= 1e-3\n\nR_load = 100\nC_out\t = 100e-6\n\nV_dc\t= 780\n"
+"m\t= V_grid/V_dc\n\nV_rect = m * V_dc\n\ndelta = 3\n\nphase = [0-delta -120-d"
+"elta 120-delta]"
   InitialState  "1"
   SystemState   ""
   TaskingMode   "1"
@@ -148,44 +148,6 @@ Plecs {
       }
     }
     Component {
-      Type          Inductor
-      Name          "L1"
-      Show          off
-      Position      [500, 215]
-      Direction     left
-      Flipped       off
-      LabelPosition north
-      Parameter {
-        Variable      "L"
-        Value         "L"
-        Show          off
-      }
-      Parameter {
-        Variable      "i_init"
-        Value         "0"
-        Show          off
-      }
-    }
-    Component {
-      Type          Inductor
-      Name          "L2"
-      Show          off
-      Position      [500, 225]
-      Direction     left
-      Flipped       off
-      LabelPosition north
-      Parameter {
-        Variable      "L"
-        Value         "L"
-        Show          off
-      }
-      Parameter {
-        Variable      "i_init"
-        Value         "0"
-        Show          off
-      }
-    }
-    Component {
       Type          Ground
       Name          "Ground"
       Show          off
@@ -202,25 +164,6 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition east
-    }
-    Component {
-      Type          Inductor
-      Name          "L3"
-      Show          off
-      Position      [500, 235]
-      Direction     left
-      Flipped       off
-      LabelPosition north
-      Parameter {
-        Variable      "L"
-        Value         "L"
-        Show          off
-      }
-      Parameter {
-        Variable      "i_init"
-        Value         "0"
-        Show          off
-      }
     }
     Component {
       Type          Resistor
@@ -558,11 +501,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 27; 1920, 1051]
+      Location      [0, 27; 1920, 1096]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPlAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAQSAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -615,11 +558,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 27; 1920, 1060]
+      Location      [0, 27; 1920, 1069]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPuAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAP3AAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -672,11 +615,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [640, 276; 990, 512]
+      Location      [640, 276; 990, 521]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAAV4AAADRAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAAV4AAADaAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -729,11 +672,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 27; 1920, 1042]
+      Location      [0, 27; 1920, 1051]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPcAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPlAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -806,6 +749,63 @@ Plecs {
         Show          off
       }
     }
+    Component {
+      Type          Inductor
+      Name          "L1"
+      Show          off
+      Position      [500, 215]
+      Direction     left
+      Flipped       on
+      LabelPosition north
+      Parameter {
+        Variable      "L"
+        Value         "L"
+        Show          off
+      }
+      Parameter {
+        Variable      "i_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Inductor
+      Name          "L2"
+      Show          off
+      Position      [500, 225]
+      Direction     left
+      Flipped       on
+      LabelPosition north
+      Parameter {
+        Variable      "L"
+        Value         "L"
+        Show          off
+      }
+      Parameter {
+        Variable      "i_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Inductor
+      Name          "L3"
+      Show          off
+      Position      [500, 235]
+      Direction     left
+      Flipped       on
+      LabelPosition north
+      Parameter {
+        Variable      "L"
+        Value         "L"
+        Show          off
+      }
+      Parameter {
+        Variable      "i_init"
+        Value         "0"
+        Show          off
+      }
+    }
     Connection {
       Type          Wire
       SrcComponent  "Ground"
@@ -836,7 +836,7 @@ Plecs {
     Connection {
       Type          Wire
       SrcComponent  "L1"
-      SrcTerminal   1
+      SrcTerminal   2
       DstComponent  "R1"
       DstTerminal   1
     }
@@ -851,7 +851,7 @@ Plecs {
     Connection {
       Type          Wire
       SrcComponent  "L2"
-      SrcTerminal   1
+      SrcTerminal   2
       DstComponent  "R2"
       DstTerminal   1
     }
@@ -866,7 +866,7 @@ Plecs {
     Connection {
       Type          Wire
       SrcComponent  "L3"
-      SrcTerminal   1
+      SrcTerminal   2
       DstComponent  "R3"
       DstTerminal   1
     }
@@ -942,12 +942,12 @@ Plecs {
       SrcComponent  "3ph Meter"
       SrcTerminal   5
       DstComponent  "L2"
-      DstTerminal   2
+      DstTerminal   1
     }
     Connection {
       Type          Wire
       SrcComponent  "L1"
-      SrcTerminal   2
+      SrcTerminal   1
       DstComponent  "3ph Meter"
       DstTerminal   4
     }
@@ -970,7 +970,7 @@ Plecs {
       SrcComponent  "3ph Meter"
       SrcTerminal   6
       DstComponent  "L3"
-      DstTerminal   2
+      DstTerminal   1
     }
     Connection {
       Type          Signal
