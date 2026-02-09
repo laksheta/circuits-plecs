@@ -29,7 +29,8 @@ Plecs {
   AssertionAction "1"
   FixedPointDatatypeOverride "1"
   InitializationCommands "V_grid \t= 220*sqrt(2)\nF\t\t\t= 50\n\nR\t= 1e-3\n\n"
-"L\t= 1e-3\n\nR_load = 1\nC_out\t = 100e-6"
+"L\t= 1e-3\n\nR_load = 1\nC_out\t = 100e-6\n\nV_dc\t= 780\nm\t= V_grid/V_dc\n"
+"\nV_rect = m * V_dc\n\nphase = [0 -120 120]"
   InitialState  "1"
   SystemState   ""
   TaskingMode   "1"
@@ -355,6 +356,78 @@ Plecs {
       Flipped       off
       LabelPosition east
     }
+    Component {
+      Type          Goto
+      Name          "Goto"
+      Show          off
+      Position      [570, 180]
+      Direction     up
+      Flipped       off
+      LabelPosition east
+      Parameter {
+        Variable      "Tag"
+        Value         "i_abc"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          SineGenerator
+      Name          "Sine Wave"
+      Show          on
+      Position      [185, 305]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Amplitude"
+        Value         "V_rect"
+        Show          off
+      }
+      Parameter {
+        Variable      "Bias"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Frequency"
+        Value         "F"
+        Show          off
+      }
+      Parameter {
+        Variable      "Phase"
+        Value         "phase"
+        Show          off
+      }
+      Parameter {
+        Variable      "Units"
+        Value         "3"
+        Show          off
+      }
+    }
+    Component {
+      Type          SignalDemux
+      Name          "Demux"
+      Show          off
+      Position      [255, 305]
+      Direction     right
+      Flipped       on
+      LabelPosition south
+      Parameter {
+        Variable      "Width"
+        Value         "3"
+        Show          off
+      }
+    }
     Connection {
       Type          Wire
       SrcComponent  "Ground"
@@ -521,6 +594,20 @@ Plecs {
       SrcTerminal   1
       DstComponent  "3ph Meter"
       DstTerminal   9
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "3ph Meter"
+      SrcTerminal   8
+      DstComponent  "Goto"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Sine Wave"
+      SrcTerminal   1
+      DstComponent  "Demux"
+      DstTerminal   1
     }
   }
 }
