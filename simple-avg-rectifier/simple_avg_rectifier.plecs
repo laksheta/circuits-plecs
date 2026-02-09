@@ -335,20 +335,6 @@ Plecs {
       LabelPosition west
     }
     Component {
-      Type          ThreePhaseMeter
-      Name          "3ph Meter"
-      Show          off
-      Position      [565, 225]
-      Direction     up
-      Flipped       off
-      LabelPosition southSoutheast
-      Parameter {
-        Variable      "voltage"
-        Value         "1"
-        Show          off
-      }
-    }
-    Component {
       Type          Ground
       Name          "Ground3"
       Show          off
@@ -361,7 +347,7 @@ Plecs {
       Type          Goto
       Name          "Goto"
       Show          off
-      Position      [570, 180]
+      Position      [560, 180]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -586,11 +572,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [640, 276; 990, 530]
+      Location      [0, 23; 1920, 1011]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAAV4AAADjAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPBAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -643,11 +629,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 27; 1920, 1042]
+      Location      [0, 27; 1920, 1060]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPcAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPuAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -757,11 +743,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 27; 1920, 1024]
+      Location      [0, 27; 1920, 1042]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPKAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPcAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -804,6 +790,20 @@ Plecs {
           KeepBaseline  off
           BaselineValue 0
         }
+      }
+    }
+    Component {
+      Type          ThreePhaseMeter
+      Name          "3ph Meter"
+      Show          off
+      Position      [565, 225]
+      Direction     down
+      Flipped       on
+      LabelPosition southSouthwest
+      Parameter {
+        Variable      "voltage"
+        Value         "1"
+        Show          off
       }
     }
     Connection {
@@ -929,12 +929,12 @@ Plecs {
       SrcComponent  "Grid"
       SrcTerminal   2
       DstComponent  "3ph Meter"
-      DstTerminal   5
+      DstTerminal   2
     }
     Connection {
       Type          Wire
       SrcComponent  "3ph Meter"
-      SrcTerminal   2
+      SrcTerminal   5
       DstComponent  "L2"
       DstTerminal   2
     }
@@ -943,12 +943,12 @@ Plecs {
       SrcComponent  "L1"
       SrcTerminal   2
       DstComponent  "3ph Meter"
-      DstTerminal   1
+      DstTerminal   4
     }
     Connection {
       Type          Wire
       SrcComponent  "3ph Meter"
-      SrcTerminal   4
+      SrcTerminal   1
       DstComponent  "Grid"
       DstTerminal   1
     }
@@ -957,21 +957,14 @@ Plecs {
       SrcComponent  "Grid"
       SrcTerminal   3
       DstComponent  "3ph Meter"
-      DstTerminal   6
+      DstTerminal   3
     }
     Connection {
       Type          Wire
       SrcComponent  "3ph Meter"
-      SrcTerminal   3
+      SrcTerminal   6
       DstComponent  "L3"
       DstTerminal   2
-    }
-    Connection {
-      Type          Wire
-      SrcComponent  "Ground3"
-      SrcTerminal   1
-      DstComponent  "3ph Meter"
-      DstTerminal   9
     }
     Connection {
       Type          Signal
@@ -1041,21 +1034,6 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "3ph Meter"
-      SrcTerminal   8
-      Points        [570, 200]
-      Branch {
-        DstComponent  "Goto"
-        DstTerminal   1
-      }
-      Branch {
-        Points        [570, 170]
-        DstComponent  "Scope1"
-        DstTerminal   1
-      }
-    }
-    Connection {
-      Type          Signal
       SrcComponent  "Demux"
       SrcTerminal   2
       Points        [280, 295]
@@ -1081,6 +1059,28 @@ Plecs {
       Branch {
         Points        [250, 130]
         DstComponent  "Scope3"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "3ph Meter"
+      SrcTerminal   9
+      DstComponent  "Ground3"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "3ph Meter"
+      SrcTerminal   8
+      Points        [560, 200]
+      Branch {
+        DstComponent  "Goto"
+        DstTerminal   1
+      }
+      Branch {
+        Points        [560, 170]
+        DstComponent  "Scope1"
         DstTerminal   1
       }
     }
