@@ -30,8 +30,8 @@ Plecs {
   FixedPointDatatypeOverride "1"
   InitializationCommands "plecs('clc')\n\nV_grid \t= 220*sqrt(2)\nF\t\t\t= 50"
 "\n\nR\t= 1e-3\n\nL\t= 1e-3\n\nR_load = 100\nC_out\t = 100e-6\n\nV_dc\t= 780\n"
-"m\t= V_grid/V_dc\n\nV_rect = m * V_dc\n\ndelta = 3\n\nphase = [0-delta -120-d"
-"elta 120-delta]"
+"m\t= V_grid/V_dc\n\nV_rect = m * V_dc\n\ndelta = 0.75\n\nphase = [0-delta -12"
+"0-delta 120-delta]"
   InitialState  "1"
   SystemState   ""
   TaskingMode   "1"
@@ -501,11 +501,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 27; 1920, 1096]
+      Location      [0, 27; 1920, 1139]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAQSAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAQ9AAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -558,11 +558,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 27; 1920, 1069]
+      Location      [0, 27; 1920, 1078]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAP3AAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAQAAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
