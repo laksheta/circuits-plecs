@@ -54,8 +54,8 @@ Plecs {
   ScriptsDialogSplitterPos "0"
   Schematic {
     Location      [0, 23; 1920, 989]
-    ZoomFactor    3.36578
-    SliderPosition [253, 357]
+    ZoomFactor    1.71498
+    SliderPosition [0, 0]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -200,6 +200,67 @@ Plecs {
       Flipped       off
       LabelPosition east
     }
+    Component {
+      Type          Inductor
+      Name          "L3"
+      Show          off
+      Position      [500, 235]
+      Direction     left
+      Flipped       off
+      LabelPosition north
+      Parameter {
+        Variable      "L"
+        Value         "0.001"
+        Show          off
+      }
+      Parameter {
+        Variable      "i_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Resistor
+      Name          "R1"
+      Show          off
+      Position      [445, 215]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "R"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          Resistor
+      Name          "R2"
+      Show          off
+      Position      [445, 225]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "R"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          Resistor
+      Name          "R3"
+      Show          off
+      Position      [445, 235]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "R"
+        Value         "1"
+        Show          off
+      }
+    }
     Connection {
       Type          Wire
       SrcComponent  "Grid"
@@ -212,30 +273,6 @@ Plecs {
       SrcComponent  "L1"
       SrcTerminal   2
       DstComponent  "Grid"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Wire
-      SrcComponent  "Grid"
-      SrcTerminal   3
-      Points        [405, 235]
-      DstComponent  "V2"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Wire
-      SrcComponent  "L2"
-      SrcTerminal   1
-      Points        [365, 225]
-      DstComponent  "V1"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Wire
-      SrcComponent  "L1"
-      SrcTerminal   1
-      Points        [335, 215]
-      DstComponent  "V"
       DstTerminal   1
     }
     Connection {
@@ -264,6 +301,58 @@ Plecs {
         DstComponent  "V"
         DstTerminal   2
       }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "Grid"
+      SrcTerminal   3
+      DstComponent  "L3"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "L1"
+      SrcTerminal   1
+      DstComponent  "R1"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "R1"
+      SrcTerminal   2
+      Points        [335, 215]
+      DstComponent  "V"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "L2"
+      SrcTerminal   1
+      DstComponent  "R2"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "R2"
+      SrcTerminal   2
+      Points        [365, 225]
+      DstComponent  "V1"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "L3"
+      SrcTerminal   1
+      DstComponent  "R3"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "R3"
+      SrcTerminal   2
+      Points        [405, 235]
+      DstComponent  "V2"
+      DstTerminal   1
     }
   }
 }
