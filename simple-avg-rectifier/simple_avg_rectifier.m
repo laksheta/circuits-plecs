@@ -39,5 +39,6 @@ m = U_rect_amp / V_dc_target;   % Resulting Modulation Index
 % Update your phase array with the calculated delta
 phase = [0+delta, -120+delta, 120+delta]; 
 
+V_rect  = m*V_dc_target
 % Note: Since delta from atan2(u_q, u_d) will be negative for a rectifier, 
 % adding it directly shifts the phase lagging behind the grid.
