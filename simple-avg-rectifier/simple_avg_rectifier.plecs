@@ -29,9 +29,9 @@ Plecs {
   AssertionAction "1"
   FixedPointDatatypeOverride "1"
   InitializationCommands "plecs('clc')\n\nV_grid \t= 220*sqrt(2)\nF\t\t\t= 50"
-"\n\nR\t= 1e-3\n\nL\t= 1e-3\n\nR_load = 100\nC_out\t = 100e-6\n\nV_dc\t= 780\n"
-"m\t= V_grid/V_dc\n\nV_rect = m * V_dc\n\ndelta = 0.75\n\nphase = [0-delta -12"
-"0-delta 120-delta]"
+"\n\nR\t= 1e-1\n\nL\t= 1e-3\n\nR_load = 100\nC_out\t = 10e-6\n\nV_dc\t= 780\nm"
+"\t= V_grid/V_dc\n\nV_rect = m * V_dc\n\ndelta = 0.83\n\nphase = [0-delta -120"
+"-delta 120-delta]"
   InitialState  "1"
   SystemState   ""
   TaskingMode   "1"
@@ -501,11 +501,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 27; 1920, 1139]
+      Location      [0, 27; 1920, 1042]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAQ9AAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPcAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
