@@ -54,8 +54,8 @@ Plecs {
   ScriptsDialogSplitterPos "0"
   Schematic {
     Location      [0, 27; 1920, 993]
-    ZoomFactor    1.96257
-    SliderPosition [0, 3]
+    ZoomFactor    1.71498
+    SliderPosition [0, 0]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -700,18 +700,21 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [640, 276; 990, 530]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
+      Location      [0, 27; 1920, 1033]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAAD0/wCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAF4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAAV4AAADjAAAA"
+"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMBAAAAMAAAA9MAAABoAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAABsgAAAPTAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":64,\"Labels\":[],"
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":183,\"Labels\":[],"
 "\"VisualIdxs\":[]}"
-      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
-"AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+      PlotPalettes  "AAAAAQAAAAIAAAACAAAAAQAAAAIB/////wAAAAAAAAL//y7g//+ZmQAAA"
+"AAAAQAAAAIBAAAAAAEAAAACAAAAAQAAAAEAAAABAAAAAgAAAAAAAQAAAAI/8AAAAAAAAD/wAAAAAA"
+"AAAAAAAQAAAAIAAAAAAAIAAAACAAAAAQAAAAIB/////wAAAAAAAAL//y7g//+ZmQAAAAAAAQAAAAI"
+"BAAAAAAEAAAACAAAAAQAAAAEAAAABAAAAAgAAAAAAAQAAAAI/8AAAAAAAAD/wAAAAAAAAAAAAAQAA"
+"AAIAAA=="
       Axes          "2"
       TimeRange     "0"
       ScrollingMode "1"
@@ -1006,7 +1009,7 @@ Plecs {
       SrcComponent  "Components/Control/Transformations/3ph->RRF"
       Name          "3ph->RRF"
       Show          on
-      Position      [320, 460]
+      Position      [635, 85]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1031,7 +1034,7 @@ Plecs {
       Type          From
       Name          "From8"
       Show          off
-      Position      [270, 455]
+      Position      [585, 80]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1055,7 +1058,7 @@ Plecs {
       Type          From
       Name          "From9"
       Show          off
-      Position      [270, 465]
+      Position      [585, 90]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1079,7 +1082,7 @@ Plecs {
       Type          Scope
       Name          "Scope2"
       Show          off
-      Position      [390, 460]
+      Position      [705, 85]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1098,7 +1101,7 @@ Plecs {
       TimeRange     "0.0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "1"
+      Open          "0"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    "Time / s"
