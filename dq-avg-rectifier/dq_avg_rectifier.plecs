@@ -54,7 +54,7 @@ Plecs {
   ScriptsDialogSplitterPos "0"
   Schematic {
     Location      [0, 27; 1920, 993]
-    ZoomFactor    1.71498
+    ZoomFactor    2.24589
     SliderPosition [0, 0]
     ShowBrowser   off
     BrowserWidth  100
@@ -1242,7 +1242,7 @@ Plecs {
     Component {
       Type          ManualSignalSwitch
       Name          "Manual Switch"
-      Show          on
+      Show          off
       Position      [180, 305]
       Direction     right
       Flipped       off
