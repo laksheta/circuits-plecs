@@ -11,5 +11,5 @@
 </p>
 
 <p align='center'>
-    <img src='!attachments/README-2026-02-10-13-26-30.png' width='800'>
+    <img src='attachments/README-2026-02-10-13-26-30.png' width='800'>
 </p>
