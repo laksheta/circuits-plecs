@@ -1,5 +1,5 @@
 Plecs {
-  Name          "simple_avg_rectifier"
+  Name          "dq_avg_rectifier"
   Version       "4.9"
   CircuitModel  "ContStateSpace"
   StartTime     "0.0"
@@ -28,7 +28,7 @@ Plecs {
   AlgebraicLoopWithStateMachineMsg "3"
   AssertionAction "1"
   FixedPointDatatypeOverride "1"
-  InitializationCommands "simple_avg_rectifier"
+  InitializationCommands "dq_avg_rectifier"
   InitialState  "1"
   SystemState   ""
   TaskingMode   "1"
@@ -53,8 +53,8 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [0, 23; 1920, 989]
-    ZoomFactor    1.96257
+    Location      [0, 27; 1920, 993]
+    ZoomFactor    1.71498
     SliderPosition [0, 0]
     ShowBrowser   off
     BrowserWidth  100
@@ -273,7 +273,7 @@ Plecs {
       Type          Goto
       Name          "Goto"
       Show          off
-      Position      [560, 180]
+      Position      [550, 180]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -290,40 +290,6 @@ Plecs {
       Parameter {
         Variable      "NoMatchingCounterpartAction"
         Value         "2"
-        Show          off
-      }
-    }
-    Component {
-      Type          SineGenerator
-      Name          "Sine Wave"
-      Show          on
-      Position      [185, 305]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      Parameter {
-        Variable      "Amplitude"
-        Value         "V_rect"
-        Show          off
-      }
-      Parameter {
-        Variable      "Bias"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "Frequency"
-        Value         "F"
-        Show          off
-      }
-      Parameter {
-        Variable      "Phase"
-        Value         "phase"
-        Show          off
-      }
-      Parameter {
-        Variable      "Units"
-        Value         "3"
         Show          off
       }
     }
@@ -607,11 +573,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [640, 276; 990, 521]
+      Location      [640, 276; 990, 530]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAF4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAAV4AAADaAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAAV4AAADjAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -853,6 +819,188 @@ Plecs {
         Show          off
       }
     }
+    Component {
+      Type          SineGenerator
+      Name          "Sine Wave"
+      Show          on
+      Position      [180, 305]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Amplitude"
+        Value         "V_rect"
+        Show          off
+      }
+      Parameter {
+        Variable      "Bias"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Frequency"
+        Value         "F"
+        Show          off
+      }
+      Parameter {
+        Variable      "Phase"
+        Value         "phase"
+        Show          off
+      }
+      Parameter {
+        Variable      "Units"
+        Value         "3"
+        Show          off
+      }
+    }
+    Component {
+      Type          Reference
+      SrcComponent  "Components/Control/Continuous/Three-Phase PLL"
+      Name          "Three-Phase PLL"
+      Show          on
+      Position      [560, 345]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Frame         [-40, -20; 40, 20]
+      Parameter {
+        Variable      "type"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "f0"
+        Value         "2*pi*50"
+        Show          off
+      }
+      Parameter {
+        Variable      "Vpk"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "theta0"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "units"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "contr_design"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "kp"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "ki"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "k"
+        Value         "1"
+        Show          off
+      }
+      Terminal {
+        Type          Input
+        Position      [-40, 0]
+        Direction     left
+      }
+      Terminal {
+        Type          Output
+        Position      [44, -10]
+        Direction     right
+      }
+      Terminal {
+        Type          Output
+        Position      [44, 0]
+        Direction     right
+      }
+      Terminal {
+        Type          Output
+        Position      [44, 10]
+        Direction     right
+      }
+    }
+    Component {
+      Type          Goto
+      Name          "Goto4"
+      Show          off
+      Position      [580, 180]
+      Direction     up
+      Flipped       off
+      LabelPosition east
+      Parameter {
+        Variable      "Tag"
+        Value         "V_abc"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          From
+      Name          "From7"
+      Show          off
+      Position      [490, 345]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "V_abc"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          Goto
+      Name          "Goto5"
+      Show          off
+      Position      [635, 335]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "theta"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "2"
+        Show          off
+      }
+    }
     Connection {
       Type          Wire
       SrcComponent  "Ground"
@@ -1036,20 +1184,6 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Sine Wave"
-      SrcTerminal   1
-      Points        [225, 305]
-      Branch {
-        DstComponent  "Demux"
-        DstTerminal   1
-      }
-      Branch {
-        DstComponent  "Goto1"
-        DstTerminal   1
-      }
-    }
-    Connection {
-      Type          Signal
       SrcComponent  "Mux"
       SrcTerminal   1
       DstComponent  "Fcn"
@@ -1104,6 +1238,7 @@ Plecs {
       Type          Signal
       SrcComponent  "3ph Meter"
       SrcTerminal   8
+      Points        [550, 205]
       DstComponent  "Goto"
       DstTerminal   1
     }
@@ -1141,6 +1276,42 @@ Plecs {
       SrcTerminal   1
       DstComponent  "Scope1"
       DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "3ph Meter"
+      SrcTerminal   7
+      Points        [580, 205]
+      DstComponent  "Goto4"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From7"
+      SrcTerminal   1
+      DstComponent  "Three-Phase PLL"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Three-Phase PLL"
+      SrcTerminal   2
+      DstComponent  "Goto5"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Sine Wave"
+      SrcTerminal   1
+      Points        [225, 305]
+      Branch {
+        DstComponent  "Demux"
+        DstTerminal   1
+      }
+      Branch {
+        DstComponent  "Goto1"
+        DstTerminal   1
+      }
     }
   }
 }
