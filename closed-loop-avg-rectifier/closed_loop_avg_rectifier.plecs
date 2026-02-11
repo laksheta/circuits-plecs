@@ -67,8 +67,8 @@ Plecs {
   IncompatibleInitialConditionMsg "2"
   Schematic {
     Location      [0, 23; 1920, 989]
-    ZoomFactor    1.96256
-    SliderPosition [0, -1]
+    ZoomFactor    1.49863
+    SliderPosition [0, 1]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -378,7 +378,7 @@ Plecs {
       Frame         [-20, -10; 20, 10]
       Parameter {
         Variable      "f(u)"
-        Value         "-(u[1]*u[4]+u[2]*u[5]+u[3]*u[6])/(V_dc_target)"
+        Value         "max(0, -(u[1]*u[4]+u[2]*u[5]+u[3]*u[6]) / max(u[7], 1))"
         Show          off
       }
     }
@@ -390,10 +390,10 @@ Plecs {
       Direction     right
       Flipped       off
       LabelPosition south
-      Frame         [-2, -10; 7, 10]
+      Frame         [-2, -15; 7, 15]
       Parameter {
         Variable      "Width"
-        Value         "[3 3]"
+        Value         "[3 3 1]"
         Show          off
       }
     }
@@ -401,7 +401,7 @@ Plecs {
       Type          From
       Name          "From"
       Show          off
-      Position      [335, 165]
+      Position      [335, 170]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -436,7 +436,7 @@ Plecs {
       Type          From
       Name          "From1"
       Show          off
-      Position      [335, 195]
+      Position      [335, 180]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -666,11 +666,11 @@ Plecs {
       Flipped       off
       LabelPosition south
       Frame         [-15, -15; 15, 15]
-      Location      [0, 24; 1920, 1057]
+      Location      [0, 24; 1920, 1066]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAFgA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAAB4AAAAPqAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAAB4AAAAPzAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -816,15 +816,15 @@ Plecs {
       Flipped       off
       LabelPosition south
       Frame         [-15, -15; 15, 15]
-      Location      [961, 24; 1919, 1136]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAAD3PwCAAAAA/sAAAAQAFoAbwBvA"
+      Location      [961, 29; 1919, 1089]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAAEBfwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAFgA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAMAAAA9wAAABiAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAAA74AAAQ5AAAA"
+"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMBAAAANAAABAUAAABiAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAAAwQAAAQFAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":184,\"Labels\":[],"
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":66,\"Labels\":[],"
 "\"VisualIdxs\":[]}"
       PlotPalettes  "AAAAAQAAAAIAAAACAAAAAQAAAAIB/////wAAAAAAAAL//y7g//+ZmQAAA"
 "AAAAQAAAAIBAAAAAAEAAAACAAAAAQAAAAEAAAABAAAAAgAAAAAAAQAAAAI/8AAAAAAAAD/wAAAAAA"
@@ -835,7 +835,7 @@ Plecs {
       TimeRange     "0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "0"
+      Open          "1"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    "Time / s"
@@ -1485,11 +1485,11 @@ Plecs {
       Flipped       off
       LabelPosition east
       Frame         [-15, -15; 15, 15]
-      Location      [0, 74; 1920, 1089]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAAD2PwCAAAAA/sAAAAQAFoAbwBvA"
+      Location      [0, 23; 1920, 1011]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAADvfwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMBAAAANAAAA9gAAABiAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAABsYAAAPYAAAA"
+"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMBAAAANAAAA70AAABiAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAABsYAAAO9AAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -1819,12 +1819,12 @@ Plecs {
       }
       Parameter {
         Variable      "up_limit"
-        Value         "20"
+        Value         "15"
         Show          off
       }
       Parameter {
         Variable      "low_limit"
-        Value         "0"
+        Value         "-15"
         Show          off
       }
       Parameter {
@@ -2455,177 +2455,38 @@ Plecs {
       }
     }
     Component {
-      Type          Scope
-      Name          "Scope4"
-      Show          on
-      Position      [790, 415]
-      Direction     up
+      Type          From
+      Name          "From19"
+      Show          off
+      Position      [335, 190]
+      Direction     right
       Flipped       off
       LabelPosition south
-      Frame         [-15, -15; 15, 15]
-      Location      [0, 24; 1920, 1030]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAAB4AAAAPPAAAA"
-"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
-"AAAAA=="
-      SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":95,\"Labels\":[],"
-"\"VisualIdxs\":[]}"
-      PlotPalettes  "AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-      Axes          "1"
-      TimeRange     "0.0"
-      ScrollingMode "1"
-      SingleTimeAxis "1"
-      Open          "0"
-      Ts            "-1"
-      SampleLimit   "0"
-      XAxisLabel    "Time / s"
-      ShowLegend    "1"
-      Axis {
-        Name          ""
-        AutoScale     1
-        MinValue      0
-        MaxValue      1
-        Signals       {}
-        SignalTypes   [ ]
-        Untangle      0
-        KeepBaseline  off
-        BaselineValue 0
+      Parameter {
+        Variable      "Tag"
+        Value         "V_out"
+        Show          off
       }
-      Fourier {
-        SingleXAxis       on
-        AxisLabel         "Frequency / Hz"
-        Scaling           0
-        PhaseDisplay      0
-        ShowFourierLegend off
-        Axis {
-          Name          ""
-          AutoScale     1
-          MinValue      0
-          MaxValue      1
-          Signals       {}
-          Untangle      0
-          KeepBaseline  off
-          BaselineValue 0
-        }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
       }
-    }
-    Component {
-      Type          Scope
-      Name          "Scope5"
-      Show          on
-      Position      [510, 425]
-      Direction     up
-      Flipped       off
-      LabelPosition south
-      Frame         [-15, -15; 15, 15]
-      Location      [0, 24; 1920, 1048]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAAB4AAAAPhAAAA"
-"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
-"AAAAA=="
-      SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":95,\"Labels\":[],"
-"\"VisualIdxs\":[]}"
-      PlotPalettes  "AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-      Axes          "1"
-      TimeRange     "0.0"
-      ScrollingMode "1"
-      SingleTimeAxis "1"
-      Open          "0"
-      Ts            "-1"
-      SampleLimit   "0"
-      XAxisLabel    "Time / s"
-      ShowLegend    "1"
-      Axis {
-        Name          ""
-        AutoScale     1
-        MinValue      0
-        MaxValue      1
-        Signals       {}
-        SignalTypes   [ ]
-        Untangle      0
-        KeepBaseline  off
-        BaselineValue 0
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "1"
+        Show          off
       }
-      Fourier {
-        SingleXAxis       on
-        AxisLabel         "Frequency / Hz"
-        Scaling           0
-        PhaseDisplay      0
-        ShowFourierLegend off
-        Axis {
-          Name          ""
-          AutoScale     1
-          MinValue      0
-          MaxValue      1
-          Signals       {}
-          Untangle      0
-          KeepBaseline  off
-          BaselineValue 0
-        }
+      Parameter {
+        Variable      "CustomMessage"
+        Value         ""
+        Show          off
+        Evaluate      on
       }
-    }
-    Component {
-      Type          Scope
-      Name          "Scope6"
-      Show          on
-      Position      [710, 440]
-      Direction     up
-      Flipped       off
-      LabelPosition south
-      Frame         [-15, -15; 15, 15]
-      Location      [640, 276; 990, 525]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAAAV4AAADaAAAA"
-"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
-"AAAAA=="
-      SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":203,\"Labels\":[],"
-"\"VisualIdxs\":[]}"
-      PlotPalettes  "AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-      Axes          "1"
-      TimeRange     "0.0"
-      ScrollingMode "1"
-      SingleTimeAxis "1"
-      Open          "0"
-      Ts            "-1"
-      SampleLimit   "0"
-      XAxisLabel    "Time / s"
-      ShowLegend    "1"
-      Axis {
-        Name          ""
-        AutoScale     1
-        MinValue      0
-        MaxValue      1
-        Signals       {}
-        SignalTypes   [ ]
-        Untangle      0
-        KeepBaseline  off
-        BaselineValue 0
-      }
-      Fourier {
-        SingleXAxis       on
-        AxisLabel         "Frequency / Hz"
-        Scaling           0
-        PhaseDisplay      0
-        ShowFourierLegend off
-        Axis {
-          Name          ""
-          AutoScale     1
-          MinValue      0
-          MaxValue      1
-          Signals       {}
-          Untangle      0
-          KeepBaseline  off
-          BaselineValue 0
-        }
+      Parameter {
+        Variable      "HighlightLevel"
+        Value         "0"
+        Show          off
       }
     }
     Connection {
@@ -2820,7 +2681,6 @@ Plecs {
       Type          Signal
       SrcComponent  "From1"
       SrcTerminal   1
-      Points        [355, 195; 355, 185]
       DstComponent  "Mux"
       DstTerminal   3
     }
@@ -2828,7 +2688,6 @@ Plecs {
       Type          Signal
       SrcComponent  "From"
       SrcTerminal   1
-      Points        [355, 165; 355, 175]
       DstComponent  "Mux"
       DstTerminal   2
     }
@@ -3108,48 +2967,31 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Sum1"
+      SrcComponent  "From19"
       SrcTerminal   1
-      Points        [745, 485]
-      Branch {
-        DstComponent  "Continuous PID\nController1"
-        DstTerminal   1
-      }
-      Branch {
-        Points        [745, 415]
-        DstComponent  "Scope4"
-        DstTerminal   1
-      }
+      DstComponent  "Mux"
+      DstTerminal   4
     }
     Connection {
       Type          Signal
-      SrcComponent  "Sum"
+      SrcComponent  "Sum1"
       SrcTerminal   1
-      Points        [485, 490]
-      Branch {
-        DstComponent  "Continuous PID\nController"
-        DstTerminal   1
-      }
-      Branch {
-        Points        [480, 490]
-        DstComponent  "Scope5"
-        DstTerminal   1
-      }
+      DstComponent  "Continuous PID\nController1"
+      DstTerminal   1
     }
     Connection {
       Type          Signal
       SrcComponent  "Continuous PID\nController"
       SrcTerminal   2
-      Points        [620, 490]
-      Branch {
-        DstComponent  "Manual Switch1"
-        DstTerminal   3
-      }
-      Branch {
-        Points        [620, 440]
-        DstComponent  "Scope6"
-        DstTerminal   1
-      }
+      DstComponent  "Manual Switch1"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Sum"
+      SrcTerminal   1
+      DstComponent  "Continuous PID\nController"
+      DstTerminal   1
     }
   }
 }
