@@ -16,11 +16,11 @@ V_dc_target = 780;
 
 P_load = (V_dc_target^2) / R_load;
 
-i_d_req = -10%-(2 * P_load) / (3 * V_grid_peak)
-i_q_req = 0
+i_d_req = -(2 * P_load) / (3 * V_grid_peak);
+i_q_req = 0;
 
-u_d = V_grid_peak - (R * i_d_req - omega * L * i_q_req)
-u_q = 0 - (R * i_q_req + omega * L * i_d_req)
+u_d = V_grid_peak - (R * i_d_req - omega * L * i_q_req);
+u_q = 0 - (R * i_q_req + omega * L * i_d_req);
 
 U_rect_amp = sqrt(u_d^2 + u_q^2);
 delta_rad  = atan2(u_q, u_d);
@@ -33,7 +33,7 @@ phase = [0+delta, -120+delta, 120+delta];
 V_rect = m*V_dc_target;
 
 % Controller
-f_bw_i      = f_sw;
+f_bw_i      = f_sw*0.1;
 omega_ci    = 2*pi*f_bw_i;
 Kp_i        = omega_ci * L;
 Ki_i        = omega_ci * R;
