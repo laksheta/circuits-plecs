@@ -3,6 +3,8 @@ plecs('clc')
 V_grid_peak = 220*sqrt(2);
 F           = 50;
 omega       = 2*pi*F;
+f_sw        = 10e3;
+
 
 R           = 1e-1;
 L           = 1e-3;
@@ -32,7 +34,7 @@ V_rect = m*V_dc_target;
 
 % Controller
 f_bw_i      = f_sw/10;
-omega_ci    = 2*pi*f*f_bw_i;
+omega_ci    = 2*pi*f_bw_i;
 Kp_i        = omega_ci * L;
 Ki_i        = omega_ci * R;
 
