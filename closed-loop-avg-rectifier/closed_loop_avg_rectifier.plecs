@@ -1670,7 +1670,7 @@ Plecs {
       Frame         [-40, -25; 40, 25]
       Parameter {
         Variable      "cont_type"
-        Value         "5"
+        Value         "3"
         Show          off
       }
       Parameter {
@@ -1680,12 +1680,12 @@ Plecs {
       }
       Parameter {
         Variable      "kp"
-        Value         "1"
+        Value         "Kp_v"
         Show          off
       }
       Parameter {
         Variable      "ki"
-        Value         "1"
+        Value         "Ki_v"
         Show          off
       }
       Parameter {
