@@ -835,7 +835,7 @@ Plecs {
       TimeRange     "0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "1"
+      Open          "0"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    "Time / s"
@@ -1499,11 +1499,11 @@ Plecs {
       Flipped       off
       LabelPosition east
       Frame         [-15, -15; 15, 15]
-      Location      [0, 24; 1920, 1048]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAAD4fwCAAAAA/sAAAAQAFoAbwBvA"
+      Location      [0, 23; 1920, 1011]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAADvfwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMBAAAANAAAA+EAAABiAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAABsYAAAPhAAAA"
+"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMBAAAANAAAA70AAABiAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAABsYAAAO9AAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -1764,86 +1764,6 @@ Plecs {
         Variable      "HighlightLevel"
         Value         "0"
         Show          off
-      }
-    }
-    Component {
-      Type          Scope
-      Name          "Scope4"
-      Show          on
-      Position      [665, 470]
-      Direction     up
-      Flipped       off
-      LabelPosition south
-      Frame         [-15, -15; 15, 15]
-      Location      [0, 24; 1920, 1136]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAAFgA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAeAAAAAYvw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABEAP///wAAB4AAAAPRAAAA"
-"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
-"AAAAA=="
-      SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":209,\"Labels\":[],"
-"\"VisualIdxs\":[]}"
-      PlotPalettes  "AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
-      Axes          "2"
-      TimeRange     "0.0"
-      ScrollingMode "1"
-      SingleTimeAxis "1"
-      Open          "0"
-      Ts            "-1"
-      SampleLimit   "0"
-      XAxisLabel    "Time / s"
-      ShowLegend    "1"
-      Axis {
-        Name          ""
-        AutoScale     1
-        MinValue      0
-        MaxValue      1
-        Signals       {}
-        SignalTypes   [ ]
-        Untangle      0
-        KeepBaseline  off
-        BaselineValue 0
-      }
-      Axis {
-        Name          ""
-        AutoScale     1
-        MinValue      0
-        MaxValue      1
-        Signals       {}
-        SignalTypes   [ ]
-        Untangle      0
-        KeepBaseline  off
-        BaselineValue 0
-      }
-      Fourier {
-        SingleXAxis       on
-        AxisLabel         "Frequency / Hz"
-        Scaling           0
-        PhaseDisplay      0
-        ShowFourierLegend off
-        Axis {
-          Name          ""
-          AutoScale     1
-          MinValue      0
-          MaxValue      1
-          Signals       {}
-          Untangle      0
-          KeepBaseline  off
-          BaselineValue 0
-        }
-        Axis {
-          Name          ""
-          AutoScale     1
-          MinValue      0
-          MaxValue      1
-          Signals       {}
-          Untangle      0
-          KeepBaseline  off
-          BaselineValue 0
-        }
       }
     }
     Component {
@@ -2138,7 +2058,7 @@ Plecs {
       }
       Parameter {
         Variable      "ex_reset"
-        Value         "2"
+        Value         "1"
         Show          off
       }
       Parameter {
@@ -2284,7 +2204,7 @@ Plecs {
       }
       Parameter {
         Variable      "ex_reset"
-        Value         "2"
+        Value         "1"
         Show          off
       }
       Parameter {
@@ -2294,7 +2214,7 @@ Plecs {
       }
       Parameter {
         Variable      "x0"
-        Value         "4.0955"
+        Value         "0"
         Show          off
       }
       Parameter {
@@ -2386,35 +2306,6 @@ Plecs {
         Type          Input
         Position      [-40, 20]
         Direction     left
-      }
-    }
-    Component {
-      Type          Step
-      Name          "Step"
-      Show          on
-      Position      [400, 430]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      Parameter {
-        Variable      "Time"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "Before"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "After"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "DataType"
-        Value         "10"
-        Show          off
       }
     }
     Component {
@@ -2719,27 +2610,6 @@ Plecs {
       }
     }
     Component {
-      Type          Constant
-      Name          "u_q1"
-      Show          off
-      Position      [120, 370]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      CommentOut    DisabledOpenCircuit
-      Frame         [-15, -10; 15, 10]
-      Parameter {
-        Variable      "Value"
-        Value         "u_q"
-        Show          off
-      }
-      Parameter {
-        Variable      "DataType"
-        Value         "10"
-        Show          off
-      }
-    }
-    Component {
       Type          From
       Name          "From18"
       Show          off
@@ -2771,40 +2641,6 @@ Plecs {
       Parameter {
         Variable      "HighlightLevel"
         Value         "0"
-        Show          off
-      }
-    }
-    Component {
-      Type          SineGenerator
-      Name          "Sine Wave"
-      Show          on
-      Position      [80, 315]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      Parameter {
-        Variable      "Amplitude"
-        Value         "V_rect"
-        Show          off
-      }
-      Parameter {
-        Variable      "Bias"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "Frequency"
-        Value         "F"
-        Show          off
-      }
-      Parameter {
-        Variable      "Phase"
-        Value         "phase"
-        Show          off
-      }
-      Parameter {
-        Variable      "Units"
-        Value         "3"
         Show          off
       }
     }
@@ -3221,21 +3057,6 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Continuous PID\nController1"
-      SrcTerminal   2
-      Points        [530, 515]
-      Branch {
-        DstComponent  "Goto8"
-        DstTerminal   1
-      }
-      Branch {
-        Points        [530, 465]
-        DstComponent  "Scope4"
-        DstTerminal   1
-      }
-    }
-    Connection {
-      Type          Signal
       SrcComponent  "From13"
       SrcTerminal   1
       DstComponent  "Sum"
@@ -3247,20 +3068,6 @@ Plecs {
       SrcTerminal   1
       DstComponent  "Sum"
       DstTerminal   2
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Step"
-      SrcTerminal   1
-      Points        [425, 430; 425, 525]
-      Branch {
-        DstComponent  "Continuous PID\nController1"
-        DstTerminal   7
-      }
-      Branch {
-        DstComponent  "Continuous PID\nController2"
-        DstTerminal   7
-      }
     }
     Connection {
       Type          Signal
@@ -3358,21 +3165,6 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Sum1"
-      SrcTerminal   1
-      Points        [405, 515]
-      Branch {
-        DstComponent  "Continuous PID\nController1"
-        DstTerminal   1
-      }
-      Branch {
-        Points        [405, 475]
-        DstComponent  "Scope4"
-        DstTerminal   2
-      }
-    }
-    Connection {
-      Type          Signal
       SrcComponent  "RRF->3ph"
       SrcTerminal   2
       Points        [320, 265; 320, 300]
@@ -3391,6 +3183,20 @@ Plecs {
       SrcComponent  "Sum"
       SrcTerminal   1
       DstComponent  "Continuous PID\nController"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Continuous PID\nController1"
+      SrcTerminal   2
+      DstComponent  "Goto8"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Sum1"
+      SrcTerminal   1
+      DstComponent  "Continuous PID\nController1"
       DstTerminal   1
     }
   }
