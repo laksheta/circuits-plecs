@@ -66,9 +66,9 @@ Plecs {
   InvalidNetlistFunctionEvaluationMsg "1"
   IncompatibleInitialConditionMsg "2"
   Schematic {
-    Location      [961, 31; 1919, 988]
-    ZoomFactor    1.14436
-    SliderPosition [0, -1]
+    Location      [0, 23; 1920, 989]
+    ZoomFactor    1.30957
+    SliderPosition [0, 0]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -816,11 +816,11 @@ Plecs {
       Flipped       off
       LabelPosition south
       Frame         [-15, -15; 15, 15]
-      Location      [961, 31; 1919, 1037]
+      Location      [961, 31; 1919, 1064]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAAD3PwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAFgA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAMAAAA9wAAABiAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAAA74AAAPPAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAAA74AAAPqAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -835,7 +835,7 @@ Plecs {
       TimeRange     "0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "0"
+      Open          "1"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    "Time / s"
@@ -982,7 +982,7 @@ Plecs {
       }
       Parameter {
         Variable      "Vpk"
-        Value         "1"
+        Value         "V_grid_peak"
         Show          off
       }
       Parameter {
@@ -1305,7 +1305,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "SwitchState"
-        Value         "1"
+        Value         "2"
         Show          off
       }
     }
@@ -1760,157 +1760,6 @@ Plecs {
       Parameter {
         Variable      "NoMatchingCounterpartAction"
         Value         "2"
-        Show          off
-      }
-      Parameter {
-        Variable      "CustomMessage"
-        Value         ""
-        Show          off
-        Evaluate      on
-      }
-      Parameter {
-        Variable      "HighlightLevel"
-        Value         "0"
-        Show          off
-      }
-    }
-    Component {
-      Type          SignalMux
-      Name          "Mux2"
-      Show          off
-      Position      [240, 335]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      CommentOut    DisabledOpenCircuit
-      Frame         [-2, -10; 7, 10]
-      Parameter {
-        Variable      "Width"
-        Value         "2"
-        Show          off
-      }
-    }
-    Component {
-      Type          From
-      Name          "From16"
-      Show          off
-      Position      [240, 365]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      CommentOut    DisabledOpenCircuit
-      Parameter {
-        Variable      "Tag"
-        Value         "theta"
-        Show          off
-      }
-      Parameter {
-        Variable      "Visibility"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "CustomMessage"
-        Value         ""
-        Show          off
-        Evaluate      on
-      }
-      Parameter {
-        Variable      "HighlightLevel"
-        Value         "0"
-        Show          off
-      }
-    }
-    Component {
-      Type          Reference
-      SrcComponent  "Components/Control/Transformations/RRF->3ph"
-      Name          "RRF->3ph1"
-      Show          off
-      Position      [290, 350]
-      Direction     up
-      Flipped       off
-      LabelPosition south
-      CommentOut    DisabledOpenCircuit
-      Frame         [-15, -15; 15, 15]
-      Terminal {
-        Type          Input
-        Position      [-15, -5]
-        Direction     left
-      }
-      Terminal {
-        Type          Output
-        Position      [19, 0]
-        Direction     right
-      }
-      Terminal {
-        Type          Input
-        Position      [-15, 5]
-        Direction     left
-      }
-    }
-    Component {
-      Type          From
-      Name          "From17"
-      Show          off
-      Position      [205, 320]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      CommentOut    DisabledOpenCircuit
-      Parameter {
-        Variable      "Tag"
-        Value         "u_d_pi"
-        Show          off
-      }
-      Parameter {
-        Variable      "Visibility"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "CustomMessage"
-        Value         ""
-        Show          off
-        Evaluate      on
-      }
-      Parameter {
-        Variable      "HighlightLevel"
-        Value         "0"
-        Show          off
-      }
-    }
-    Component {
-      Type          From
-      Name          "From18"
-      Show          off
-      Position      [205, 350]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      CommentOut    DisabledOpenCircuit
-      Parameter {
-        Variable      "Tag"
-        Value         "u_q_pi"
-        Show          off
-      }
-      Parameter {
-        Variable      "Visibility"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "1"
         Show          off
       }
       Parameter {
@@ -2731,52 +2580,10 @@ Plecs {
       }
     }
     Component {
-      Type          Constant
-      Name          "u_d"
-      Show          off
-      Position      [125, 170]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      CommentOut    DisabledOpenCircuit
-      Frame         [-15, -10; 15, 10]
-      Parameter {
-        Variable      "Value"
-        Value         "u_d"
-        Show          off
-      }
-      Parameter {
-        Variable      "DataType"
-        Value         "10"
-        Show          off
-      }
-    }
-    Component {
-      Type          Constant
-      Name          "u_q"
-      Show          off
-      Position      [125, 200]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      CommentOut    DisabledOpenCircuit
-      Frame         [-15, -10; 15, 10]
-      Parameter {
-        Variable      "Value"
-        Value         "u_q"
-        Show          off
-      }
-      Parameter {
-        Variable      "DataType"
-        Value         "10"
-        Show          off
-      }
-    }
-    Component {
       Type          SignalMux
-      Name          "Mux1"
+      Name          "Mux2"
       Show          off
-      Position      [160, 185]
+      Position      [1065, 480]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2790,9 +2597,9 @@ Plecs {
     }
     Component {
       Type          From
-      Name          "From10"
+      Name          "From16"
       Show          off
-      Position      [160, 215]
+      Position      [1065, 510]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2827,13 +2634,201 @@ Plecs {
     Component {
       Type          Reference
       SrcComponent  "Components/Control/Transformations/RRF->3ph"
-      Name          "RRF->3ph"
+      Name          "RRF->3ph1"
       Show          off
-      Position      [210, 200]
+      Position      [1115, 495]
       Direction     up
       Flipped       off
       LabelPosition south
       CommentOut    DisabledOpenCircuit
+      Frame         [-15, -15; 15, 15]
+      Terminal {
+        Type          Input
+        Position      [-15, -5]
+        Direction     left
+      }
+      Terminal {
+        Type          Output
+        Position      [19, 0]
+        Direction     right
+      }
+      Terminal {
+        Type          Input
+        Position      [-15, 5]
+        Direction     left
+      }
+    }
+    Component {
+      Type          From
+      Name          "From17"
+      Show          off
+      Position      [1030, 465]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      CommentOut    DisabledOpenCircuit
+      Parameter {
+        Variable      "Tag"
+        Value         "u_d_pi"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "CustomMessage"
+        Value         ""
+        Show          off
+        Evaluate      on
+      }
+      Parameter {
+        Variable      "HighlightLevel"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          From
+      Name          "From18"
+      Show          off
+      Position      [1030, 495]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      CommentOut    DisabledOpenCircuit
+      Parameter {
+        Variable      "Tag"
+        Value         "u_q_pi"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "CustomMessage"
+        Value         ""
+        Show          off
+        Evaluate      on
+      }
+      Parameter {
+        Variable      "HighlightLevel"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Constant
+      Name          "u_d"
+      Show          off
+      Position      [205, 320]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Frame         [-15, -10; 15, 10]
+      Parameter {
+        Variable      "Value"
+        Value         "u_d"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
+      }
+    }
+    Component {
+      Type          Constant
+      Name          "u_q"
+      Show          off
+      Position      [205, 350]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Frame         [-15, -10; 15, 10]
+      Parameter {
+        Variable      "Value"
+        Value         "u_q"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
+      }
+    }
+    Component {
+      Type          SignalMux
+      Name          "Mux1"
+      Show          off
+      Position      [240, 335]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Frame         [-2, -10; 7, 10]
+      Parameter {
+        Variable      "Width"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          From
+      Name          "From10"
+      Show          off
+      Position      [240, 365]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "theta"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "CustomMessage"
+        Value         ""
+        Show          off
+        Evaluate      on
+      }
+      Parameter {
+        Variable      "HighlightLevel"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Reference
+      SrcComponent  "Components/Control/Transformations/RRF->3ph"
+      Name          "RRF->3ph"
+      Show          off
+      Position      [290, 350]
+      Direction     up
+      Flipped       off
+      LabelPosition south
       Frame         [-15, -15; 15, 15]
       Terminal {
         Type          Input
@@ -3278,42 +3273,10 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Mux2"
-      SrcTerminal   1
-      Points        [255, 335; 255, 345]
-      DstComponent  "RRF->3ph1"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "From16"
-      SrcTerminal   1
-      Points        [255, 365; 255, 355]
-      DstComponent  "RRF->3ph1"
-      DstTerminal   3
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "RRF->3ph1"
+      SrcComponent  "RRF->3ph"
       SrcTerminal   2
       Points        [320, 350; 320, 310]
       DstComponent  "Manual Switch"
-      DstTerminal   3
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "From17"
-      SrcTerminal   1
-      Points        [225, 320; 225, 330]
-      DstComponent  "Mux2"
-      DstTerminal   2
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "From18"
-      SrcTerminal   1
-      Points        [225, 350; 225, 340]
-      DstComponent  "Mux2"
       DstTerminal   3
     }
     Connection {
@@ -3407,9 +3370,41 @@ Plecs {
     }
     Connection {
       Type          Signal
+      SrcComponent  "Mux2"
+      SrcTerminal   1
+      Points        [1080, 480; 1080, 490]
+      DstComponent  "RRF->3ph1"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From16"
+      SrcTerminal   1
+      Points        [1080, 510; 1080, 500]
+      DstComponent  "RRF->3ph1"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From17"
+      SrcTerminal   1
+      Points        [1050, 465; 1050, 475]
+      DstComponent  "Mux2"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From18"
+      SrcTerminal   1
+      Points        [1050, 495; 1050, 485]
+      DstComponent  "Mux2"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
       SrcComponent  "u_d"
       SrcTerminal   1
-      Points        [145, 180]
+      Points        [225, 330]
       DstComponent  "Mux1"
       DstTerminal   2
     }
@@ -3417,7 +3412,7 @@ Plecs {
       Type          Signal
       SrcComponent  "u_q"
       SrcTerminal   1
-      Points        [145, 190]
+      Points        [225, 340]
       DstComponent  "Mux1"
       DstTerminal   3
     }
@@ -3425,7 +3420,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Mux1"
       SrcTerminal   1
-      Points        [175, 185; 175, 195]
+      Points        [255, 335; 255, 345]
       DstComponent  "RRF->3ph"
       DstTerminal   1
     }
@@ -3433,7 +3428,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From10"
       SrcTerminal   1
-      Points        [175, 215; 175, 205]
+      Points        [255, 365; 255, 355]
       DstComponent  "RRF->3ph"
       DstTerminal   3
     }
