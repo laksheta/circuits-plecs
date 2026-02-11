@@ -13,6 +13,7 @@ R_load      = 100;
 C_out       = 10e-6;
 
 V_dc_target = 780;
+V_dc        = V_dc_target;
 
 P_load = (V_dc_target^2) / R_load;
 
