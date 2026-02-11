@@ -35,3 +35,9 @@ f_bw_i      = f_sw/10;
 omega_ci    = 2*pi*f*f_bw_i;
 Kp_i        = omega_ci * L;
 Ki_i        = omega_ci * R;
+
+f_bw_v      = 20;
+omega_cv    = 2*pi*f_bw_v;
+zeta        = 0.707;
+Kp_v        = 2*zeta*omega_cv*C_out;
+Ki_v        = (omega_cv**2)*C_out;
