@@ -67,8 +67,8 @@ Plecs {
   IncompatibleInitialConditionMsg "2"
   Schematic {
     Location      [0, 23; 1920, 989]
-    ZoomFactor    1.49863
-    SliderPosition [0, -1]
+    ZoomFactor    1.30957
+    SliderPosition [0, 0]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -225,7 +225,6 @@ Plecs {
       Direction     down
       Flipped       on
       LabelPosition east
-      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "DiscretizationBehavior"
         Value         "2"
@@ -245,7 +244,6 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition east
-      CommentOut    DisabledOpenCircuit
     }
     Component {
       Type          Capacitor
@@ -255,7 +253,6 @@ Plecs {
       Direction     down
       Flipped       on
       LabelPosition west
-      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "C"
         Value         "C_out"
@@ -275,7 +272,6 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition west
-      CommentOut    DisabledOpenCircuit
     }
     Component {
       Type          Ground
@@ -379,7 +375,6 @@ Plecs {
       Direction     right
       Flipped       off
       LabelPosition south
-      CommentOut    DisabledOpenCircuit
       Frame         [-20, -10; 20, 10]
       Parameter {
         Variable      "f(u)"
@@ -395,7 +390,6 @@ Plecs {
       Direction     right
       Flipped       off
       LabelPosition south
-      CommentOut    DisabledOpenCircuit
       Frame         [-2, -10; 7, 10]
       Parameter {
         Variable      "Width"
@@ -411,7 +405,6 @@ Plecs {
       Direction     right
       Flipped       off
       LabelPosition south
-      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Tag"
         Value         "V_rect"
@@ -447,7 +440,6 @@ Plecs {
       Direction     right
       Flipped       off
       LabelPosition south
-      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Tag"
         Value         "i_abc"
@@ -483,7 +475,6 @@ Plecs {
       Direction     right
       Flipped       off
       LabelPosition south
-      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Tag"
         Value         "i_dc"
@@ -519,7 +510,6 @@ Plecs {
       Direction     right
       Flipped       off
       LabelPosition south
-      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Tag"
         Value         "i_dc"
@@ -569,7 +559,6 @@ Plecs {
       Direction     down
       Flipped       off
       LabelPosition west
-      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "R"
         Value         "R_load"
@@ -641,7 +630,6 @@ Plecs {
       Direction     right
       Flipped       off
       LabelPosition south
-      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Tag"
         Value         "V_out"
@@ -827,13 +815,12 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      CommentOut    DisabledOpenCircuit
       Frame         [-15, -15; 15, 15]
-      Location      [961, 31; 1919, 1073]
+      Location      [961, 31; 1919, 1082]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAAD3PwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAFgA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAMAAAA9wAAABiAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAAA74AAAPzAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAAA74AAAP8AAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -848,7 +835,7 @@ Plecs {
       TimeRange     "0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "0"
+      Open          "1"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    "Time / s"
@@ -911,7 +898,6 @@ Plecs {
       Direction     right
       Flipped       off
       LabelPosition south
-      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Tag"
         Value         "V_out"
@@ -947,7 +933,6 @@ Plecs {
       Direction     right
       Flipped       off
       LabelPosition south
-      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Tag"
         Value         "i_dc"
@@ -1514,11 +1499,11 @@ Plecs {
       Flipped       off
       LabelPosition east
       Frame         [-15, -15; 15, 15]
-      Location      [0, 24; 1920, 1039]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAAD2PwCAAAAA/sAAAAQAFoAbwBvA"
+      Location      [0, 24; 1920, 1048]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAAD4fwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMBAAAANAAAA9gAAABiAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAABsYAAAPYAAAA"
+"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMBAAAANAAAA+EAAABiAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAABsYAAAPhAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -1866,11 +1851,10 @@ Plecs {
       SrcComponent  "Components/Control/Continuous/Continuous PID\\nController"
       Name          "Continuous PID\nController"
       Show          off
-      Position      [915, 575]
+      Position      [220, 520]
       Direction     up
       Flipped       off
       LabelPosition south
-      CommentOut    DisabledOpenCircuit
       Frame         [-40, -25; 40, 25]
       Parameter {
         Variable      "cont_type"
@@ -2012,11 +1996,10 @@ Plecs {
       Type          From
       Name          "From13"
       Show          off
-      Position      [820, 620]
+      Position      [125, 565]
       Direction     up
       Flipped       off
       LabelPosition east
-      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "Tag"
         Value         "V_out"
@@ -2048,11 +2031,10 @@ Plecs {
       Type          Sum
       Name          "Sum"
       Show          off
-      Position      [820, 575]
+      Position      [125, 520]
       Direction     up
       Flipped       off
       LabelPosition south
-      CommentOut    DisabledOpenCircuit
       Parameter {
         Variable      "IconShape"
         Value         "2"
@@ -2078,11 +2060,10 @@ Plecs {
       Type          Constant
       Name          "Constant"
       Show          off
-      Position      [740, 575]
+      Position      [45, 520]
       Direction     right
       Flipped       off
       LabelPosition south
-      CommentOut    DisabledOpenCircuit
       Frame         [-40, -10; 40, 10]
       Parameter {
         Variable      "Value"
@@ -2446,125 +2427,8 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "SwitchState"
-        Value         "1"
+        Value         "2"
         Show          off
-      }
-    }
-    Component {
-      Type          Scope
-      Name          "Scope5"
-      Show          on
-      Position      [340, 440]
-      Direction     up
-      Flipped       off
-      LabelPosition south
-      Frame         [-15, -15; 15, 15]
-      Location      [640, 276; 990, 516]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAAAV4AAADRAAAA"
-"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
-"AAAAA=="
-      SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":203,\"Labels\":[],"
-"\"VisualIdxs\":[]}"
-      PlotPalettes  "AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-      Axes          "1"
-      TimeRange     "0.0"
-      ScrollingMode "1"
-      SingleTimeAxis "1"
-      Open          "0"
-      Ts            "-1"
-      SampleLimit   "0"
-      XAxisLabel    "Time / s"
-      ShowLegend    "1"
-      Axis {
-        Name          ""
-        AutoScale     1
-        MinValue      0
-        MaxValue      1
-        Signals       {}
-        SignalTypes   [ ]
-        Untangle      0
-        KeepBaseline  off
-        BaselineValue 0
-      }
-      Fourier {
-        SingleXAxis       on
-        AxisLabel         "Frequency / Hz"
-        Scaling           0
-        PhaseDisplay      0
-        ShowFourierLegend off
-        Axis {
-          Name          ""
-          AutoScale     1
-          MinValue      0
-          MaxValue      1
-          Signals       {}
-          Untangle      0
-          KeepBaseline  off
-          BaselineValue 0
-        }
-      }
-    }
-    Component {
-      Type          Scope
-      Name          "Scope6"
-      Show          on
-      Position      [890, 635]
-      Direction     up
-      Flipped       off
-      LabelPosition south
-      CommentOut    DisabledOpenCircuit
-      Frame         [-15, -15; 15, 15]
-      Location      [0, 23; 1920, 1011]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAeAAAAAYvw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABEAP///wAAB4AAAANVAAAA"
-"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
-"AAAAA=="
-      SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":89,\"Labels\":[]"
-",\"VisualIdxs\":[]}"
-      PlotPalettes  "AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-      Axes          "1"
-      TimeRange     "0.0"
-      ScrollingMode "1"
-      SingleTimeAxis "1"
-      Open          "0"
-      Ts            "-1"
-      SampleLimit   "0"
-      XAxisLabel    "Time / s"
-      ShowLegend    "1"
-      Axis {
-        Name          ""
-        AutoScale     1
-        MinValue      0
-        MaxValue      1
-        Signals       {}
-        SignalTypes   [ ]
-        Untangle      0
-        KeepBaseline  off
-        BaselineValue 0
-      }
-      Fourier {
-        SingleXAxis       on
-        AxisLabel         "Frequency / Hz"
-        Scaling           0
-        PhaseDisplay      0
-        ShowFourierLegend off
-        Axis {
-          Name          ""
-          AutoScale     1
-          MinValue      0
-          MaxValue      1
-          Signals       {}
-          Untangle      0
-          KeepBaseline  off
-          BaselineValue 0
-        }
       }
     }
     Component {
@@ -2803,11 +2667,11 @@ Plecs {
       Flipped       off
       LabelPosition south
       Frame         [-15, -15; 15, 15]
-      Location      [0, 24; 1920, 1030]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAADz/wCAAAAA/sAAAAQAFoAbwBvA"
+      Location      [0, 24; 1920, 1039]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAAD2PwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMBAAAANAAAA88AAABiAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAABsYAAAPPAAAA"
+"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMBAAAANAAAA9gAAABiAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAABsYAAAPYAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -3415,21 +3279,6 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Sum"
-      SrcTerminal   1
-      Points        [845, 575]
-      Branch {
-        DstComponent  "Continuous PID\nController"
-        DstTerminal   1
-      }
-      Branch {
-        Points        [845, 635]
-        DstComponent  "Scope6"
-        DstTerminal   1
-      }
-    }
-    Connection {
-      Type          Signal
       SrcComponent  "Mux2"
       SrcTerminal   1
       Points        [255, 335; 255, 345]
@@ -3529,6 +3378,20 @@ Plecs {
       Points        [320, 265; 320, 300]
       DstComponent  "Manual Switch"
       DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Continuous PID\nController"
+      SrcTerminal   2
+      DstComponent  "Manual Switch1"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Sum"
+      SrcTerminal   1
+      DstComponent  "Continuous PID\nController"
+      DstTerminal   1
     }
   }
 }
