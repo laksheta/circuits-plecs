@@ -28,4 +28,10 @@ m = U_rect_amp / V_dc_target;
 
 phase = [0+delta, -120+delta, 120+delta];
 
-V_rect = m*V_dc_target
+V_rect = m*V_dc_target;
+
+% Controller
+f_bw_i      = f_sw/10;
+omega_ci    = 2*pi*f*f_bw_i;
+Kp_i        = omega_ci * L;
+Ki_i        = omega_ci * R;
