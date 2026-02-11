@@ -816,11 +816,11 @@ Plecs {
       Flipped       off
       LabelPosition south
       Frame         [-15, -15; 15, 15]
-      Location      [961, 31; 1919, 1082]
+      Location      [961, 24; 1919, 1093]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAAD3PwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAFgA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAMAAAA9wAAABiAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAAA74AAAP8AAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAAA74AAAQOAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -1296,20 +1296,6 @@ Plecs {
       }
     }
     Component {
-      Type          ManualSignalSwitch
-      Name          "Manual Switch"
-      Show          off
-      Position      [355, 305]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      Parameter {
-        Variable      "SwitchState"
-        Value         "2"
-        Show          off
-      }
-    }
-    Component {
       Type          Reference
       SrcComponent  "Components/Control/Transformations/3ph->RRF"
       Name          "3ph->RRF1"
@@ -1552,7 +1538,7 @@ Plecs {
       Type          Sum
       Name          "Sum1"
       Show          off
-      Position      [380, 515]
+      Position      [725, 485]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1581,7 +1567,7 @@ Plecs {
       Type          From
       Name          "From14"
       Show          off
-      Position      [380, 560]
+      Position      [725, 530]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -1616,7 +1602,7 @@ Plecs {
       Type          Sum
       Name          "Sum2"
       Show          off
-      Position      [380, 610]
+      Position      [725, 580]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1645,7 +1631,7 @@ Plecs {
       Type          Constant
       Name          "Constant1"
       Show          off
-      Position      [280, 610]
+      Position      [625, 580]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1665,7 +1651,7 @@ Plecs {
       Type          From
       Name          "From15"
       Show          off
-      Position      [380, 655]
+      Position      [725, 625]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -1700,7 +1686,7 @@ Plecs {
       Type          Goto
       Name          "Goto8"
       Show          off
-      Position      [555, 515]
+      Position      [900, 485]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1735,7 +1721,7 @@ Plecs {
       Type          Goto
       Name          "Goto9"
       Show          off
-      Position      [555, 610]
+      Position      [900, 580]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1771,7 +1757,7 @@ Plecs {
       SrcComponent  "Components/Control/Continuous/Continuous PID\\nController"
       Name          "Continuous PID\nController"
       Show          off
-      Position      [220, 520]
+      Position      [565, 490]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1916,7 +1902,7 @@ Plecs {
       Type          From
       Name          "From13"
       Show          off
-      Position      [125, 565]
+      Position      [470, 535]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -1951,7 +1937,7 @@ Plecs {
       Type          Sum
       Name          "Sum"
       Show          off
-      Position      [125, 520]
+      Position      [470, 490]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1980,7 +1966,7 @@ Plecs {
       Type          Constant
       Name          "Constant"
       Show          off
-      Position      [45, 520]
+      Position      [390, 490]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2000,7 +1986,7 @@ Plecs {
       Type          Constant
       Name          "Constant2"
       Show          off
-      Position      [250, 455]
+      Position      [595, 425]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2021,7 +2007,7 @@ Plecs {
       SrcComponent  "Components/Control/Continuous/Continuous PID\\nController"
       Name          "Continuous PID\nController1"
       Show          off
-      Position      [480, 515]
+      Position      [825, 485]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -2167,7 +2153,7 @@ Plecs {
       SrcComponent  "Components/Control/Continuous/Continuous PID\\nController"
       Name          "Continuous PID\nController2"
       Show          off
-      Position      [480, 610]
+      Position      [825, 580]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -2311,8 +2297,8 @@ Plecs {
     Component {
       Type          ManualSignalSwitch
       Name          "Manual Switch1"
-      Show          on
-      Position      [330, 515]
+      Show          off
+      Position      [675, 485]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2326,7 +2312,7 @@ Plecs {
       Type          SignalMux
       Name          "Mux2"
       Show          off
-      Position      [240, 335]
+      Position      [310, 290]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2341,7 +2327,7 @@ Plecs {
       Type          From
       Name          "From16"
       Show          off
-      Position      [240, 365]
+      Position      [310, 320]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2377,7 +2363,7 @@ Plecs {
       SrcComponent  "Components/Control/Transformations/RRF->3ph"
       Name          "RRF->3ph1"
       Show          off
-      Position      [290, 350]
+      Position      [360, 305]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -2402,7 +2388,7 @@ Plecs {
       Type          From
       Name          "From17"
       Show          off
-      Position      [205, 320]
+      Position      [275, 275]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2434,186 +2420,10 @@ Plecs {
       }
     }
     Component {
-      Type          Constant
-      Name          "u_d"
-      Show          off
-      Position      [145, 235]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      Frame         [-15, -10; 15, 10]
-      Parameter {
-        Variable      "Value"
-        Value         "u_d"
-        Show          off
-      }
-      Parameter {
-        Variable      "DataType"
-        Value         "10"
-        Show          off
-      }
-    }
-    Component {
-      Type          Constant
-      Name          "u_q"
-      Show          off
-      Position      [145, 265]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      Frame         [-15, -10; 15, 10]
-      Parameter {
-        Variable      "Value"
-        Value         "u_q"
-        Show          off
-      }
-      Parameter {
-        Variable      "DataType"
-        Value         "10"
-        Show          off
-      }
-    }
-    Component {
-      Type          SignalMux
-      Name          "Mux1"
-      Show          off
-      Position      [180, 250]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      Frame         [-2, -10; 7, 10]
-      Parameter {
-        Variable      "Width"
-        Value         "2"
-        Show          off
-      }
-    }
-    Component {
-      Type          From
-      Name          "From10"
-      Show          off
-      Position      [180, 280]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      Parameter {
-        Variable      "Tag"
-        Value         "theta"
-        Show          off
-      }
-      Parameter {
-        Variable      "Visibility"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NoMatchingCounterpartAction"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "CustomMessage"
-        Value         ""
-        Show          off
-        Evaluate      on
-      }
-      Parameter {
-        Variable      "HighlightLevel"
-        Value         "0"
-        Show          off
-      }
-    }
-    Component {
-      Type          Reference
-      SrcComponent  "Components/Control/Transformations/RRF->3ph"
-      Name          "RRF->3ph"
-      Show          off
-      Position      [230, 265]
-      Direction     up
-      Flipped       off
-      LabelPosition south
-      Frame         [-15, -15; 15, 15]
-      Terminal {
-        Type          Input
-        Position      [-15, -5]
-        Direction     left
-      }
-      Terminal {
-        Type          Output
-        Position      [19, 0]
-        Direction     right
-      }
-      Terminal {
-        Type          Input
-        Position      [-15, 5]
-        Direction     left
-      }
-    }
-    Component {
-      Type          Scope
-      Name          "Scope7"
-      Show          on
-      Position      [840, 315]
-      Direction     up
-      Flipped       off
-      LabelPosition south
-      Frame         [-15, -15; 15, 15]
-      Location      [0, 24; 1920, 1039]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAAD2PwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMBAAAANAAAA9gAAABiAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAABsYAAAPYAAAA"
-"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
-"AAAAA=="
-      SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":179,\"Labels\":[],"
-"\"VisualIdxs\":[]}"
-      PlotPalettes  "AAAAAQAAAAIAAAACAAAAAQAAAAIB/////wAAAAAAAAL//y7g//+ZmQAAA"
-"AAAAQAAAAIBAAAAAAEAAAACAAAAAQAAAAEAAAABAAAAAgAAAAAAAQAAAAI/8AAAAAAAAD/wAAAAAA"
-"AAAAAAAQAAAAIAAA=="
-      Axes          "1"
-      TimeRange     "0.0"
-      ScrollingMode "1"
-      SingleTimeAxis "1"
-      Open          "0"
-      Ts            "-1"
-      SampleLimit   "0"
-      XAxisLabel    "Time / s"
-      ShowLegend    "1"
-      Axis {
-        Name          ""
-        AutoScale     1
-        MinValue      0
-        MaxValue      1
-        Signals       {}
-        SignalTypes   [ ]
-        Untangle      0
-        KeepBaseline  off
-        BaselineValue 0
-      }
-      Fourier {
-        SingleXAxis       on
-        AxisLabel         "Frequency / Hz"
-        Scaling           0
-        PhaseDisplay      0
-        ShowFourierLegend off
-        Axis {
-          Name          ""
-          AutoScale     1
-          MinValue      0
-          MaxValue      1
-          Signals       {}
-          Untangle      0
-          KeepBaseline  off
-          BaselineValue 0
-        }
-      }
-    }
-    Component {
       Type          From
       Name          "From18"
       Show          off
-      Position      [205, 350]
+      Position      [275, 305]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2958,20 +2768,6 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Manual Switch"
-      SrcTerminal   1
-      Points        [400, 305]
-      Branch {
-        DstComponent  "Demux"
-        DstTerminal   1
-      }
-      Branch {
-        DstComponent  "Goto1"
-        DstTerminal   1
-      }
-    }
-    Connection {
-      Type          Signal
       SrcComponent  "From11"
       SrcTerminal   1
       DstComponent  "3ph->RRF1"
@@ -3049,14 +2845,6 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "RRF->3ph1"
-      SrcTerminal   2
-      Points        [320, 350; 320, 310]
-      DstComponent  "Manual Switch"
-      DstTerminal   3
-    }
-    Connection {
-      Type          Signal
       SrcComponent  "From13"
       SrcTerminal   1
       DstComponent  "Sum"
@@ -3080,7 +2868,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Constant2"
       SrcTerminal   1
-      Points        [300, 455]
+      Points        [645, 425; 645, 480]
       DstComponent  "Manual Switch1"
       DstTerminal   2
     }
@@ -3088,7 +2876,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Mux2"
       SrcTerminal   1
-      Points        [255, 335; 255, 345]
+      Points        [325, 290; 325, 300]
       DstComponent  "RRF->3ph1"
       DstTerminal   1
     }
@@ -3096,7 +2884,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From16"
       SrcTerminal   1
-      Points        [255, 365; 255, 355]
+      Points        [325, 320; 325, 310]
       DstComponent  "RRF->3ph1"
       DstTerminal   3
     }
@@ -3104,7 +2892,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From17"
       SrcTerminal   1
-      Points        [225, 320; 225, 330]
+      Points        [295, 275; 295, 285]
       DstComponent  "Mux2"
       DstTerminal   2
     }
@@ -3112,64 +2900,9 @@ Plecs {
       Type          Signal
       SrcComponent  "From18"
       SrcTerminal   1
-      Points        [225, 350]
+      Points        [295, 305]
       DstComponent  "Mux2"
       DstTerminal   3
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "u_d"
-      SrcTerminal   1
-      Points        [165, 245]
-      DstComponent  "Mux1"
-      DstTerminal   2
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "u_q"
-      SrcTerminal   1
-      Points        [165, 255]
-      DstComponent  "Mux1"
-      DstTerminal   3
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Mux1"
-      SrcTerminal   1
-      Points        [195, 250; 195, 260]
-      DstComponent  "RRF->3ph"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "From10"
-      SrcTerminal   1
-      Points        [195, 280; 195, 270]
-      DstComponent  "RRF->3ph"
-      DstTerminal   3
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Three-Phase PLL"
-      SrcTerminal   2
-      Points        [785, 335]
-      Branch {
-        DstComponent  "Goto5"
-        DstTerminal   1
-      }
-      Branch {
-        Points        [785, 315]
-        DstComponent  "Scope7"
-        DstTerminal   1
-      }
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "RRF->3ph"
-      SrcTerminal   2
-      Points        [320, 265; 320, 300]
-      DstComponent  "Manual Switch"
-      DstTerminal   2
     }
     Connection {
       Type          Signal
@@ -3197,6 +2930,27 @@ Plecs {
       SrcComponent  "Sum1"
       SrcTerminal   1
       DstComponent  "Continuous PID\nController1"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "RRF->3ph1"
+      SrcTerminal   2
+      Points        [400, 305]
+      Branch {
+        DstComponent  "Demux"
+        DstTerminal   1
+      }
+      Branch {
+        DstComponent  "Goto1"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Three-Phase PLL"
+      SrcTerminal   2
+      DstComponent  "Goto5"
       DstTerminal   1
     }
   }
